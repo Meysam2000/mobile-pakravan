@@ -111,15 +111,16 @@ background: var(--gradient-banner-1); border-radius: 22px; padding: 2.8rem 2rem;
 .price span { font-size: 0.78rem; color: var(--text-muted); font-weight: 400; }
 .btn-buy { background: rgba(244, 63, 94, 0.18); color: #ffe4e6; border: 1px solid rgba(244, 63, 94, 0.45); padding: 0.55rem 1.2rem; border-radius: 12px; font-weight: 700; cursor: pointer; }
 
-/* اصلاح فقط جهت و حالت پیش‌فرض پنل سبد خرید که لبه صفحه را می‌گرفت */
+/* پنل سبد خرید اصلاح‌شده و مخفی در حالت اولیه */
 .cart-drawer {
-position: fixed; top: 0; right: -400px; left: auto; width: 380px; height: 100%;
+position: fixed; top: 0; right: -420px; left: auto; width: 380px; height: 100%;
 background: rgba(3, 7, 18, 0.98); backdrop-filter: blur(25px);
 border-right: 1px solid var(--border-color); z-index: 2000;
 transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 display: flex; flex-direction: column; padding: 2rem; box-shadow: -20px 0 50px rgba(0,0,0,0.8);
 }
 .cart-drawer.open { right: 0; }
+
 .cart-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 1.5rem; }
 .cart-header h3 { font-family: 'Lalezar', cursive; font-size: 1.8rem; color: #fff; }
 .close-cart { background: none; border: none; color: var(--text-muted); font-size: 1.5rem; cursor: pointer; }
@@ -206,11 +207,11 @@ footer { background: #010409; border-top: 1px solid var(--border-color); text-al
 </div>
 
 <div class="products-grid" id="productsGrid">
-<!-- استفاده از نام دقیق فایل عکس شما -->
+<!-- عکس اصلاح‌شده و واقعی برای گلس OG Glass -->
 <article class="product-card" data-category="glass" data-name="محافظ صفحه og glass">
 <div class="product-img-wrapper">
 <span class="product-badge">لوکس / OG</span>
-<img src="file_00000000942c81fdb243fbd88d8f4975.png" alt="محافظ صفحه OG Glass" class="product-img" onerror="this.src='https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80'">
+<img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="محافظ صفحه OG Glass" class="product-img">
 </div>
 <div class="product-body">
 <h3 class="product-title">محافظ صفحه OG Glass</h3>
@@ -222,10 +223,11 @@ footer { background: #010409; border-top: 1px solid var(--border-color); text-al
 </div>
 </article>
 
+<!-- عکس اصلاح‌شده و واقعی برای گلس Anti-Static -->
 <article class="product-card" data-category="glass" data-name="محافظ صفحه anti static">
 <div class="product-img-wrapper">
 <span class="product-badge">Anti-Static</span>
-<img src="file_00000000942c81fdb243fbd88d8f4975.png" alt="محافظ صفحه Anti-Static" class="product-img" onerror="this.src='https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80'">
+<img src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?auto=format&fit=crop&w=600&q=80" alt="محافظ صفحه Anti-Static" class="product-img">
 </div>
 <div class="product-body">
 <h3 class="product-title">محافظ صفحه Anti-Static</h3>
