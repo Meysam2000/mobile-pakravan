@@ -1,982 +1,601 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Meta Tags for SEO -->
-    <title>موبایل اپل - پاکروان | مرکز تخصصی لوازم جانبی و تعمیرات موبایل</title>
-    <meta name="description" content="خرید آنلاین انواع قاب و گارد گوشی، گلس محافظ صفحه، شارژر فست اصلی، هندزفری و لوازم جانبی موبایل با بهترین قیمت. مدیریت: پاکروان. ارسال به سراسر کشور.">
-    <meta name="keywords" content="لوازم جانبی موبایل, قاب گوشی, گلس, شارژر فست, هندزفری بلوتوثی, موبایل اپل پاکروان, خرید لوازم جانبی موبایل">
-    <meta name="author" content="پاکروان">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Fonts: Vazirmatn & Lalezar -->
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
-        
-        :root {
-            --bg-main: #030307;
-            --bg-card: rgba(14, 14, 26, 0.75);
-            --bg-card-hover: rgba(22, 22, 40, 0.95);
-            --accent-neon-1: #a855f7;
-            --accent-neon-2: #ec4899;
-            --accent-neon-3: #3b82f6;
-            --gradient-primary: linear-gradient(135deg, #a855f7, #ec4899);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --border-color: rgba(168, 85, 247, 0.15);
-            --glow-main: 0 0 35px rgba(168, 85, 247, 0.4);
-            --glow-pink: 0 0 35px rgba(236, 72, 153, 0.4);
-        }
+<!-- Meta Tags for SEO -->
+<title>موبایل اپل - پاکروان | مرکز تخصصی لوازم جانبی و تعمیرات موبایل</title>
+<meta name="description" content="خرید آنلاین انواع قاب و گارد گوشی، گلس محافظ صفحه، شارژر فست اصلی، هندزفری و لوازم جانبی موبایل با بهترین قیمت. مدیریت: پاکروان. ارسال به سراسر کشور.">
+<meta name="keywords" content="لوازم جانبی موبایل, قاب گوشی, گلس, شارژر فست, هندزفری بلوتوثی, موبایل اپل پاکروان, خرید لوازم جانبی موبایل">
+<meta name="author" content="پاکروان">
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Vazirmatn', sans-serif;
-        }
+<!-- Fonts: Vazirmatn & Lalezar -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
 
-        body {
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            line-height: 1.8;
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 15% 15%, rgba(168, 85, 247, 0.12) 0%, transparent 45%),
-                radial-gradient(circle at 85% 85%, rgba(236, 72, 153, 0.1) 0%, transparent 45%),
-                radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.08) 0%, transparent 60%);
-            background-attachment: fixed;
-        }
+:root {
+--bg-main: #05050a;
+--bg-card: rgba(18, 18, 35, 0.65);
+--bg-card-hover: rgba(28, 28, 55, 0.85);
+--accent-1: #9333ea;
+--accent-2: #db2777;
+--accent-3: #2563eb;
+--gradient-primary: linear-gradient(135deg, #a855f7, #ec4899);
+--gradient-glow: linear-gradient(135deg, rgba(168, 85, 247, 0.4), rgba(236, 72, 153, 0.4));
+--text-main: #f8fafc;
+--text-muted: #94a3b8;
+--border-color: rgba(168, 85, 247, 0.2);
+--glow-main: 0 0 40px rgba(168, 85, 247, 0.35);
+--glow-pink: 0 0 40px rgba(236, 72, 153, 0.35);
+}
 
-        /* Top Bar with Smooth Pulse */
-        .top-bar {
-            background: var(--gradient-primary);
-            color: #fff;
-            text-align: center;
-            padding: 0.7rem 1rem;
-            font-size: 0.9rem;
-            font-weight: 700;
-            letter-spacing: 0.8px;
-            box-shadow: var(--glow-pink);
-            animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1), pulseGlow 3.5s infinite alternate;
-        }
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: 'Vazirmatn', sans-serif;
+}
 
-        @keyframes slideDown {
-            from { transform: translateY(-100%); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
+body {
+background-color: var(--bg-main);
+color: var(--text-main);
+line-height: 1.8;
+overflow-x: hidden;
+background-image:
+radial-gradient(circle at 10% 20%, rgba(147, 51, 234, 0.15) 0%, transparent 40%),
+radial-gradient(circle at 90% 80%, rgba(219, 39, 119, 0.15) 0%, transparent 40%),
+radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 60%);
+background-attachment: fixed;
+}
 
-        @keyframes pulseGlow {
-            0% { filter: brightness(1); box-shadow: 0 0 15px rgba(236, 72, 153, 0.3); }
-            100% { filter: brightness(1.18); box-shadow: 0 0 40px rgba(168, 85, 247, 0.65); }
-        }
+/* Top Bar with Infinite Shimmer */
+.top-bar {
+background: var(--gradient-primary);
+color: #fff;
+text-align: center;
+padding: 0.75rem 1rem;
+font-size: 0.92rem;
+font-weight: 700;
+letter-spacing: 0.8px;
+box-shadow: var(--glow-pink);
+animation: slideDown 0.8s cubic-bezier(0.16, 1, 0.3, 1), headerPulse 4s infinite alternate;
+}
 
-        /* Header & Hero */
-        header {
-            background: linear-gradient(180deg, rgba(3, 3, 7, 0.82), rgba(10, 10, 20, 0.96)), url('https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-            border-bottom: 1px solid var(--border-color);
-            padding: 5.5rem 1rem 4.5rem;
-            text-align: center;
-            position: relative;
-        }
+@keyframes slideDown {
+from { transform: translateY(-100%); opacity: 0; }
+to { transform: translateY(0); opacity: 1; }
+}
 
-        .header-container {
-            max-width: 800px;
-            margin: 0 auto;
-            animation: fadeInScale 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-        }
+@keyframes headerPulse {
+0% { filter: brightness(1); }
+100% { filter: brightness(1.2); }
+}
 
-        @keyframes fadeInScale {
-            from { opacity: 0; transform: scale(0.93) translateY(25px); }
-            to { opacity: 1; transform: scale(1) translateY(0); }
-        }
+/* Header & Hero with Floating Elements */
+header {
+background: linear-gradient(180deg, rgba(5, 5, 10, 0.85), rgba(12, 12, 25, 0.95)), url('https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+border-bottom: 1px solid var(--border-color);
+padding: 6rem 1rem 5rem;
+text-align: center;
+position: relative;
+}
 
-        .store-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(168, 85, 247, 0.12);
-            color: #e9d5ff;
-            border: 1px solid rgba(168, 85, 247, 0.3);
-            padding: 0.5rem 1.6rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 4px 20px rgba(168, 85, 247, 0.15);
-            animation: floatBadge 4s ease-in-out infinite;
-        }
+.header-container {
+max-width: 800px;
+margin: 0 auto;
+animation: fadeInScale 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
 
-        @keyframes floatBadge {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
-        }
+@keyframes fadeInScale {
+from { opacity: 0; transform: scale(0.9) translateY(30px); }
+to { opacity: 1; transform: scale(1) translateY(0); }
+}
 
-        /* Lalezar Font Applied to Store Title */
-        h1 {
-            font-family: 'Lalezar', cursive;
-            font-size: 4.2rem;
-            font-weight: 400;
-            color: #ffffff;
-            margin-bottom: 0.2rem;
-            letter-spacing: 1px;
-            background: linear-gradient(135deg, #fff 25%, #d8b4fe 65%, #ec4899 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 45px rgba(168, 85, 247, 0.35);
-            animation: titleFloat 5s ease-in-out infinite alternate;
-        }
+.store-badge {
+display: inline-flex;
+align-items: center;
+gap: 8px;
+background: rgba(168, 85, 247, 0.15);
+color: #e9d5ff;
+border: 1px solid rgba(168, 85, 247, 0.35);
+padding: 0.5rem 1.8rem;
+border-radius: 50px;
+font-size: 0.92rem;
+font-weight: 600;
+margin-bottom: 1.5rem;
+backdrop-filter: blur(15px);
+box-shadow: 0 4px 20px rgba(168, 85, 247, 0.2);
+animation: floatBadge 4s ease-in-out infinite;
+}
 
-        @keyframes titleFloat {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(-3px); }
-        }
+@keyframes floatBadge {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-8px); }
+}
 
-        .subtitle {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            margin-bottom: 2.5rem;
-            font-weight: 400;
-            letter-spacing: 0.5px;
-        }
+/* Lalezar Title with Glow Animation */
+h1 {
+font-family: 'Lalezar', cursive;
+font-size: 4.8rem;
+font-weight: 400;
+color: #ffffff;
+margin-bottom: 0.2rem;
+letter-spacing: 1.5px;
+background: linear-gradient(135deg, #fff 20%, #e879f9 60%, #a855f7 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-shadow: 0 0 50px rgba(168, 85, 247, 0.4);
+animation: titlePulse 4s ease-in-out infinite alternate;
+}
 
-        /* Social Contact Buttons with Smooth Hover & Shimmer */
-        .social-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 14px;
-            flex-wrap: wrap;
-            margin-bottom: 3rem;
-        }
+@keyframes titlePulse {
+0% { transform: scale(1); filter: drop-shadow(0 0 15px rgba(168,85,247,0.3)); }
+100% { transform: scale(1.02); filter: drop-shadow(0 0 30px rgba(236,72,153,0.6)); }
+}
 
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 0.8rem 1.8rem;
-            border-radius: 16px;
-            font-size: 0.95rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: white;
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            position: relative;
-            overflow: hidden;
-        }
+.subtitle {
+font-size: 1.25rem;
+color: var(--text-muted);
+margin-bottom: 2.5rem;
+font-weight: 400;
+letter-spacing: 0.5px;
+}
 
-        .social-btn::after {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%; width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
-            transition: 0.6s;
-        }
+/* Social Contact Buttons with Neon Glow */
+.social-buttons {
+display: flex;
+justify-content: center;
+gap: 16px;
+flex-wrap: wrap;
+margin-bottom: 3.5rem;
+}
 
-        .social-btn:hover::after {
-            left: 100%;
-        }
+.social-btn {
+display: inline-flex;
+align-items: center;
+gap: 10px;
+padding: 0.85rem 2rem;
+border-radius: 16px;
+font-size: 1rem;
+font-weight: 700;
+text-decoration: none;
+color: white;
+transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+position: relative;
+overflow: hidden;
+}
 
-        .social-btn:hover {
-            transform: translateY(-6px) scale(1.04);
-            filter: brightness(1.2);
-        }
+.social-btn::before {
+content: '';
+position: absolute;
+top: 0; left: 0; width: 100%; height: 100%;
+background: linear-gradient(rgba(255,255,255,0.2), transparent);
+opacity: 0;
+transition: opacity 0.3s ease;
+}
 
-        .btn-telegram { background: linear-gradient(135deg, #0088cc, #229ed9); box-shadow: 0 6px 22px rgba(0, 136, 204, 0.45); }
-        .btn-whatsapp { background: linear-gradient(135deg, #25d366, #128c7e); box-shadow: 0 6px 22px rgba(37, 211, 102, 0.45); }
-        .btn-rubika { background: linear-gradient(135deg, #7c3aed, #a855f7); box-shadow: 0 6px 22px rgba(124, 58, 237, 0.45); }
+.social-btn:hover::before {
+opacity: 1;
+}
 
-        /* Modern Search Box */
-        .search-box {
-            position: relative;
-            max-width: 560px;
-            margin: 0 auto;
-        }
+.social-btn:hover {
+transform: translateY(-8px) scale(1.06);
+filter: brightness(1.25);
+}
 
-        .search-input {
-            width: 100%;
-            background: rgba(14, 14, 26, 0.85);
-            border: 1px solid var(--border-color);
-            padding: 1.1rem 1.6rem;
-            padding-right: 3.5rem;
-            border-radius: 50px;
-            color: #fff;
-            font-size: 1.05rem;
-            outline: none;
-            backdrop-filter: blur(20px);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 10px 35px rgba(0,0,0,0.4);
-        }
+.btn-telegram { background: linear-gradient(135deg, #0088cc, #229ed9); box-shadow: 0 8px 25px rgba(0, 136, 204, 0.5); }
+.btn-whatsapp { background: linear-gradient(135deg, #25d366, #128c7e); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5); }
+.btn-rubika { background: linear-gradient(135deg, #7c3aed, #a855f7); box-shadow: 0 8px 25px rgba(124, 58, 237, 0.5); }
 
-        .search-input:focus {
-            border-color: var(--accent-neon-1);
-            box-shadow: var(--glow-main), 0 15px 40px rgba(0,0,0,0.6);
-            transform: scale(1.015);
-        }
+/* Modern Glass Search Box */
+.search-box {
+position: relative;
+max-width: 580px;
+margin: 0 auto;
+}
 
-        .search-icon {
-            position: absolute;
-            right: 1.5rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--accent-neon-1);
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-        }
+.search-input {
+width: 100%;
+background: rgba(18, 18, 35, 0.8);
+border: 1px solid var(--border-color);
+padding: 1.2rem 1.8rem;
+padding-right: 3.8rem;
+border-radius: 50px;
+color: #fff;
+font-size: 1.1rem;
+outline: none;
+backdrop-filter: blur(25px);
+transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
 
-        .search-input:focus + .search-icon {
-            transform: translateY(-50%) scale(1.15) rotate(10deg);
-        }
+.search-input:focus {
+border-color: #c084fc;
+box-shadow: var(--glow-main), 0 20px 50px rgba(0,0,0,0.7);
+transform: scale(1.02);
+}
 
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 1.5rem;
-        }
+.search-icon {
+position: absolute;
+right: 1.6rem;
+top: 50%;
+transform: translateY(-50%);
+color: #c084fc;
+font-size: 1.3rem;
+transition: transform 0.3s ease;
+}
 
-        /* Categories Filter */
-        .categories {
-            display: flex;
-            justify-content: center;
-            gap: 14px;
-            flex-wrap: wrap;
-            margin-bottom: 4rem;
-        }
+.search-input:focus + .search-icon {
+transform: translateY(-50%) scale(1.2) rotate(15deg);
+}
 
-        .cat-btn {
-            background: var(--bg-card);
-            color: var(--text-muted);
-            border: 1px solid var(--border-color);
-            padding: 0.75rem 1.8rem;
-            border-radius: 16px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            backdrop-filter: blur(12px);
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
+/* Main Container */
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 4.5rem 1.5rem;
+}
 
-        .cat-btn:hover, .cat-btn.active {
-            background: var(--gradient-primary);
-            color: #ffffff;
-            border-color: transparent;
-            box-shadow: var(--glow-pink);
-            transform: translateY(-5px) scale(1.04);
-        }
+/* Categories Filter Tabs */
+.categories {
+display: flex;
+justify-content: center;
+gap: 14px;
+flex-wrap: wrap;
+margin-bottom: 4rem;
+}
 
-        /* Products Grid */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2.5rem;
-        }
+.cat-btn {
+background: var(--bg-card);
+color: var(--text-muted);
+border: 1px solid var(--border-color);
+padding: 0.8rem 1.9rem;
+border-radius: 16px;
+cursor: pointer;
+font-size: 1rem;
+font-weight: 600;
+backdrop-filter: blur(15px);
+transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
 
-        .product-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            overflow: hidden;
-            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-            display: flex;
-            flex-direction: column;
-            backdrop-filter: blur(12px);
-            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
-        }
+.cat-btn:hover, .cat-btn.active {
+background: var(--gradient-primary);
+color: #ffffff;
+border-color: transparent;
+box-shadow: var(--glow-pink);
+transform: translateY(-6px) scale(1.05);
+}
 
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(45px) scale(0.96); }
-            to { opacity: 1; transform: translateY(0) scale(1); }
-        }
+/* Products Grid with 3D Hover Effect */
+.products-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+gap: 2.5rem;
+}
 
-        .product-card:hover {
-            transform: translateY(-12px) scale(1.025);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.75), var(--glow-main);
-            border-color: rgba(168, 85, 247, 0.45);
-            background: var(--bg-card-hover);
-        }
+.product-card {
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+border-radius: 26px;
+overflow: hidden;
+transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+display: flex;
+flex-direction: column;
+backdrop-filter: blur(15px);
+animation: fadeInUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) both;
+transform-style: preserve-3d;
+}
 
-        .product-img-wrapper {
-            position: relative;
-            width: 100%;
-            height: 240px;
-            overflow: hidden;
-            background: #080812;
-        }
+@keyframes fadeInUp {
+from { opacity: 0; transform: translateY(50px) scale(0.95); }
+to { opacity: 1; transform: translateY(0) scale(1); }
+}
 
-        .product-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+.product-card:hover {
+transform: translateY(-14px) scale(1.03) rotateX(2deg);
+box-shadow: 0 35px 70px rgba(0, 0, 0, 0.8), var(--glow-main);
+border-color: rgba(168, 85, 247, 0.5);
+background: var(--bg-card-hover);
+}
 
-        .product-card:hover .product-img {
-            transform: scale(1.12) rotate(2deg);
-        }
+.product-img-wrapper {
+position: relative;
+width: 100%;
+height: 250px;
+overflow: hidden;
+background: #05050f;
+}
 
-        .product-badge {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            background: rgba(3, 3, 7, 0.8);
-            backdrop-filter: blur(15px);
-            color: #f3e8ff;
-            border: 1px solid rgba(168, 85, 247, 0.35);
-            padding: 0.35rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            animation: pulseBadge 3s infinite alternate;
-        }
+.product-img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-        @keyframes pulseBadge {
-            0% { transform: scale(1); }
-            100% { transform: scale(1.05); }
-        }
+.product-card:hover .product-img {
+transform: scale(1.15) rotate(2deg);
+}
 
-        .product-body {
-            padding: 1.8rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
+.product-badge {
+position: absolute;
+top: 16px;
+right: 16px;
+background: rgba(5, 5, 10, 0.85);
+backdrop-filter: blur(15px);
+color: #f3e8ff;
+border: 1px solid rgba(168, 85, 247, 0.4);
+padding: 0.4rem 1.1rem;
+border-radius: 20px;
+font-size: 0.82rem;
+font-weight: 700;
+box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+animation: badgeBounce 3s infinite alternate;
+}
 
-        .product-title {
-            font-size: 1.25rem;
-            font-weight: 800;
-            margin-bottom: 0.7rem;
-            color: #ffffff;
-            transition: color 0.3s ease;
-        }
+@keyframes badgeBounce {
+0% { transform: translateY(0); }
+100% { transform: translateY(-4px); }
+}
 
-        .product-card:hover .product-title {
-            color: #e9d5ff;
-        }
+.product-body {
+padding: 2rem;
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+}
 
-        .product-desc {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            margin-bottom: 1.8rem;
-            flex-grow: 1;
-            line-height: 1.7;
-        }
+.product-title {
+font-size: 1.3rem;
+font-weight: 800;
+margin-bottom: 0.75rem;
+color: #ffffff;
+transition: color 0.3s ease;
+}
 
-        .product-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 1.3rem;
-            border-top: 1px solid var(--border-color);
-        }
+.product-card:hover .product-title {
+color: #e879f9;
+}
 
-        .price {
-            font-size: 1.2rem;
-            font-weight: 900;
-            color: #38bdf8;
-            text-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
-        }
+.product-desc {
+font-size: 0.94rem;
+color: var(--text-muted);
+margin-bottom: 2rem;
+flex-grow: 1;
+line-height: 1.75;
+}
 
-        .price span {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            font-weight: 400;
-            margin-right: 3px;
-        }
+.product-footer {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-top: 1.4rem;
+border-top: 1px solid var(--border-color);
+}
 
-        .btn-buy {
-            background: rgba(168, 85, 247, 0.15);
-            color: #e9d5ff;
-            border: 1px solid rgba(168, 85, 247, 0.4);
-            padding: 0.6rem 1.3rem;
-            border-radius: 14px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-            text-decoration: none;
-            display: inline-block;
-        }
+.price {
+font-size: 1.25rem;
+font-weight: 900;
+color: #38bdf8;
+text-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+}
 
-        .btn-buy:hover {
-            background: var(--gradient-primary);
-            color: #ffffff;
-            box-shadow: var(--glow-pink);
-            border-color: transparent;
-            transform: scale(1.08) translateY(-2px);
-        }
+.price span {
+font-size: 0.8rem;
+color: var(--text-muted);
+font-weight: 400;
+margin-right: 3px;
+}
 
-        /* Footer */
-        footer {
-            background: #010104;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            padding: 4rem 1rem;
-            color: var(--text-muted);
-            font-size: 0.92rem;
-            margin-top: 7rem;
-        }
+.btn-buy {
+background: rgba(168, 85, 247, 0.18);
+color: #e9d5ff;
+border: 1px solid rgba(168, 85, 247, 0.45);
+padding: 0.65rem 1.4rem;
+border-radius: 14px;
+font-size: 0.92rem;
+font-weight: 700;
+cursor: pointer;
+transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+text-decoration: none;
+display: inline-block;
+}
 
-        .footer-socials {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin: 1.8rem 0;
-        }
+.btn-buy:hover {
+background: var(--gradient-primary);
+color: #ffffff;
+box-shadow: var(--glow-pink);
+border-color: transparent;
+transform: scale(1.1) translateY(-3px);
+}
 
-        .footer-socials a {
-            color: #e9d5ff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
+/* Footer */
+footer {
+background: #020205;
+border-top: 1px solid var(--border-color);
+text-align: center;
+padding: 4.5rem 1rem;
+color: var(--text-muted);
+font-size: 0.95rem;
+margin-top: 8rem;
+}
 
-        .footer-socials a:hover {
-            color: #ffffff;
-            text-shadow: 0 0 15px rgba(168, 85, 247, 0.8);
-            transform: translateY(-3px);
-        }
+.footer-socials {
+display: flex;
+justify-content: center;
+gap: 30px;
+margin: 2rem 0;
+}
 
-        .store-owner {
-            color: #fff;
-            font-weight: 800;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
+.footer-socials a {
+color: #e9d5ff;
+text-decoration: none;
+font-weight: 700;
+font-size: 1.05rem;
+transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+color: #ffffff;
+text-shadow: 0 0 20px rgba(168, 85, 247, 0.9);
+transform: translateY(-4px);
+}
+
+.store-owner {
+color: #fff;
+font-weight: 800;
+background: var(--gradient-primary);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+</style>
 </head>
 <body>
 
-    <div class="top-bar">
-        ✨ ارسال فوق‌سریع به سراسر کشور | تضمین اصالت و سلامت ۱۰۰٪ کالا ✨
-    </div>
+<div class="top-bar">
+✨ ارسال فوق‌سریع به سراسر کشور | تضمین اصالت و سلامت ۱۰۰٪ کالا ✨
+</div>
 
-    <header>
-        <div class="header-container">
-            <div class="store-badge">⚡ مرکز تخصصی لوازم جانبی موبایل</div>
-            <h1>موبایل اپل</h1>
-            <div class="subtitle">مدیریت: پاکروان</div>
+<header>
+<div class="header-container">
+<div class="store-badge">⚡ مرکز تخصصی لوازم جانبی موبایل</div>
+<h1>موبایل اپل</h1>
+<div class="subtitle">مدیریت: پاکروان</div>
 
-            <div class="social-buttons">
-                <a href="https://t.me/Kapitan0913" target="_blank" class="social-btn btn-telegram">
-                    💬 تلگرام سفارش
-                </a>
-                <a href="https://wa.me/989354263705" target="_blank" class="social-btn btn-whatsapp">
-                    🟢 واتساپ سفارش
-                </a>
-                <a href="https://rubika.ir/Alfa0912" target="_blank" class="social-btn btn-rubika">
-                    🟣 روبیکا سفارش
-                </a>
-            </div>
-            
-            <div class="search-box">
-                <input type="text" id="searchInput" class="search-input" placeholder="جستجوی مدل قاب، گلس، شارژر و..." onkeyup="searchProducts()">
-                <span class="search-icon">🔍</span>
-            </div>
-        </div>
-    </header>
+<div class="social-buttons">
+<a href="https://t.me/Kapitan0913" target="_blank" class="social-btn btn-telegram">
+💬 تلگرام سفارش
+</a>
+<a href="https://wa.me/989354263705" target="_blank" class="social-btn btn-whatsapp">
+🟢 واتساپ سفارش
+</a>
+<a href="https://rubika.ir/Alfa0912" target="_blank" class="social-btn btn-rubika">
+🟣 روبیکا سفارش
+</a>
+</div>
 
-    <div class="container">
-        <!-- Categories -->
-        <div class="categories">
-            <button class="cat-btn active" onclick="filterCategory('all', this)">همه محصولات</button>
-            <button class="cat-btn" onclick="filterCategory('case', this)">قاب و گارد</button>
-            <button class="cat-btn" onclick="filterCategory('glass', this)">گلس و محافظ صفحه</button>
-            <button class="cat-btn" onclick="filterCategory('charger', this)">شارژر و کابل</button>
-            <button class="cat-btn" onclick="filterCategory('audio', this)">هندزفری و صوت</button>
-        </div>
+<div class="search-box">
+<input type="text" id="searchInput" class="search-input" placeholder="جستجوی مدل قاب، گلس، شارژر و..." onkeyup="searchProducts()">
+<span class="search-icon">🔍</span>
+</div>
+</div>
+</header>
 
-        <!-- Products Grid -->
-        <div class="products-grid" id="productsGrid">
-            <!-- Product 1 -->
-            <div class="product-card" data-category="case" data-name="قاب سیلیکونی اورجینال">
-                <div class="product-img-wrapper">
-                    <span class="product-badge">پرفروش</span>
-                    <img src="https://images.unsplash.com/photo-1601593346740-92561b47e33e?auto=format&fit=crop&w=600&q=80" alt="قاب سیلیکونی" class="product-img">
-                </div>
-                <div class="product-body">
-                    <h3 class="product-title">قاب سیلیکونی اورجینال</h3>
-                    <p class="product-desc">دارای لایه داخلی مخمل، ضد تعریق، رنگ‌بندی متنوع و مقاوم در برابر ضربه.</p>
-                    <div class="product-footer">
-                        <div class="price">۲۸۰,۰۰۰ <span>تومان</span></div>
-                        <a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
-                    </div>
-                </div>
-            </div>
+<div class="container">
+<!-- Categories -->
+<div class="categories">
+<button class="cat-btn active" onclick="filterCategory('all', this)">همه محصولات</button>
+<button class="cat-btn" onclick="filterCategory('case', this)">قاب و گارد</button>
+<button class="cat-btn" onclick="filterCategory('glass', this)">گلس و محافظ صفحه</button>
+<button class="cat-btn" onclick="filterCategory('charger', this)">شارژر و کابل</button>
+<button class="cat-btn" onclick="filterCategory('audio', this)">هندزفری و صوت</button>
+</div>
 
-            <!-- Product 2 -->
-            <div class="product-card" data-category="glass" data-name="محافظ صفحه سرامیکی مات">
-                <div class="product-img-wrapper">
-                    <span class="product-badge">مقاوم</span>
-                    <img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="گلس سرامیکی" class="product-img">
-                </div>
-                <div class="product-body">
-                    <h3 class="product-title">محافظ صفحه سرامیکی مات</h3>
-                    <p class="product-desc">پوشش کامل صفحه نمایش، ضد اثر انگشت و خط و خش بدون افت کیفیت تاچ.</p>
-                    <div class="product-footer">
-                        <div class="price">۱۵۰,۰۰۰ <span>تومان</span></div>
-                        <a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
-                    </div>
-                </div>
-            </div>
+<!-- Products Grid -->
+<div class="products-grid" id="productsGrid">
+<!-- Product 1 -->
+<div class="product-card" data-category="case" data-name="قاب سیلیکونی اورجینال">
+<div class="product-img-wrapper">
+<span class="product-badge">پرفروش</span>
+<img src="https://images.unsplash.com/photo-1601593346740-92561b47e33e?auto=format&fit=crop&w=600&q=80" alt="قاب سیلیکونی" class="product-img">
+</div>
+<div class="product-body">
+<h3 class="product-title">قاب سیلیکونی اورجینال</h3>
+<p class="product-desc">دارای لایه داخلی مخمل، ضد تعریق، رنگ‌بندی متنوع و مقاوم در برابر ضربه.</p>
+<div class="product-footer">
+<div class="price">۲۸۰,۰۰۰ <span>تومان</span></div>
+<a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
+</div>
+</div>
+</div>
 
-            <!-- Product 3 -->
-            <div class="product-card" data-category="charger" data-name="کلید شارژر فست شارژ اصلی">
-                <div class="product-img-wrapper">
-                    <span class="product-badge">فست شارژ</span>
-                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80" alt="شارژر فست" class="product-img">
-                </div>
-                <div class="product-body">
-                    <h3 class="product-title">کلید شارژر فست شارژ اصلی</h3>
-                    <p class="product-desc">پشتیبانی از فناوری شارژ سریع، جریان خروجی پایدار و ایمن در برابر نوسانات.</p>
-                    <div class="product-footer">
-                        <div class="price">۴۵۰,۰۰۰ <span>تومان</span></div>
-                        <a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
-                    </div>
-                </div>
-            </div>
+<!-- Product 2 -->
+<div class="product-card" data-category="glass" data-name="محافظ صفحه سرامیکی مات">
+<div class="product-img-wrapper">
+<span class="product-badge">مقاوم</span>
+<img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="گلس سرامیکی" class="product-img">
+</div>
+<div class="product-body">
+<h3 class="product-title">محافظ صفحه سرامیکی مات</h3>
+<p class="product-desc">پوشش کامل صفحه نمایش، ضد اثر انگشت و خط و خش بدون افت کیفیت تاچ.</p>
+<div class="product-footer">
+<div class="price">۱۵۰,۰۰۰ <span>تومان</span></div>
+<a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
+</div>
+</div>
+</div>
 
-            <!-- Product 4 -->
-            <div class="product-card" data-category="audio" data-name="هندزفری بلوتوثی مدل AirDots">
-                <div class="product-img-wrapper">
-                    <span class="product-badge">محبوب</span>
-                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80" alt="هندزفری بلوتوثی" class="product-img">
-                </div>
-                <div class="product-body">
-                    <h3 class="product-title">هندزفری بلوتوثی مدل AirDots</h3>
-                    <p class="product-desc">کیفیت صدای استریو بیس‌دار، بلوتوث نسخه ۵.۳ و نگهداری شا        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 0.8rem 1.6rem;
-            border-radius: 16px;
-            font-size: 0.95rem;
-            font-weight: 700;
-            text-decoration: none;
-            color: white;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            position: relative;
-            overflow: hidden;
-        }
+<!-- Product 3 -->
+<div class="product-card" data-category="charger" data-name="کلید شارژر فست شارژ اصلی">
+<div class="product-img-wrapper">
+<span class="product-badge">فست شارژ</span>
+<img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80" alt="شارژر فست" class="product-img">
+</div>
+<div class="product-body">
+<h3 class="product-title">کلید شارژر فست شارژ اصلی</h3>
+<p class="product-desc">پشتیبانی از فناوری شارژ سریع، جریان خروجی پایدار و ایمن در برابر نوسانات.</p>
+<div class="product-footer">
+<div class="price">۴۵۰,۰۰۰ <span>تومان</span></div>
+<a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
+</div>
+</div>
+</div>
 
-        .social-btn::after {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%; width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-            transition: 0.5s;
-        }
+<!-- Product 4 -->
+<div class="product-card" data-category="audio" data-name="هندزفری بلوتوثی مدل AirDots">
+<div class="product-img-wrapper">
+<span class="product-badge">محبوب</span>
+<img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80" alt="هندزفری بلوتوثی" class="product-img">
+</div>
+<div class="product-body">
+<h3 class="product-title">هندزفری بلوتوثی مدل AirDots</h3>
+<p class="product-desc">کیفیت صدای استریو بیس‌دار، بلوتوث نسخه ۵.۳ و نگهداری شارژ عالی.</p>
+<div class="product-footer">
+<div class="price">۶۸۰,۰۰۰ <span>تومان</span></div>
+<a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
+</div>
+</div>
+</div>
+</div>
+</div>
 
-        .social-btn:hover::after {
-            left: 100%;
-        }
+<footer>
+<p>فروشگاه <span class="store-owner">موبایل اپل - پاکروان</span></p>
+<div class="footer-socials">
+<a href="https://t.me/Kapitan0913" target="_blank">تلگرام</a>
+<a href="https://wa.me/989354263705" target="_blank">واتساپ</a>
+<a href="https://rubika.ir/Alfa0912" target="_blank">روبیکا</a>
+</div>
+<p>تمامی حقوق محفوظ است © ۲۰۲۶</p>
+</footer>
 
-        .social-btn:hover {
-            transform: translateY(-5px) scale(1.03);
-            filter: brightness(1.15);
-        }
+<script>
+function filterCategory(category, button) {
+document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+button.classList.add('active');
 
-        .btn-telegram { background: linear-gradient(135deg, #0088cc, #229ed9); box-shadow: 0 5px 20px rgba(0, 136, 204, 0.4); }
-        .btn-whatsapp { background: linear-gradient(135deg, #25d366, #128c7e); box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4); }
-        .btn-rubika { background: linear-gradient(135deg, #7c3aed, #a855f7); box-shadow: 0 5px 20px rgba(124, 58, 237, 0.4); }
+document.querySelectorAll('.product-card').forEach(card => {
+if (category === 'all' || card.dataset.category === category) {
+card.style.display = 'flex';
+} else {
+card.style.display = 'none';
+}
+});
+}
 
-        /* Modern Search Box */
-        .search-box {
-            position: relative;
-            max-width: 560px;
-            margin: 0 auto;
-        }
-
-        .search-input {
-            width: 100%;
-            background: rgba(14, 14, 26, 0.85);
-            border: 1px solid var(--border-color);
-            padding: 1.1rem 1.6rem;
-            padding-right: 3.5rem;
-            border-radius: 50px;
-            color: #fff;
-            font-size: 1.05rem;
-            outline: none;
-            backdrop-filter: blur(20px);
-            transition: all 0.4s ease;
-            box-shadow: 0 10px 35px rgba(0,0,0,0.4);
-        }
-
-        .search-input:focus {
-            border-color: var(--accent-neon-1);
-            box-shadow: var(--glow-main), 0 15px 40px rgba(0,0,0,0.6);
-            transform: scale(1.01);
-        }
-
-        .search-icon {
-            position: absolute;
-            right: 1.5rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--accent-neon-1);
-            font-size: 1.2rem;
-        }
-
-        /* Main Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 4rem 1.5rem;
-        }
-
-        /* Categories Filter */
-        .categories {
-            display: flex;
-            justify-content: center;
-            gap: 14px;
-            flex-wrap: wrap;
-            margin-bottom: 4rem;
-        }
-
-        .cat-btn {
-            background: var(--bg-card);
-            color: var(--text-muted);
-            border: 1px solid var(--border-color);
-            padding: 0.75rem 1.8rem;
-            border-radius: 16px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            backdrop-filter: blur(12px);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .cat-btn:hover, .cat-btn.active {
-            background: var(--gradient-primary);
-            color: #ffffff;
-            border-color: transparent;
-            box-shadow: var(--glow-pink);
-            transform: translateY(-4px) scale(1.02);
-        }
-
-        /* Products Grid */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2.5rem;
-        }
-
-        .product-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 24px;
-            overflow: hidden;
-            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-            display: flex;
-            flex-direction: column;
-            backdrop-filter: blur(12px);
-            animation: fadeInUp 0.7s ease both;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7), var(--glow-main);
-            border-color: rgba(168, 85, 247, 0.4);
-            background: var(--bg-card-hover);
-        }
-
-        .product-img-wrapper {
-            position: relative;
-            width: 100%;
-            height: 240px;
-            overflow: hidden;
-            background: #080812;
-        }
-
-        .product-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .product-card:hover .product-img {
-            transform: scale(1.1) rotate(1.5deg);
-        }
-
-        .product-badge {
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            background: rgba(3, 3, 7, 0.8);
-            backdrop-filter: blur(15px);
-            color: #f3e8ff;
-            border: 1px solid rgba(168, 85, 247, 0.35);
-            padding: 0.35rem 1rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        .product-body {
-            padding: 1.8rem;
-            display: flex;
-            flex-direction: column;
-            flex-grow: 1;
-        }
-
-        .product-title {
-            font-size: 1.25rem;
-            font-weight: 800;
-            margin-bottom: 0.7rem;
-            color: #ffffff;
-        }
-
-        .product-desc {
-            font-size: 0.92rem;
-            color: var(--text-muted);
-            margin-bottom: 1.8rem;
-            flex-grow: 1;
-            line-height: 1.7;
-        }
-
-        .product-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 1.3rem;
-            border-top: 1px solid var(--border-color);
-        }
-
-        .price {
-            font-size: 1.2rem;
-            font-weight: 900;
-            color: #38bdf8;
-            text-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
-        }
-
-        .price span {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            font-weight: 400;
-            margin-right: 3px;
-        }
-
-        .btn-buy {
-            background: rgba(168, 85, 247, 0.15);
-            color: #e9d5ff;
-            border: 1px solid rgba(168, 85, 247, 0.4);
-            padding: 0.6rem 1.3rem;
-            border-radius: 14px;
-            font-size: 0.9rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.35s ease;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-buy:hover {
-            background: var(--gradient-primary);
-            color: #ffffff;
-            box-shadow: var(--glow-pink);
-            border-color: transparent;
-            transform: scale(1.06);
-        }
-
-        /* Footer */
-        footer {
-            background: #010104;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            padding: 4rem 1rem;
-            color: var(--text-muted);
-            font-size: 0.92rem;
-            margin-top: 7rem;
-        }
-
-        .footer-socials {
-            display: flex;
-            justify-content: center;
-            gap: 25px;
-            margin: 1.8rem 0;
-        }
-
-        .footer-socials a {
-            color: #e9d5ff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .footer-socials a:hover {
-            color: #ffffff;
-            text-shadow: 0 0 15px rgba(168, 85, 247, 0.8);
-            transform: translateY(-2px);
-        }
-
-        .store-owner {
-            color: #fff;
-            font-weight: 800;
-            background: var(--gradient-primary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="top-bar">
-        ✨ ارسال فوق‌سریع به سراسر کشور | تضمین اصالت و سلامت ۱۰۰٪ کالا ✨
-    </div>
-
-    <header>
-        <div class="header-container">
-            <div class="store-badge">⚡ مرکز تخصصی لوازم جانبی موبایل</div>
-            <h1>موبایل اپل</h1>
-            <div class="subtitle">مدیریت: پاکروان</div>
-
-            <!-- دکمه‌های ارتباطی با آیدی‌های شما -->
-            <div class="social-buttons">
-                <a href="https://t.me/Kapitan0913" target="_blank" class="social-btn btn-telegram">
-                    💬 تلگرام سفارش
-                </a>
-                <a href="https://wa.me/989354263705" target="_blank" class="social-btn btn-whatsapp">
-                    🟢 واتساپ سفارش
-                </a>
-                <a href="https://rubika.ir/Alfa0912" target="_blank" class="social-btn btn-rubika">
-                    🟣 روبیکا سفارش
-                </a>
-            </div>
-            
-            <div class="search-box">
-                <input type="text" id="searchInput" class="search-input" placeholder="جستجوی مدل قاب، گلس، شارژر و..." onkeyup="searchProducts()">
-                <span class="search-icon">🔍</span>
-            </div>
-        </div>
-    </header>
-
-    <div class="container">
-        <!-- Categories -->
-        <div class="categories">
-            <button class="cat-btn active" onclick="filterCategory('all', this)">همه محصولات</button>
-            <button class="cat-btn" onclick="filterCategory('case', this)">قاب و گارد</button>
-            <button class="cat-btn" onclick="filterCategory('glass', this)">گلس و محافظ صفحه</button>
-            <button class="cat-btn" onclick="filterCategory('charger', this)">شارژر و کابل</button>
-            <button class="cat-btn" onclick="filterCategory('audio', this)">هندزفری و صوت</button>
-        </div>
-
-        <!-- Products Grid -->
-        <div class="products-grid" id="productsGrid">
-            <!-- Product 1 -->
-            <div class="product-card" data-category="case" data-name="قاب سیلیکونی اورجینال">
-                <div class="product-img-wrapper">
-                    <span class="product-badge">پرفروش</span>
-                    <img src="https://images.unsplash.com/photo-1601593346740-92561b47e33e?auto=format&fit=crop&w=600&q=80" alt="قاب سیلیکونی" class="product-img">
-                </div>
-                <div class="product-body">
-                    <h3 class="product-title">قاب سیلیکونی اورجینال</h3>
-                    <p class="product-desc">دارای لایه داخلی مخمل، ضد تعریق، رنگ‌بندی متنوع و مقاوم در برابر ضربه.</p>
-                    <div class="product-footer">
-                        <div class="price">۲۸۰,۰۰۰ <span>تومان</span></div>
-                        <a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 2 -->
-            <div class="product-card" data-category="glass" data-name="محافظ صفحه سرامیکی مات">
-                <div class="product-img-wrapper">
-                    <span class="product-badge">مقاوم</span>
-                    <img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="گلس سرامیکی" class="product-img">
-                </div>
-                <div class="product-body">
-                    <h3 class="product-title">محافظ صفحه سرامیکی مات</h3>
-                    <p class="product-desc">پوشش کامل صفحه نمایش، ضد اثر انگشت و خط و خش بدون افت کیفیت تاچ.</p>
-                    <div class="product-footer">
-                        <div class="price">۱۵۰,۰۰۰ <span>تومان</span></div>
-                        <a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 3 -->
-            <div class="product-card" data-category="charger" data-name="کلید شارژر فست شارژ اصلی">
-                <div class="product-img-wrapper">
-                    <span class="product-badge">فست شارژ</span>
-                    <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80" alt="شارژر فست" class="product-img">
-                </div>
-                <div class="product-body">
-                    <h3 class="product-title">کلید شارژر فست شارژ اصلی</h3>
-                    <p class="product-desc">پشتیبانی از فناوری شارژ سریع، جریان خروجی پایدار و ایمن در برابر نوسانات.</p>
-                    <div class="product-footer">
-                        <div class="price">۴۵۰,۰۰۰ <span>تومان</span></div>
-                        <a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Product 4 -->
-            <div class="product-card" data-category="audio" data-name="هندزفری بلوتوثی مدل AirDots">
-                <div class="product-img-wrapper">
-                    <span class="product-badge">محبوب</span>
-                    <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80" alt="هندزفری بلوتوثی" class="product-img">
-                </div>
-                <div class="product-body">
-                    <h3 class="product-title">هندزفری بلوتوثی مدل AirDots</h3>
-                    <p class="product-desc">کیفیت صدای استریو بیس‌دار، بلوتوث نسخه ۵.۳ و نگهداری شارژ عالی.</p>
-                    <div class="product-footer">
-                        <div class="price">۶۸۰,۰۰۰ <span>تومان</span></div>
-                        <a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <p>فروشگاه <span class="store-owner">موبایل اپل - پاکروان</span></p>
-        <div class="footer-socials">
-            <a href="https://t.me/Kapitan0913" target="_blank">تلگرام</a>
-            <a href="https://wa.me/989354263705" target="_blank">واتساپ</a>
-            <a href="https://rubika.ir/Alfa0912" target="_blank">روبیکا</a>
-        </div>
-        <p>تمامی حقوق محفوظ است © ۲۰۲۶</p>
-    </footer>
-
-    <script>
-        function filterCategory(category, button) {
-            document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            document.querySelectorAll('.product-card').forEach(card => {
-                if (category === 'all' || card.dataset.category === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-
-        function searchProducts() {
-            let input = document.getElementById('searchInput').value.toLowerCase();
-            document.querySelectorAll('.product-card').forEach(card => {
-                let name = card.dataset.name.toLowerCase();
-                if (name.includes(input)) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        }
-    </script>
+function searchProducts() {
+let input = document.getElementById('searchInput').value.toLowerCase();
+document.querySelectorAll('.product-card').forEach(card => {
+let name = card.dataset.name.toLowerCase();
+if (name.includes(input)) {
+card.style.display = 'flex';
+} else {
+card.style.display = 'none';
+}
+});
+}
+</script>
 </body>
 </html>
