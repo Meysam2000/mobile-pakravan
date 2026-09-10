@@ -43,7 +43,7 @@ background-color: var(--bg-main);
 color: var(--text-main);
 line-height: 1.8;
 overflow-x: hidden;
-padding-bottom: 80px;
+padding-bottom: 90px;
 position: relative;
 }
 
@@ -292,6 +292,78 @@ font-size: 0.9rem;
 opacity: 0.95;
 }
 
+/* بخش ثبت درخواست تعمیرات */
+.repair-section {
+max-width: 1200px;
+margin: 2rem auto;
+padding: 0 1rem;
+}
+
+.repair-card {
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+border-radius: 24px;
+padding: 2.5rem;
+backdrop-filter: blur(15px);
+box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.repair-card h3 {
+font-family: 'Lalezar', cursive;
+font-size: 2rem;
+color: #fff;
+margin-bottom: 0.5rem;
+text-align: center;
+}
+
+.repair-card p {
+text-align: center;
+color: var(--text-muted);
+margin-bottom: 2rem;
+}
+
+.repair-form {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+gap: 1.2rem;
+}
+
+.repair-input, .repair-select {
+width: 100%;
+background: rgba(3, 7, 18, 0.85);
+border: 1px solid var(--border-color);
+padding: 1rem 1.2rem;
+border-radius: 14px;
+color: #fff;
+font-size: 0.95rem;
+outline: none;
+transition: all 0.3s ease;
+}
+
+.repair-input:focus, .repair-select:focus {
+border-color: #f43f5e;
+box-shadow: var(--glow-main);
+}
+
+.repair-btn {
+grid-column: 1 / -1;
+background: var(--gradient-primary);
+color: white;
+border: none;
+padding: 1rem;
+border-radius: 14px;
+font-size: 1.1rem;
+font-weight: 700;
+cursor: pointer;
+transition: all 0.35s ease;
+box-shadow: var(--glow-pink);
+}
+
+.repair-btn:hover {
+transform: translateY(-3px);
+filter: brightness(1.15);
+}
+
 /* دسته‌بندی‌ها */
 .container {
 max-width: 1200px;
@@ -446,7 +518,6 @@ font-size: 0.88rem;
 font-weight: 700;
 cursor: pointer;
 transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-text-decoration: none;
 }
 
 .btn-buy:hover {
@@ -455,6 +526,130 @@ color: #ffffff;
 box-shadow: var(--glow-pink);
 border-color: transparent;
 transform: scale(1.08) translateY(-2px);
+}
+
+/* پنل سبد خرید کشویی */
+.cart-drawer {
+position: fixed;
+top: 0;
+left: -100%;
+width: 380px;
+height: 100%;
+background: rgba(3, 7, 18, 0.95);
+backdrop-filter: blur(25px);
+border-left: 1px solid var(--border-color);
+z-index: 2000;
+transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+display: flex;
+flex-direction: column;
+padding: 2rem;
+box-shadow: -20px 0 50px rgba(0,0,0,0.8);
+}
+
+.cart-drawer.open {
+left: 0;
+}
+
+.cart-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid var(--border-color);
+padding-bottom: 1rem;
+margin-bottom: 1.5rem;
+}
+
+.cart-header h3 {
+font-family: 'Lalezar', cursive;
+font-size: 1.8rem;
+color: #fff;
+}
+
+.close-cart {
+background: none;
+border: none;
+color: var(--text-muted);
+font-size: 1.5rem;
+cursor: pointer;
+transition: color 0.3s;
+}
+
+.close-cart:hover {
+color: #f43f5e;
+}
+
+.cart-items {
+flex-grow: 1;
+overflow-y: auto;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+margin-bottom: 1rem;
+}
+
+.cart-item {
+background: var(--bg-card);
+border: 1px solid var(--border-color);
+padding: 1rem;
+border-radius: 14px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.cart-item-info h4 {
+font-size: 0.95rem;
+color: #fff;
+margin-bottom: 4px;
+}
+
+.cart-item-info span {
+font-size: 0.85rem;
+color: #38bdf8;
+font-weight: 700;
+}
+
+.remove-item {
+background: none;
+border: none;
+color: #f43f5e;
+cursor: pointer;
+font-size: 1rem;
+}
+
+.cart-footer {
+border-top: 1px solid var(--border-color);
+padding-top: 1.5rem;
+}
+
+.cart-total {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 1.2rem;
+font-size: 1.1rem;
+font-weight: 700;
+}
+
+.checkout-btn {
+width: 100%;
+background: var(--gradient-primary);
+color: white;
+border: none;
+padding: 0.9rem;
+border-radius: 14px;
+font-size: 1rem;
+font-weight: 700;
+cursor: pointer;
+box-shadow: var(--glow-pink);
+transition: transform 0.3s ease;
+text-align: center;
+text-decoration: none;
+display: block;
+}
+
+.checkout-btn:hover {
+transform: translateY(-2px);
 }
 
 /* منوی پایین صفحه */
@@ -483,6 +678,9 @@ flex-direction: column;
 align-items: center;
 gap: 4px;
 transition: all 0.3s ease;
+cursor: pointer;
+background: none;
+border: none;
 }
 
 .nav-item span.icon {
@@ -550,8 +748,8 @@ background: var(--gradient-primary);
 
 <div class="social-buttons">
 <a href="https://t.me/meysam2000" target="_blank" class="social-btn btn-telegram">💬 تلگرام سفارش</a>
-<a href="https://wa.me/" target="_blank" class="social-btn btn-whatsapp">🟢 واتساپ سفارش</a>
-<a href="#" target="_blank" class="social-btn btn-rubika">🟣 روبیکا سفارش</a>
+<a href="https://wa.me/989140000000" target="_blank" class="social-btn btn-whatsapp">🟢 واتساپ سفارش</a>
+<a href="https://rubika.ir/meysam2000" target="_blank" class="social-btn btn-rubika">🟣 روبیکا سفارش</a>
 </div>
 
 <div class="search-box">
@@ -568,14 +766,42 @@ background: var(--gradient-primary);
 <p>خدمات فوق تخصصی تعمیرات موبایل، فروش انواع لوازم جانبی اصلی و گارد و گلس</p>
 </div>
 <div class="promo-grid">
-<div class="sub-promo-banner sub-promo-1">
+<div class="sub-promo-banner sub-promo-1" onclick="filterCategory('charger', document.querySelector('.cat-btn:nth-child(4)'))">
 <h4>لوازم جانبی اورجینال</h4>
 <span>با تضمین اصالت و ضمانت کیفیت</span>
 </div>
-<div class="sub-promo-banner sub-promo-2">
+<div class="sub-promo-banner sub-promo-2" onclick="filterCategory('charger', document.querySelector('.cat-btn:nth-child(4)'))">
 <h4>شارژر و کابل‌های فست</h4>
 <span>انکر، سامسونگ، اپل و شیائومی</span>
 </div>
+</div>
+</section>
+
+<!-- بخش ثبت درخواست تعمیرات آنلاین -->
+<section class="repair-section" id="repairSection">
+<div class="repair-card">
+<h3>ثبت درخواست تعمیرات موبایل</h3>
+<p>گوشی شما دچار مشکل شده؟ فرم زیر را پر کنید تا کارشناسان ما با شما تماس بگیرند.</p>
+<form class="repair-form" onsubmit="submitRepair(event)">
+<input type="text" placeholder="نام و نام خانوادگی" class="repair-input" required id="repairName">
+<input type="tel" placeholder="شماره تماس (مثلاً 0914...)" class="repair-input" required id="repairPhone">
+<select class="repair-select" id="repairBrand">
+<option value="" disabled selected>انتخاب برند گوشی</option>
+<option value="Apple">آیفون (Apple)</option>
+<option value="Samsung">سامسونگ (Samsung)</option>
+<option value="Xiaomi">شیائومی (Xiaomi)</option>
+<option value="Other">سایر برندها</option>
+</select>
+<select class="repair-select" id="repairIssue">
+<option value="" disabled selected>نوع خرابی دستگاه</option>
+<option value="LCD">تعویض ال‌سی‌دی (صفحه نمایش)</option>
+<option value="Battery">تعویض باتری</option>
+<option value="Charging">خرابی پورت شارژ</option>
+<option value="Software">مشکلات نرم‌افزاری</option>
+<option value="Other">سایر مشکلات</option>
+</select>
+<button type="submit" class="repair-btn">ثبت سفارش تعمیر</button>
+</form>
 </div>
 </section>
 
@@ -587,6 +813,7 @@ background: var(--gradient-primary);
 <button class="cat-btn" onclick="filterCategory('glass', this)">گلس و محافظ صفحه</button>
 <button class="cat-btn" onclick="filterCategory('charger', this)">شارژر و کابل</button>
 <button class="cat-btn" onclick="filterCategory('audio', this)">هندزفری و صوت</button>
+<button class="cat-btn" onclick="filterCategory('gadget', this)">پاوربانک و گجت</button>
 </div>
 
 <!-- محصولات -->
@@ -601,7 +828,7 @@ background: var(--gradient-primary);
 <p class="product-desc">دارای لایه داخلی مخمل، ضد تعریق، رنگ‌بندی متنوع و مقاوم در برابر ضربه.</p>
 <div class="product-footer">
 <div class="price">۲۸۰,۰۰۰ <span>تومان</span></div>
-<a href="https://t.me/meysam2000" target="_blank" class="btn-buy">خرید و سفارش</a>
+<button class="btn-buy" onclick="addToCart('قاب سیلیکونی اورجینال', 280000)">افزودن به سبد</button>
 </div>
 </div>
 </article>
@@ -616,7 +843,7 @@ background: var(--gradient-primary);
 <p class="product-desc">پوشش کامل صفحه نمایش، ضد اثر انگشت و خط و خش بدون افت کیفیت تاچ.</p>
 <div class="product-footer">
 <div class="price">۱۵۰,۰۰۰ <span>تومان</span></div>
-<a href="https://t.me/meysam2000" target="_blank" class="btn-buy">خرید و سفارش</a>
+<button class="btn-buy" onclick="addToCart('محافظ صفحه سرامیکی مات', 150000)">افزودن به سبد</button>
 </div>
 </div>
 </article>
@@ -631,7 +858,7 @@ background: var(--gradient-primary);
 <p class="product-desc">پشتیبانی از فناوری شارژ سریع، جریان خروجی پایدار و ایمن در برابر نوسانات.</p>
 <div class="product-footer">
 <div class="price">۳۲۰,۰۰۰ <span>تومان</span></div>
-<a href="https://t.me/meysam2000" target="_blank" class="btn-buy">خرید و سفارش</a>
+<button class="btn-buy" onclick="addToCart('کلید شارژر فست شارژ اصلی', 320000)">افزودن به سبد</button>
 </div>
 </div>
 </article>
@@ -646,27 +873,75 @@ background: var(--gradient-primary);
 <p class="product-desc">کیفیت صدای استریو بیس‌دار، بلوتوث نسخه ۵.۳ و نگهداری شارژ عالی.</p>
 <div class="product-footer">
 <div class="price">۶۸۰,۰۰۰ <span>تومان</span></div>
-<a href="https://t.me/meysam2000" target="_blank" class="btn-buy">خرید و سفارش</a>
+<button class="btn-buy" onclick="addToCart('هندزفری بلوتوثی AirDots', 680000)">افزودن به سبد</button>
+</div>
+</div>
+</article>
+
+<article class="product-card" data-category="gadget" data-name="پاوربانک ۲۰۰۰۰ میلی‌آمپر">
+<div class="product-img-wrapper">
+<span class="product-badge">قدرتمند</span>
+<img src="https://images.unsplash.com/photo-1609592424104-94bc1a166a5b?auto=format&fit=crop&w=600&q=80" alt="پاوربانک" class="product-img">
+</div>
+<div class="product-body">
+<h3 class="product-title">پاوربانک ۲۰۰۰۰ میلی‌آمپر فست</h3>
+<p class="product-desc">دارای دو پرو خروجی USB و پورت Type-C با قابلیت شارژ سریع دوطرفه.</p>
+<div class="product-footer">
+<div class="price">۱,۲۵۰,۰۰۰ <span>تومان</span></div>
+<button class="btn-buy" onclick="addToCart('پاوربانک ۲۰۰۰۰ میلی‌آمپر', 1250000)">افزودن به سبد</button>
+</div>
+</div>
+</article>
+
+<article class="product-card" data-category="gadget" data-name="هولدر مگنتی موبایل خودرو">
+<div class="product-img-wrapper">
+<span class="product-badge">کاربردی</span>
+<img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="هولدر خودرو" class="product-img">
+</div>
+<div class="product-body">
+<h3 class="product-title">هولدر مگنتی داشبوردی خودرو</h3>
+<p class="product-desc">مگنت بسیار قوی، قابلیت چرخش ۳۶۰ درجه و نصب آسان روی داشبورد یا دریچه کولر.</p>
+<div class="product-footer">
+<div class="price">۲۱۰,۰۰۰ <span>تومان</span></div>
+<button class="btn-buy" onclick="addToCart('هولدر مگنتی خودرو', 210000)">افزودن به سبد</button>
 </div>
 </div>
 </article>
 </div>
 </main>
 
+<!-- پنل سبد خرید کشویی -->
+<div class="cart-drawer" id="cartDrawer">
+<div class="cart-header">
+<h3>سبد خرید شما</h3>
+<button class="close-cart" onclick="toggleCart()">✕</button>
+</div>
+<div class="cart-items" id="cartItemsContainer">
+<!-- آیتم‌ها اینجا قرار می‌گیرند -->
+</div>
+<div class="cart-footer">
+<div class="cart-total">
+<span>مجموع:</span>
+<span id="cartTotalPrice">۰ تومان</span>
+</div>
+<a href="https://t.me/meysam2000" target="_blank" class="checkout-btn" id="checkoutBtn">تایید و ارسال سفارش به تلگرام</a>
+</div>
+</div>
+
 <!-- منوی پایین صفحه -->
 <nav class="bottom-nav">
-<a href="https://t.me/meysam2000" target="_blank" class="nav-item">
-<span class="icon">👤</span>
-ورود/ارتباط
-</a>
-<a href="https://t.me/meysam2000" target="_blank" class="nav-item">
+<button class="nav-item" onclick="document.getElementById('repairSection').scrollIntoView({behavior: 'smooth'})">
+<span class="icon">🛠️</span>
+تعمیرات
+</button>
+<button class="nav-item" onclick="toggleCart()">
 <span class="icon">🛒</span>
-ثبت سفارش
-</a>
-<a href="#searchInput" class="nav-item">
+سبد خرید
+</button>
+<button class="nav-item" onclick="document.getElementById('searchInput').focus()">
 <span class="icon">🗂️</span>
-دسته محصولات
-</a>
+جستجو
+</button>
 <a href="#" class="nav-item active">
 <span class="icon">🏠</span>
 خانه
@@ -677,13 +952,15 @@ background: var(--gradient-primary);
 <p>فروشگاه <span class="store-owner">موبایل اپل - پاکروان</span></p>
 <div class="footer-socials">
 <a href="https://t.me/meysam2000" target="_blank">تلگرام</a>
-<a href="https://wa.me/" target="_blank">واتساپ</a>
-<a href="#" target="_blank">روبیکا</a>
+<a href="https://wa.me/989140000000" target="_blank">واتساپ</a>
+<a href="https://rubika.ir/meysam2000" target="_blank">روبیکا</a>
 </div>
 <p>تمامی حقوق محفوظ است © ۲۰۲۶</p>
 </footer>
 
 <script>
+let cart = [];
+
 function filterCategory(category, button) {
 document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
 button.classList.add('active');
@@ -707,6 +984,63 @@ card.style.display = 'flex';
 card.style.display = 'none';
 }
 });
+}
+
+function toggleCart() {
+document.getElementById('cartDrawer').classList.toggle('open');
+}
+
+function addToCart(name, price) {
+cart.push({ name, price });
+updateCartUI();
+toggleCart();
+}
+
+function removeFromCart(index) {
+cart.splice(index, 1);
+updateCartUI();
+}
+
+function updateCartUI() {
+const container = document.getElementById('cartItemsContainer');
+const totalPriceEl = document.getElementById('cartTotalPrice');
+container.innerHTML = '';
+
+if (cart.length === 0) {
+container.innerHTML = '<p style="color:var(--text-muted); text-align:center; margin-top:2rem;">سبد خرید شما خالی است.</p>';
+totalPriceEl.innerText = '۰ تومان';
+return;
+}
+
+let total = 0;
+cart.forEach((item, index) => {
+total += item.price;
+container.innerHTML += &lt;div class="cart-item"&gt; &lt;div class="cart-item-info"&gt; &lt;h4&gt;${item.name}</h4>
+<span>${item.price.toLocaleString()} تومان&lt;/span&gt; &lt;/div&gt; &lt;button class="remove-item" onclick="removeFromCart(${index})">🗑️</button>
+</div>
+`;
+});
+
+totalPriceEl.innerText = total.toLocaleString() + ' تومان';
+
+// آپدیت لینک تلگرام با جزئیات سبد خرید
+let orderText = encodeURIComponent(cart.map(i => -${i.name} (latex
+{i.price.toLocaleString()} تومان)`).join('\n') + `\nمجموع کل: 
+
+{total.toLocaleString()} تومان); document.getElementById('checkoutBtn').href =https://t.me/meysam2000?text=${orderText};
+}
+
+function submitRepair(event) {
+event.preventDefault();
+let name = document.getElementById('repairName').value;
+let phone = document.getElementById('repairPhone').value;
+let brand = document.getElementById('repairBrand').value;
+let issue = document.getElementById('repairIssue').value;
+
+let msg = encodeURIComponent(درخواست تعمیرات جدید:\nنام:${name}\nشماره تماس: latex
+{phone}\nبرند گوشی: 
+
+{brand}\nنوع خرابی: {msg}`, '_blank');
 }
 </script>
 </body>
