@@ -24,7 +24,7 @@ overflow-x: hidden;
 header {
 background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.9)), url('https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
 border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-padding: 3rem 1rem;
+padding: 4rem 1rem;
 text-align: center;
 position: relative;
 }
@@ -33,7 +33,7 @@ header::before {
 content: '';
 position: absolute;
 top: 0; left: 0; right: 0; bottom: 0;
-background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(15, 23, 42, 0.8) 100%);
+background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(15, 23, 42, 0.85) 100%);
 z-index: 1;
 }
 
@@ -43,17 +43,17 @@ z-index: 2;
 }
 
 h1 {
-font-size: 3rem;
+font-size: 3.2rem;
 font-weight: 800;
 color: #ffffff;
-margin-bottom: 0.5rem;
+margin-bottom: 0.2rem;
 letter-spacing: -1px;
 text-shadow: 0 4px 20px rgba(56, 189, 248, 0.4);
 }
 
 .subtitle {
-font-size: 1.25rem;
-font-weight: 400;
+font-size: 1.3rem;
+font-weight: 500;
 color: #38bdf8;
 letter-spacing: 2px;
 margin-bottom: 1.5rem;
@@ -74,6 +74,34 @@ font-weight: 500;
 max-width: 1200px;
 margin: 0 auto;
 padding: 3rem 1.5rem;
+}
+
+/* Category Filter Buttons */
+.categories {
+display: flex;
+justify-content: center;
+gap: 10px;
+flex-wrap: wrap;
+margin-bottom: 2.5rem;
+}
+
+.cat-btn {
+background: rgba(30, 41, 59, 0.8);
+color: #94a3b8;
+border: 1px solid rgba(255, 255, 255, 0.08);
+padding: 0.6rem 1.4rem;
+border-radius: 30px;
+cursor: pointer;
+font-size: 0.95rem;
+font-weight: 500;
+transition: all 0.3s ease;
+}
+
+.cat-btn:hover, .cat-btn.active {
+background: #0284c7;
+color: #ffffff;
+border-color: #38bdf8;
+box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
 }
 
 .section-title {
@@ -123,6 +151,17 @@ padding: 1.5rem;
 display: flex;
 flex-direction: column;
 flex-grow: 1;
+}
+
+.product-tag {
+font-size: 0.75rem;
+color: #38bdf8;
+background: rgba(56, 189, 248, 0.1);
+padding: 0.2rem 0.6rem;
+border-radius: 4px;
+width: max-content;
+margin-bottom: 0.5rem;
+font-weight: 600;
 }
 
 .product-title {
@@ -207,53 +246,98 @@ font-weight: 500;
 </header>
 
 <div class="container">
-<h2 class="section-title">محصولات پرفروش لوازم جانبی</h2>
+<!-- دسته‌بندی‌ها -->
+<div class="categories">
+<button class="cat-btn active" onclick="filterCategory('all', this)">همه محصولات</button>
+<button class="cat-btn" onclick="filterCategory('case', this)">قاب و گارد</button>
+<button class="cat-btn" onclick="filterCategory('glass', this)">گلس و محافظ</button>
+<button class="cat-btn" onclick="filterCategory('charger', this)">شارژر و کابل</button>
+<button class="cat-btn" onclick="filterCategory('audio', this)">هندزفری و صوت</button>
+</div>
+
+<h2 class="section-title">لیست محصولات فروشگاه</h2>
 
 <div class="products-grid">
-<div class="product-card">
-<img src="https://images.unsplash.com/photo-1601593346740-92561b47e33e?auto=format&fit=crop&w=600&q=80" alt="قاب سیلیکونی اصل" class="product-img">
+<!-- Product 1 -->
+<div class="product-card" data-category="case">
+<img src="https://images.unsplash.com/photo-1601593346740-92561b47e33e?auto=format&fit=crop&w=600&q=80" alt="قاب سیلیکونی" class="product-img">
 <div class="product-body">
+<span class="product-tag">قاب و گارد</span>
 <h3 class="product-title">قاب سیلیکونی اورجینال</h3>
-<p class="product-desc">دارای لایه داخلی مخمل، ضد تعریق، رنگ‌بندی متنوع و مقاوم در برابر ضربه برای انواع مدل‌های آیفون و سامسونگ.</p>
+<p class="product-desc">لایه داخلی مخمل، ضد تعریق، رنگ‌بندی متنوع و مقاوم در برابر ضربه برای انواع مدل‌ها.</p>
 <div class="product-footer">
 <div class="price">۲۸۰,۰۰۰ <span>تومان</span></div>
-<button class="btn-buy" onclick="alert('برای ثبت سفارش محصول با مدیریت (پاکروان) تماس بگیرید.')">خرید محصول</button>
+<button class="btn-buy" onclick="alert('برای ثبت سفارش قاب سیلیکونی با مدیریت (پاکروان) تماس بگیرید.')">خرید محصول</button>
 </div>
 </div>
 </div>
 
-<div class="product-card">
-<img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="گلس سرامیکی مات" class="product-img">
+<!-- Product 2 -->
+<div class="product-card" data-category="glass">
+<img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="گلس سرامیکی" class="product-img">
 <div class="product-body">
-<h3 class="product-title">محافظ صفحه (گلس) سرامیکی مات</h3>
-<p class="product-desc">پوشش کامل صفحه نمایش، ضد اثر انگشت، مقاومت بالا در برابر خط و خش و ضربه بدون افت کیفیت تاچ.</p>
+<span class="product-tag">گلس و محافظ</span>
+<h3 class="product-title">محافظ صفحه سرامیکی مات</h3>
+<p class="product-desc">پوشش کامل صفحه نمایش، ضد اثر انگشت و خط و خش بدون افت کیفیت تاچ.</p>
 <div class="product-footer">
 <div class="price">۱۵۰,۰۰۰ <span>تومان</span></div>
-<button class="btn-buy" onclick="alert('برای ثبت سفارش محصول با مدیریت (پاکروان) تماس بگیرید.')">خرید محصول</button>
+<button class="btn-buy" onclick="alert('برای ثبت سفارش گلس با مدیریت (پاکروان) تماس بگیرید.')">خرید محصول</button>
 </div>
 </div>
 </div>
 
-<div class="product-card">
-<img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80" alt="شارژر فست اصلی" class="product-img">
+<!-- Product 3 -->
+<div class="product-card" data-category="charger">
+<img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80" alt="شارژر فست" class="product-img">
 <div class="product-body">
+<span class="product-tag">شارژر و کابل</span>
 <h3 class="product-title">کلید شارژر فست شارژ اصلی</h3>
-<p class="product-desc">پشتیبانی از فناوری شارژ سریع، جریان خروجی پایدار، ایمن در برابر نوسانات برق و داغ شدن.</p>
+<p class="product-desc">پشتیبانی از شارژ سریع، جریان خروجی پایدار، ایمن در برابر نوسانات برق.</p>
 <div class="product-footer">
 <div class="price">۴۵۰,۰۰۰ <span>تومان</span></div>
-<button class="btn-buy" onclick="alert('برای ثبت سفارش محصول با مدیریت (پاکروان) تماس بگیرید.')">خرید محصول</button>
+<button class="btn-buy" onclick="alert('برای ثبت سفارش شارژر با مدیریت (پاکروان) تماس بگیرید.')">خرید محصول</button>
 </div>
 </div>
 </div>
 
-<div class="product-card">
+<!-- Product 4 -->
+<div class="product-card" data-category="audio">
 <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80" alt="هندزفری بلوتوثی" class="product-img">
 <div class="product-body">
+<span class="product-tag">هندزفری و صوت</span>
 <h3 class="product-title">هندزفری بلوتوثی مدل AirDots</h3>
-<p class="product-desc">کیفیت صدای استریو بیس‌دار، بلوتوث نسخه ۵.۳، نگهداری شارژ عالی مناسب مکالمه و موزیک.</p>
+<p class="product-desc">کیفیت صدای استریو بیس‌دار، بلوتوث نسخه ۵.۳، نگهداری شارژ عالی.</p>
 <div class="product-footer">
 <div class="price">۶۸۰,۰۰۰ <span>تومان</span></div>
-<button class="btn-buy" onclick="alert('برای ثبت سفارش محصول با مدیریت (پاکروان) تماس بگیرید.')">خرید محصول</button>
+<button class="btn-buy" onclick="alert('برای ثبت سفارش هندزفری با مدیریت (پاکروان) تماس بگیرید.')">خرید محصول</button>
+</div>
+</div>
+</div>
+
+<!-- Product 5 -->
+<div class="product-card" data-category="charger">
+<img src="https://images.unsplash.com/photo-1622445275576-725325740f9e?auto=format&fit=crop&w=600&q=80" alt="کابل شارژ" class="product-img">
+<div class="product-body">
+<span class="product-tag">شارژر و کابل</span>
+<h3 class="product-title">کابل تایپ سی کتان فست</h3>
+<p class="product-desc">مقاوم در برابر کشش و قطع شدن، مناسب انتقال دیتا و شارژ سریع.</p>
+<div class="product-footer">
+<div class="price">۱۳۰,۰۰۰ <span>تومان</span></div>
+<button class="btn-buy" onclick="alert('برای ثبت سفارش کابل با مدیریت (پاکروان) تماس بگیرید.')">خرید محصول</button>
+</div>
+</div>
+</div>
+
+<!-- Product 6 -->
+<div class="product-card" data-category="case">
+<img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=600&q=80" alt="قاب ضد ضربه" class="product-img">
+<div class="product-body">
+<span class="product-tag">قاب و گارد</span>
+<h3 class="product-title">گارد محافظ ضد ضربه زرهی</h3>
+<p class="product-desc">حفاظت کامل از لنز دوربین و بدنه‌ی گوشی در برابر سقوط از ارتفاع.</p>
+<div class="product-footer">
+<div class="price">۳۴۰,۰۰۰ <span>تومان</span></div>
+<button class="btn-buy" onclick="alert('برای ثبت سفارش گارد زرهی با مدیریت (پاکروان) تماس بگیرید.')">خرید محصول</button>
 </div>
 </div>
 </div>
@@ -265,5 +349,21 @@ font-weight: 500;
 <p>تمامی حقوق محفوظ است © ۲۰۲۶</p>
 </footer>
 
+<script>
+function filterCategory(category, button) {
+// تغییر دکمه فعال
+document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
+button.classList.add('active');
+
+// فیلتر کردن محصولات
+document.querySelectorAll('.product-card').forEach(card => {
+if (category === 'all' || card.dataset.category === category) {
+card.style.display = 'flex';
+} else {
+card.style.display = 'none';
+}
+});
+}
+</script>
 </body>
 </html>
