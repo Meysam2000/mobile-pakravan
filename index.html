@@ -4,11 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Meta Tags for SEO -->
-<title>موبایل اپل - پاکروان | مرکز تخصصی لوازم جانبی و تعمیرات موبایل</title>
-<meta name="description" content="خرید آنلاین انواع قاب و گارد گوشی، گلس محافظ صفحه، شارژر فست اصلی، هندزفری و لوازم جانبی موبایل با بهترین قیمت. مدیریت: پاکروان. ارسال به سراسر کشور.">
-<meta name="keywords" content="لوازم جانبی موبایل, قاب گوشی, گلس, شارژر فست, هندزفری بلوتوثی, موبایل اپل پاکروان, خرید لوازم جانبی موبایل">
+<!-- Meta Tags for SEO & Google Visibility -->
+<title>موبایل اپل - پاکروان | مرکز تخصصی لوازم جانبی و قاب گوشی</title>
+<meta name="description" content="⚡ خرید آنلاین انواع قاب گوشی، گلس محافظ صفحه، شارژر فست اصلی و هندزفری با بهترین قیمت و ارسال فوری. مدیریت: پاکروان. کلیک کنید و تخفیف بگیرید!">
+<meta name="keywords" content="خرید قاب گوشی, گلس موبایل, شارژر فست اصلی, لوازم جانبی موبایل پاکروان, قیمت قاب آیفون">
 <meta name="author" content="پاکروان">
+
+<!-- Open Graph / Social Media Meta Tags for better sharing -->
+<meta property="og:title" content="موبایل اپل - پاکروان | لوازم جانبی موبایل">
+<meta property="og:description" content="بهترین و باکیفیت‌ترین لوازم جانبی موبایل با ضمانت اصالت. ارسال به سراسر کشور.">
+<meta property="og:type" content="website">
 
 <!-- Fonts: Vazirmatn & Lalezar -->
 <style>
@@ -46,7 +51,7 @@ padding-bottom: 80px;
 position: relative;
 }
 
-/* پس‌زمینه روان و متحرک (Fluid Dynamic Background) با رنگ‌های جدید */
+/* پس‌زمینه روان و متحرک */
 body::before, body::after {
 content: '';
 position: fixed;
@@ -78,7 +83,7 @@ animation-delay: -7s;
 100% { transform: translate(-50px, 60px) scale(0.85); }
 }
 
-/* Header & Hero با انیمیشن ورود */
+/* Header & Hero */
 header {
 background: linear-gradient(180deg, rgba(3, 7, 18, 0.9), rgba(15, 23, 42, 0.95));
 border-bottom: 1px solid var(--border-color);
@@ -120,7 +125,6 @@ animation: badgePulse 3s infinite alternate;
 100% { transform: scale(1.03); box-shadow: 0 0 30px rgba(244, 63, 94, 0.4); }
 }
 
-/* سرتیتر خیره‌کننده و متحرک جدید */
 .glitch-title {
 font-family: 'Lalezar', cursive;
 font-size: 4.2rem;
@@ -148,7 +152,6 @@ margin-bottom: 2rem;
 letter-spacing: 0.5px;
 }
 
-/* دکمه‌های اجتماعی */
 .social-buttons {
 display: flex;
 justify-content: center;
@@ -181,7 +184,6 @@ filter: brightness(1.2);
 .btn-whatsapp { background: linear-gradient(135deg, #25d366, #128c7e); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45); }
 .btn-rubika { background: linear-gradient(135deg, #7c3aed, #a855f7); box-shadow: 0 8px 25px rgba(124, 58, 237, 0.45); }
 
-/* نوار جستجو */
 .search-box {
 position: relative;
 max-width: 580px;
@@ -216,7 +218,6 @@ top: 50%;
 transform: translateY(-50%);
 color: #f43f5e;
 font-size: 1.25rem;
-transition: transform 0.3s ease;
 }
 
 /* بنرهای تبلیغاتی */
@@ -234,26 +235,12 @@ color: white;
 text-align: center;
 margin-bottom: 1.2rem;
 box-shadow: 0 12px 35px rgba(79, 70, 229, 0.4);
-position: relative;
-overflow: hidden;
-transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.main-promo-banner:hover {
-transform: translateY(-4px);
-box-shadow: 0 18px 45px rgba(79, 70, 229, 0.6);
 }
 
 .main-promo-banner h2 {
 font-family: 'Lalezar', cursive;
 font-size: 2.7rem;
 margin-bottom: 0.4rem;
-letter-spacing: 1px;
-}
-
-.main-promo-banner p {
-font-size: 1.05rem;
-opacity: 0.95;
 }
 
 .promo-grid {
@@ -272,30 +259,12 @@ min-height: 140px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-cursor: pointer;
-}
-
-.sub-promo-banner:hover {
-transform: translateY(-6px) scale(1.02);
-filter: brightness(1.15);
-box-shadow: 0 15px 35px rgba(0,0,0,0.5);
 }
 
 .sub-promo-1 { background: var(--gradient-banner-2); }
 .sub-promo-2 { background: var(--gradient-banner-3); }
 
-.sub-promo-banner h4 {
-font-size: 1.15rem;
-font-weight: 800;
-}
-
-.sub-promo-banner span {
-font-size: 0.9rem;
-opacity: 0.95;
-}
-
-/* دسته‌بندی‌ها */
+/* محصولات و دسته‌بندی‌ها */
 .container {
 max-width: 1200px;
 margin: 0 auto;
@@ -319,8 +288,7 @@ border-radius: 14px;
 cursor: pointer;
 font-size: 0.95rem;
 font-weight: 600;
-backdrop-filter: blur(15px);
-transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+transition: all 0.4s ease;
 }
 
 .cat-btn:hover, .cat-btn.active {
@@ -328,10 +296,9 @@ background: var(--gradient-primary);
 color: #ffffff;
 border-color: transparent;
 box-shadow: var(--glow-pink);
-transform: translateY(-5px) scale(1.05);
+transform: translateY(-50px scale(1.05);
 }
 
-/* محصولات */
 .products-grid {
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -354,7 +321,6 @@ box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 transform: translateY(-12px) scale(1.02);
 box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), var(--glow-main);
 border-color: rgba(244, 63, 94, 0.6);
-background: var(--bg-card-hover);
 }
 
 .product-img-wrapper {
@@ -369,7 +335,7 @@ background: #030712;
 width: 100%;
 height: 100%;
 object-fit: cover;
-transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+transition: transform 0.7s ease;
 }
 
 .product-card:hover .product-img {
@@ -381,7 +347,6 @@ position: absolute;
 top: 14px;
 right: 14px;
 background: rgba(3, 7, 18, 0.85);
-backdrop-filter: blur(10px);
 color: #ffe4e6;
 border: 1px solid rgba(244, 63, 94, 0.4);
 padding: 0.35rem 1rem;
@@ -402,11 +367,6 @@ font-size: 1.2rem;
 font-weight: 800;
 margin-bottom: 0.6rem;
 color: #ffffff;
-transition: color 0.3s ease;
-}
-
-.product-card:hover .product-title {
-color: #f43f5e;
 }
 
 .product-desc {
@@ -429,7 +389,6 @@ border-top: 1px solid var(--border-color);
 font-size: 1.15rem;
 font-weight: 900;
 color: #38bdf8;
-text-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
 }
 
 .price span {
@@ -448,8 +407,8 @@ border-radius: 12px;
 font-size: 0.88rem;
 font-weight: 700;
 cursor: pointer;
-transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
 text-decoration: none;
+transition: all 0.35s ease;
 }
 
 .btn-buy:hover {
@@ -457,7 +416,6 @@ background: var(--gradient-primary);
 color: #ffffff;
 box-shadow: var(--glow-pink);
 border-color: transparent;
-transform: scale(1.08) translateY(-2px);
 }
 
 /* منوی پایین صفحه */
@@ -488,22 +446,11 @@ gap: 4px;
 transition: all 0.3s ease;
 }
 
-.nav-item span.icon {
-font-size: 1.3rem;
-transition: transform 0.3s ease;
-}
-
-.nav-item:hover span.icon, .nav-item.active span.icon {
-transform: translateY(-3px) scale(1.15);
-}
-
 .nav-item.active, .nav-item:hover {
 color: #f43f5e;
 font-weight: 700;
-text-shadow: 0 0 10px rgba(244, 63, 94, 0.4);
 }
 
-/* فوتر */
 footer {
 background: #010409;
 border-top: 1px solid var(--border-color);
@@ -525,13 +472,6 @@ margin: 1.8rem 0;
 color: #ffe4e6;
 text-decoration: none;
 font-weight: 700;
-transition: all 0.3s ease;
-}
-
-.footer-socials a:hover {
-color: #ffffff;
-text-shadow: 0 0 20px rgba(244, 63, 94, 0.9);
-transform: translateY(-3px);
 }
 
 .store-owner {
@@ -548,7 +488,6 @@ background: var(--gradient-primary);
 <header>
 <div class="header-container">
 <div class="store-badge">⚡ مرکز تخصصی لوازم جانبی موبایل</div>
-<!-- سرتیتر خیره‌کننده جدید با افکت گرادینت متحرک -->
 <h1 class="glitch-title">موبایل اپل | کهکشان دیجیتال</h1>
 <div class="subtitle">مدیریت: پاکروان</div>
 
@@ -565,7 +504,6 @@ background: var(--gradient-primary);
 </div>
 </header>
 
-<!-- بنرهای تبلیغاتی -->
 <section class="banners-section">
 <div class="main-promo-banner">
 <h2>تنوع بی‌نظیر گجت‌های هوشمند</h2>
@@ -584,7 +522,6 @@ background: var(--gradient-primary);
 </section>
 
 <div class="container">
-<!-- دسته‌بندی‌ها -->
 <div class="categories">
 <button class="cat-btn active" onclick="filterCategory('all', this)">همه محصولات</button>
 <button class="cat-btn" onclick="filterCategory('case', this)">قاب و گارد</button>
@@ -593,7 +530,6 @@ background: var(--gradient-primary);
 <button class="cat-btn" onclick="filterCategory('audio', this)">هندزفری و صوت</button>
 </div>
 
-<!-- محصولات -->
 <div class="products-grid" id="productsGrid">
 <div class="product-card" data-category="case" data-name="قاب سیلیکونی اورجینال">
 <div class="product-img-wrapper">
@@ -657,23 +593,18 @@ background: var(--gradient-primary);
 </div>
 </div>
 
-<!-- منوی پایین صفحه -->
 <nav class="bottom-nav">
 <a href="https://t.me/Kapitan0913" target="_blank" class="nav-item">
-<span class="icon">👤</span>
-ورود/ارتباط
+<span class="icon">👤</span>ورود/ارتباط
 </a>
 <a href="https://t.me/Kapitan0913" target="_blank" class="nav-item">
-<span class="icon">🛒</span>
-ثبت سفارش
+<span class="icon">🛒</span>ثبت سفارش
 </a>
 <a href="#searchInput" class="nav-item">
-<span class="icon">🗂️</span>
-دسته محصولات
+<span class="icon">🗂️</span>دسته محصولات
 </a>
 <a href="#" class="nav-item active">
-<span class="icon">🏠</span>
-خانه
+<span class="icon">🏠</span>خانه
 </a>
 </nav>
 
