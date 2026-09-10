@@ -43,7 +43,7 @@ background-color: var(--bg-main);
 color: var(--text-main);
 line-height: 1.8;
 overflow-x: hidden;
-padding-bottom: 90px;
+padding-bottom: 150px; /* افزایش فاصله پایین برای جلوگیری از پوشش منوی ثابت روی محصولات */
 position: relative;
 }
 
@@ -747,9 +747,9 @@ background: var(--gradient-primary);
 <div class="subtitle">مدیریت: پاکروان</div>
 
 <div class="social-buttons">
-<a href="https://t.me/meysam2000" target="_blank" class="social-btn btn-telegram">💬 تلگرام سفارش</a>
-<a href="https://wa.me/989140000000" target="_blank" class="social-btn btn-whatsapp">🟢 واتساپ سفارش</a>
-<a href="https://rubika.ir/meysam2000" target="_blank" class="social-btn btn-rubika">🟣 روبیکا سفارش</a>
+<a href="https://t.me/Kapitan0913" target="_blank" class="social-btn btn-telegram">💬 تلگرام سفارش</a>
+<a href="https://wa.me/989354263705" target="_blank" class="social-btn btn-whatsapp">🟢 واتساپ سفارش</a>
+<a href="https://rubika.ir/Alfa0912" target="_blank" class="social-btn btn-rubika">🟣 روبیکا سفارش</a>
 </div>
 
 <div class="search-box">
@@ -777,14 +777,14 @@ background: var(--gradient-primary);
 </div>
 </section>
 
-<!-- بخش ثبت درخواست تعمیرات آنلاین -->
+<!-- بخش ثبت درخواست تعمیرات -->
 <section class="repair-section" id="repairSection">
 <div class="repair-card">
 <h3>ثبت درخواست تعمیرات موبایل</h3>
 <p>گوشی شما دچار مشکل شده؟ فرم زیر را پر کنید تا کارشناسان ما با شما تماس بگیرند.</p>
 <form class="repair-form" onsubmit="submitRepair(event)">
 <input type="text" placeholder="نام و نام خانوادگی" class="repair-input" required id="repairName">
-<input type="tel" placeholder="شماره تماس (مثلاً 0914...)" class="repair-input" required id="repairPhone">
+<input type="tel" placeholder="شماره تماس (مثلاً 0935...)" class="repair-input" required id="repairPhone">
 <select class="repair-select" id="repairBrand">
 <option value="" disabled selected>انتخاب برند گوشی</option>
 <option value="Apple">آیفون (Apple)</option>
@@ -818,6 +818,36 @@ background: var(--gradient-primary);
 
 <!-- محصولات -->
 <div class="products-grid" id="productsGrid">
+<article class="product-card" data-category="glass" data-name="محافظ صفحه og glass">
+<div class="product-img-wrapper">
+<span class="product-badge">لوکس / OG</span>
+<img src="آدرس_عکس_OG_شما" alt="محافظ صفحه OG Glass" class="product-img">
+</div>
+<div class="product-body">
+<h3 class="product-title">محافظ صفحه OG Glass</h3>
+<p class="product-desc">فناوری ESD Anti-Static، شفافیت فوق‌العاده و مقاومت درجه سختی 9H.</p>
+<div class="product-footer">
+<div class="price">۳۷۰,۰۰۰ <span>تومان</span></div>
+<button class="btn-buy" onclick="addToCart('محافظ صفحه OG Glass', 370000)">افزودن به سبد</button>
+</div>
+</div>
+</article>
+
+<article class="product-card" data-category="glass" data-name="محافظ صفحه anti static">
+<div class="product-img-wrapper">
+<span class="product-badge">Anti-Static</span>
+<img src="آدرس_عکس_Antistatic_شما" alt="محافظ صفحه Anti-Static" class="product-img">
+</div>
+<div class="product-body">
+<h3 class="product-title">محافظ صفحه Anti-Static</h3>
+<p class="product-desc">ضد گرد و غبار، نصب آسان و وضوح تصویر بالا با کیفیت HD.</p>
+<div class="product-footer">
+<div class="price">۲۸۰,۰۰۰ <span>تومان</span></div>
+<button class="btn-buy" onclick="addToCart('محافظ صفحه Anti-Static', 280000)">افزودن به سبد</button>
+</div>
+</div>
+</article>
+
 <article class="product-card" data-category="case" data-name="قاب سیلیکونی اورجینال">
 <div class="product-img-wrapper">
 <span class="product-badge">پرفروش</span>
@@ -829,21 +859,6 @@ background: var(--gradient-primary);
 <div class="product-footer">
 <div class="price">۲۸۰,۰۰۰ <span>تومان</span></div>
 <button class="btn-buy" onclick="addToCart('قاب سیلیکونی اورجینال', 280000)">افزودن به سبد</button>
-</div>
-</div>
-</article>
-
-<article class="product-card" data-category="glass" data-name="محافظ صفحه سرامیکی مات">
-<div class="product-img-wrapper">
-<span class="product-badge">مقاوم</span>
-<img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="گلس و محافظ صفحه سرامیکی مات" class="product-img">
-</div>
-<div class="product-body">
-<h3 class="product-title">محافظ صفحه سرامیکی مات</h3>
-<p class="product-desc">پوشش کامل صفحه نمایش، ضد اثر انگشت و خط و خش بدون افت کیفیت تاچ.</p>
-<div class="product-footer">
-<div class="price">۱۵۰,۰۰۰ <span>تومان</span></div>
-<button class="btn-buy" onclick="addToCart('محافظ صفحه سرامیکی مات', 150000)">افزودن به سبد</button>
 </div>
 </div>
 </article>
@@ -863,7 +878,7 @@ background: var(--gradient-primary);
 </div>
 </article>
 
-<article class="product-card" data-category="audio" data-name="هندزفری بلوتوثی مدل AirDots">
+<article class="product-card" data-category="audio" data-name="هندزفری بلوتوثی مدل airdots">
 <div class="product-img-wrapper">
 <span class="product-badge">محبوب</span>
 <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80" alt="هندزفری بلوتوثی ایرداتس" class="product-img">
@@ -885,25 +900,10 @@ background: var(--gradient-primary);
 </div>
 <div class="product-body">
 <h3 class="product-title">پاوربانک ۲۰۰۰۰ میلی‌آمپر فست</h3>
-<p class="product-desc">دارای دو پرو خروجی USB و پورت Type-C با قابلیت شارژ سریع دوطرفه.</p>
+<p class="product-desc">دارای دو پورت خروجی USB و پورت Type-C با قابلیت شارژ سریع دوطرفه.</p>
 <div class="product-footer">
 <div class="price">۱,۲۵۰,۰۰۰ <span>تومان</span></div>
 <button class="btn-buy" onclick="addToCart('پاوربانک ۲۰۰۰۰ میلی‌آمپر', 1250000)">افزودن به سبد</button>
-</div>
-</div>
-</article>
-
-<article class="product-card" data-category="gadget" data-name="هولدر مگنتی موبایل خودرو">
-<div class="product-img-wrapper">
-<span class="product-badge">کاربردی</span>
-<img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="هولدر خودرو" class="product-img">
-</div>
-<div class="product-body">
-<h3 class="product-title">هولدر مگنتی داشبوردی خودرو</h3>
-<p class="product-desc">مگنت بسیار قوی، قابلیت چرخش ۳۶۰ درجه و نصب آسان روی داشبورد یا دریچه کولر.</p>
-<div class="product-footer">
-<div class="price">۲۱۰,۰۰۰ <span>تومان</span></div>
-<button class="btn-buy" onclick="addToCart('هولدر مگنتی خودرو', 210000)">افزودن به سبد</button>
 </div>
 </div>
 </article>
@@ -924,7 +924,7 @@ background: var(--gradient-primary);
 <span>مجموع:</span>
 <span id="cartTotalPrice">۰ تومان</span>
 </div>
-<a href="https://t.me/meysam2000" target="_blank" class="checkout-btn" id="checkoutBtn">تایید و ارسال سفارش به تلگرام</a>
+<a href="https://t.me/Kapitan0913" target="_blank" class="checkout-btn" id="checkoutBtn">تایید و ارسال سفارش به تلگرام</a>
 </div>
 </div>
 
@@ -951,9 +951,9 @@ background: var(--gradient-primary);
 <footer>
 <p>فروشگاه <span class="store-owner">موبایل اپل - پاکروان</span></p>
 <div class="footer-socials">
-<a href="https://t.me/meysam2000" target="_blank">تلگرام</a>
-<a href="https://wa.me/989140000000" target="_blank">واتساپ</a>
-<a href="https://rubika.ir/meysam2000" target="_blank">روبیکا</a>
+<a href="https://t.me/Kapitan0913" target="_blank">تلگرام</a>
+<a href="https://wa.me/989354263705" target="_blank">واتساپ</a>
+<a href="https://rubika.ir/Alfa0912" target="_blank">روبیکا</a>
 </div>
 <p>تمامی حقوق محفوظ است © ۲۰۲۶</p>
 </footer>
@@ -1023,11 +1023,10 @@ container.innerHTML += &lt;div class="cart-item"&gt; &lt;div class="cart-item-in
 
 totalPriceEl.innerText = total.toLocaleString() + ' تومان';
 
-// آپدیت لینک تلگرام با جزئیات سبد خرید
 let orderText = encodeURIComponent(cart.map(i => -${i.name} (latex
 {i.price.toLocaleString()} تومان)`).join('\n') + `\nمجموع کل: 
 
-{total.toLocaleString()} تومان); document.getElementById('checkoutBtn').href =https://t.me/meysam2000?text=${orderText};
+{total.toLocaleString()} تومان); document.getElementById('checkoutBtn').href =https://t.me/Kapitan0913?text=${orderText};
 }
 
 function submitRepair(event) {
