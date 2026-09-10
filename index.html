@@ -3,646 +3,105 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- Meta Tags for SEO & Google Visibility -->
-<title>موبایل اپل - پاکروان | مرکز تخصصی لوازم جانبی و قاب گوشی</title>
-<meta name="description" content="⚡ خرید آنلاین انواع قاب گوشی، گلس محافظ صفحه، شارژر فست اصلی و هندزفری با بهترین قیمت و ارسال فوری. مدیریت: پاکروان. کلیک کنید و تخفیف بگیرید!">
-<meta name="keywords" content="خرید قاب گوشی, گلس موبایل, شارژر فست اصلی, لوازم جانبی موبایل پاکروان, قیمت قاب آیفون">
-<meta name="author" content="پاکروان">
-
-<!-- Open Graph / Social Media Meta Tags for better sharing -->
-<meta property="og:title" content="موبایل اپل - پاکروان | لوازم جانبی موبایل">
-<meta property="og:description" content="بهترین و باکیفیت‌ترین لوازم جانبی موبایل با ضمانت اصالت. ارسال به سراسر کشور.">
-<meta property="og:type" content="website">
-
-<!-- Fonts: Vazirmatn & Lalezar -->
+<title>لوازم جانبی موبایل پاکروان | خرید قاب، گارد و شارژر اصل</title>
+<meta name="description" content="فروشگاه لوازم جانبی موبایل پاکروان - مرکز تخصصی فروش انواع قاب گوشی، گلس محافظ صفحه، شارژر اصل و تجهیزات جانبی موبایل با بهترین کیفیت و قیمت.">
+<meta name="keywords" content="لوازم جانبی موبایل, قاب گوشی, گلس, شارژر اصل, موبایل پاکروان">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
-
 :root {
---bg-main: #030712;
---bg-card: rgba(15, 23, 42, 0.75);
---bg-card-hover: rgba(30, 41, 59, 0.9);
---gradient-primary: linear-gradient(135deg, #f43f5e, #fb923c);
---gradient-banner-1: linear-gradient(135deg, #4f46e5, #06b6d4);
---gradient-banner-2: linear-gradient(135deg, #ec4899, #8b5cf6);
---gradient-banner-3: linear-gradient(135deg, #10b981, #3b82f6);
---text-main: #f8fafc;
---text-muted: #94a3b8;
---border-color: rgba(244, 63, 94, 0.3);
---glow-main: 0 0 50px rgba(244, 63, 94, 0.4);
---glow-pink: 0 0 50px rgba(251, 146, 60, 0.4);
+--bg-color: #0d0e15;
+--card-bg: #161824;
+--neon-pink: #ff2a6d;
+--neon-blue: #05d9e8;
+--text-main: #ffffff;
+--text-muted: #a0a0ab;
 }
-
-• {
+* {
 box-sizing: border-box;
 margin: 0;
 padding: 0;
-font-family: 'Vazirmatn', sans-serif;
+font-family: Tahoma, sans-serif;
 }
-
 body {
-background-color: var(--bg-main);
+background-color: var(--bg-color);
 color: var(--text-main);
-line-height: 1.8;
-overflow-x: hidden;
-padding-bottom: 80px;
-position: relative;
-}
-
-/* پس‌زمینه روان و متحرک */
-body::before, body::after {
-content: '';
-position: fixed;
-width: 500px;
-height: 500px;
-border-radius: 50%;
-filter: blur(120px);
-z-index: -1;
-opacity: 0.3;
-animation: fluidMove 14s infinite alternate ease-in-out;
-}
-
-body::before {
-background: #4f46e5;
-top: -150px;
-left: -150px;
-}
-
-body::after {
-background: #f43f5e;
-bottom: -150px;
-right: -150px;
-animation-delay: -7s;
-}
-
-@keyframes fluidMove {
-0% { transform: translate(0, 0) scale(1); }
-50% { transform: translate(70px, 90px) scale(1.2); }
-100% { transform: translate(-50px, 60px) scale(0.85); }
-}
-
-/* Header & Hero */
-header {
-background: linear-gradient(180deg, rgba(3, 7, 18, 0.9), rgba(15, 23, 42, 0.95));
-border-bottom: 1px solid var(--border-color);
-padding: 3.5rem 1rem 2.5rem;
+padding: 20px;
 text-align: center;
-position: relative;
-overflow: hidden;
+direction: rtl;
 }
-
-.header-container {
+header {
+margin-bottom: 40px;
+padding: 20px;
+}
+h1 {
+font-size: 2rem;
+color: var(--neon-blue);
+text-shadow: 0 0 10px rgba(5, 217, 232, 0.5);
+margin-bottom: 10px;
+}
+p.subtitle {
+color: var(--text-muted);
+font-size: 1.1rem;
+}
+.container {
 max-width: 800px;
 margin: 0 auto;
-animation: fadeInDown 1s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-@keyframes fadeInDown {
-from { opacity: 0; transform: translateY(-30px); }
-to { opacity: 1; transform: translateY(0); }
-}
-
-.store-badge {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-background: rgba(244, 63, 94, 0.15);
-color: #ffe4e6;
-border: 1px solid rgba(244, 63, 94, 0.4);
-padding: 0.45rem 1.6rem;
-border-radius: 50px;
-font-size: 0.9rem;
-font-weight: 600;
-margin-bottom: 1.2rem;
-box-shadow: 0 0 20px rgba(244, 63, 94, 0.2);
-animation: badgePulse 3s infinite alternate;
-}
-
-@keyframes badgePulse {
-0% { transform: scale(1); box-shadow: 0 0 15px rgba(244, 63, 94, 0.2); }
-100% { transform: scale(1.03); box-shadow: 0 0 30px rgba(244, 63, 94, 0.4); }
-}
-
-.glitch-title {
-font-family: 'Lalezar', cursive;
-font-size: 4.2rem;
-font-weight: 400;
-color: #ffffff;
-margin-bottom: 0.2rem;
-background: linear-gradient(135deg, #fff 10%, #f43f5e 40%, #fb923c 70%, #38bdf8 100%);
-background-size: 200% auto;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-animation: textShine 5s linear infinite;
-filter: drop-shadow(0 0 30px rgba(244, 63, 94, 0.5));
-}
-
-@keyframes textShine {
-0% { background-position: 0% 50%; }
-50% { background-position: 100% 50%; }
-100% { background-position: 0% 50%; }
-}
-
-.subtitle {
-font-size: 1.15rem;
-color: var(--text-muted);
-margin-bottom: 2rem;
-letter-spacing: 0.5px;
-}
-
-.social-buttons {
-display: flex;
-justify-content: center;
-gap: 14px;
-flex-wrap: wrap;
-margin-bottom: 2.2rem;
-}
-
-.social-btn {
-display: inline-flex;
-align-items: center;
-gap: 8px;
-padding: 0.75rem 1.7rem;
-border-radius: 16px;
-font-size: 0.95rem;
-font-weight: 700;
-text-decoration: none;
-color: white;
-transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-position: relative;
-overflow: hidden;
-}
-
-.social-btn:hover {
-transform: translateY(-6px) scale(1.05);
-filter: brightness(1.2);
-}
-
-.btn-telegram { background: linear-gradient(135deg, #0088cc, #229ed9); box-shadow: 0 8px 25px rgba(0, 136, 204, 0.45); }
-.btn-whatsapp { background: linear-gradient(135deg, #25d366, #128c7e); box-shadow: 0 8px 25px rgba(37, 211, 102, 0.45); }
-.btn-rubika { background: linear-gradient(135deg, #7c3aed, #a855f7); box-shadow: 0 8px 25px rgba(124, 58, 237, 0.45); }
-
-.search-box {
-position: relative;
-max-width: 580px;
-margin: 0 auto;
-}
-
-.search-input {
-width: 100%;
-background: rgba(15, 23, 42, 0.85);
-border: 1px solid var(--border-color);
-padding: 1.1rem 1.6rem;
-padding-right: 3.6rem;
-border-radius: 50px;
-color: #fff;
-font-size: 1.05rem;
-outline: none;
-backdrop-filter: blur(20px);
-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-.search-input:focus {
-border-color: #f43f5e;
-box-shadow: var(--glow-main), 0 15px 35px rgba(0,0,0,0.7);
-transform: scale(1.02);
-}
-
-.search-icon {
-position: absolute;
-right: 1.5rem;
-top: 50%;
-transform: translateY(-50%);
-color: #f43f5e;
-font-size: 1.25rem;
-}
-
-/* بنرهای تبلیغاتی */
-.banners-section {
-max-width: 1200px;
-margin: 2.5rem auto 1rem;
-padding: 0 1rem;
-}
-
-.main-promo-banner {
-background: var(--gradient-banner-1);
-border-radius: 22px;
-padding: 2.8rem 2rem;
-color: white;
-text-align: center;
-margin-bottom: 1.2rem;
-box-shadow: 0 12px 35px rgba(79, 70, 229, 0.4);
-}
-
-.main-promo-banner h2 {
-font-family: 'Lalezar', cursive;
-font-size: 2.7rem;
-margin-bottom: 0.4rem;
-}
-
-.promo-grid {
 display: grid;
-grid-template-columns: 1fr 1fr;
-gap: 15px;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
 }
-
-.sub-promo-banner {
-border-radius: 18px;
-padding: 1.6rem;
-color: white;
-text-align: right;
-box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-min-height: 140px;
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-}
-
-.sub-promo-1 { background: var(--gradient-banner-2); }
-.sub-promo-2 { background: var(--gradient-banner-3); }
-
-/* محصولات و دسته‌بندی‌ها */
-.container {
-max-width: 1200px;
-margin: 0 auto;
-padding: 2.5rem 1rem;
-}
-
-.categories {
-display: flex;
-justify-content: center;
-gap: 12px;
-flex-wrap: wrap;
-margin-bottom: 3rem;
-}
-
-.cat-btn {
-background: var(--bg-card);
-color: var(--text-muted);
-border: 1px solid var(--border-color);
-padding: 0.7rem 1.6rem;
-border-radius: 14px;
-cursor: pointer;
-font-size: 0.95rem;
-font-weight: 600;
-transition: all 0.4s ease;
-}
-
-.cat-btn:hover, .cat-btn.active {
-background: var(--gradient-primary);
-color: #ffffff;
-border-color: transparent;
-box-shadow: var(--glow-pink);
-transform: translateY(-50px scale(1.05);
-}
-
-.products-grid {
-display: grid;
-grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-gap: 2.2rem;
-}
-
-.product-card {
-background: var(--bg-card);
-border: 1px solid var(--border-color);
-border-radius: 24px;
-overflow: hidden;
-transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-display: flex;
-flex-direction: column;
-backdrop-filter: blur(15px);
-box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-.product-card:hover {
-transform: translateY(-12px) scale(1.02);
-box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), var(--glow-main);
-border-color: rgba(244, 63, 94, 0.6);
-}
-
-.product-img-wrapper {
-position: relative;
-width: 100%;
-height: 230px;
-overflow: hidden;
-background: #030712;
-}
-
-.product-img {
-width: 100%;
-height: 100%;
-object-fit: cover;
-transition: transform 0.7s ease;
-}
-
-.product-card:hover .product-img {
-transform: scale(1.12) rotate(1deg);
-}
-
-.product-badge {
-position: absolute;
-top: 14px;
-right: 14px;
-background: rgba(3, 7, 18, 0.85);
-color: #ffe4e6;
-border: 1px solid rgba(244, 63, 94, 0.4);
-padding: 0.35rem 1rem;
-border-radius: 16px;
-font-size: 0.8rem;
-font-weight: 700;
-}
-
-.product-body {
-padding: 1.6rem;
-display: flex;
-flex-direction: column;
-flex-grow: 1;
-}
-
-.product-title {
-font-size: 1.2rem;
-font-weight: 800;
-margin-bottom: 0.6rem;
-color: #ffffff;
-}
-
-.product-desc {
-font-size: 0.9rem;
-color: var(--text-muted);
-margin-bottom: 1.6rem;
-flex-grow: 1;
-line-height: 1.65;
-}
-
-.product-footer {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding-top: 1.2rem;
-border-top: 1px solid var(--border-color);
-}
-
-.price {
-font-size: 1.15rem;
-font-weight: 900;
-color: #38bdf8;
-}
-
-.price span {
-font-size: 0.78rem;
-color: var(--text-muted);
-font-weight: 400;
-margin-right: 3px;
-}
-
-.btn-buy {
-background: rgba(244, 63, 94, 0.18);
-color: #ffe4e6;
-border: 1px solid rgba(244, 63, 94, 0.45);
-padding: 0.55rem 1.2rem;
+.card {
+background-color: var(--card-bg);
+border: 1px solid rgba(255, 42, 109, 0.3);
 border-radius: 12px;
-font-size: 0.88rem;
-font-weight: 700;
-cursor: pointer;
-text-decoration: none;
-transition: all 0.35s ease;
+padding: 20px;
+box-shadow: 0 0 15px rgba(255, 42, 109, 0.1);
+transition: transform 0.3s ease;
 }
-
-.btn-buy:hover {
-background: var(--gradient-primary);
-color: #ffffff;
-box-shadow: var(--glow-pink);
-border-color: transparent;
+.card:hover {
+transform: translateY(-5px);
+border-color: var(--neon-pink);
 }
-
-/* منوی پایین صفحه */
-.bottom-nav {
-position: fixed;
-bottom: 0;
-left: 0;
-width: 100%;
-background: rgba(3, 7, 18, 0.85);
-backdrop-filter: blur(25px);
-display: flex;
-justify-content: space-around;
-padding: 12px 0;
-box-shadow: 0 -10px 30px rgba(0,0,0,0.6);
-border-top: 1px solid rgba(244, 63, 94, 0.25);
-z-index: 1000;
+.card h3 {
+color: var(--neon-pink);
+margin-bottom: 15px;
 }
-
-.nav-item {
-text-align: center;
+.card p {
 color: var(--text-muted);
-text-decoration: none;
-font-size: 0.78rem;
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 4px;
-transition: all 0.3s ease;
+font-size: 0.95rem;
+line-height: 1.6;
 }
-
-.nav-item.active, .nav-item:hover {
-color: #f43f5e;
-font-weight: 700;
-}
-
 footer {
-background: #010409;
-border-top: 1px solid var(--border-color);
-text-align: center;
-padding: 3.5rem 1rem;
+margin-top: 50px;
 color: var(--text-muted);
-font-size: 0.92rem;
-margin-top: 5rem;
-}
-
-.footer-socials {
-display: flex;
-justify-content: center;
-gap: 25px;
-margin: 1.8rem 0;
-}
-
-.footer-socials a {
-color: #ffe4e6;
-text-decoration: none;
-font-weight: 700;
-}
-
-.store-owner {
-color: #fff;
-font-weight: 800;
-background: var(--gradient-primary);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+font-size: 0.9rem;
 }
 </style>
 </head>
 <body>
 
 <header>
-<div class="header-container">
-<div class="store-badge">⚡ مرکز تخصصی لوازم جانبی موبایل</div>
-<h1 class="glitch-title">موبایل اپل | کهکشان دیجیتال</h1>
-<div class="subtitle">مدیریت: پاکروان</div>
-
-<div class="social-buttons">
-<a href="https://t.me/Kapitan0913" target="_blank" class="social-btn btn-telegram">💬 تلگرام سفارش</a>
-<a href="https://wa.me/989354263705" target="_blank" class="social-btn btn-whatsapp">🟢 واتساپ سفارش</a>
-<a href="https://rubika.ir/Alfa0912" target="_blank" class="social-btn btn-rubika">🟣 روبیکا سفارش</a>
-</div>
-
-<div class="search-box">
-<input type="text" id="searchInput" class="search-input" placeholder="جستجوی مدل قاب، گلس، شارژر و..." onkeyup="searchProducts()">
-<span class="search-icon">🔍</span>
-</div>
-</div>
+<h1>موبایل اپل - پاکروان</h1>
+<p class="subtitle">مرکز تخصصی لوازم جانبی و تعمیرات موبایل</p>
 </header>
 
-<section class="banners-section">
-<div class="main-promo-banner">
-<h2>تنوع بی‌نظیر گجت‌های هوشمند</h2>
-<p>انواع گجت‌های مراقبت شخصی، ساعت هوشمند و لوازم جانبی لوکس</p>
+<main class="container">
+<div class="card">
+<h3>قاب و گارد گوشی</h3>
+<p>جدیدترین و باکیفیت‌ترین قاب‌های ضد ضربه و فانتزی برای انواع مدل‌های گوشی.</p>
 </div>
-<div class="promo-grid">
-<div class="sub-promo-banner sub-promo-1">
-<h4>لوازم جانبی اورجینال</h4>
-<span>با تضمین اصالت و ضمانت کیفیت</span>
+<div class="card">
+<h3>گلس محافظ صفحه</h3>
+<p>انواع محافظ صفحه نمایش سرامیکی، شیشه‌ای و مات با پوشش کامل و مقاومت بالا.</p>
 </div>
-<div class="sub-promo-banner sub-promo-2">
-<h4>شارژر و کابل‌های فست</h4>
-<span>انکر، سامسونگ، اپل و شیائومی</span>
+<div class="card">
+<h3>شارژر و کابل اصل</h3>
+<p>تضمین اصالت و کیفیت انواع کابل، کلگی شارژر و پاوربانک‌های اورجینال.</p>
 </div>
-</div>
-</section>
-
-<div class="container">
-<div class="categories">
-<button class="cat-btn active" onclick="filterCategory('all', this)">همه محصولات</button>
-<button class="cat-btn" onclick="filterCategory('case', this)">قاب و گارد</button>
-<button class="cat-btn" onclick="filterCategory('glass', this)">گلس و محافظ صفحه</button>
-<button class="cat-btn" onclick="filterCategory('charger', this)">شارژر و کابل</button>
-<button class="cat-btn" onclick="filterCategory('audio', this)">هندزفری و صوت</button>
-</div>
-
-<div class="products-grid" id="productsGrid">
-<div class="product-card" data-category="case" data-name="قاب سیلیکونی اورجینال">
-<div class="product-img-wrapper">
-<span class="product-badge">پرفروش</span>
-<img src="https://images.unsplash.com/photo-1601593346740-92561b47e33e?auto=format&fit=crop&w=600&q=80" alt="قاب سیلیکونی" class="product-img">
-</div>
-<div class="product-body">
-<h3 class="product-title">قاب سیلیکونی اورجینال</h3>
-<p class="product-desc">دارای لایه داخلی مخمل، ضد تعریق، رنگ‌بندی متنوع و مقاوم در برابر ضربه.</p>
-<div class="product-footer">
-<div class="price">۲۸۰,۰۰۰ <span>تومان</span></div>
-<a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
-</div>
-</div>
-</div>
-
-<div class="product-card" data-category="glass" data-name="محافظ صفحه سرامیکی مات">
-<div class="product-img-wrapper">
-<span class="product-badge">مقاوم</span>
-<img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="گلس سرامیکی" class="product-img">
-</div>
-<div class="product-body">
-<h3 class="product-title">محافظ صفحه سرامیکی مات</h3>
-<p class="product-desc">پوشش کامل صفحه نمایش، ضد اثر انگشت و خط و خش بدون افت کیفیت تاچ.</p>
-<div class="product-footer">
-<div class="price">۱۵۰,۰۰۰ <span>تومان</span></div>
-<a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
-</div>
-</div>
-</div>
-
-<div class="product-card" data-category="charger" data-name="کلید شارژر فست شارژ اصلی">
-<div class="product-img-wrapper">
-<span class="product-badge">فست شارژ</span>
-<img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80" alt="شارژر فست" class="product-img">
-</div>
-<div class="product-body">
-<h3 class="product-title">کلید شارژر فست شارژ اصلی</h3>
-<p class="product-desc">پشتیبانی از فناوری شارژ سریع، جریان خروجی پایدار و ایمن در برابر نوسانات.</p>
-<div class="product-footer">
-<div class="price">۴۵۰,۰۰۰ <span>تومان</span></div>
-<a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
-</div>
-</div>
-</div>
-
-<div class="product-card" data-category="audio" data-name="هندزفری بلوتوثی مدل AirDots">
-<div class="product-img-wrapper">
-<span class="product-badge">محبوب</span>
-<img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80" alt="هندزفری بلوتوثی" class="product-img">
-</div>
-<div class="product-body">
-<h3 class="product-title">هندزفری بلوتوثی مدل AirDots</h3>
-<p class="product-desc">کیفیت صدای استریو بیس‌دار، بلوتوث نسخه ۵.۳ و نگهداری شارژ عالی.</p>
-<div class="product-footer">
-<div class="price">۶۸۰,۰۰۰ <span>تومان</span></div>
-<a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-<nav class="bottom-nav">
-<a href="https://t.me/Kapitan0913" target="_blank" class="nav-item">
-<span class="icon">👤</span>ورود/ارتباط
-</a>
-<a href="https://t.me/Kapitan0913" target="_blank" class="nav-item">
-<span class="icon">🛒</span>ثبت سفارش
-</a>
-<a href="#searchInput" class="nav-item">
-<span class="icon">🗂️</span>دسته محصولات
-</a>
-<a href="#" class="nav-item active">
-<span class="icon">🏠</span>خانه
-</a>
-</nav>
+</main>
 
 <footer>
-<p>فروشگاه <span class="store-owner">موبایل اپل - پاکروان</span></p>
-<div class="footer-socials">
-<a href="https://t.me/Kapitan0913" target="_blank">تلگرام</a>
-<a href="https://wa.me/989354263705" target="_blank">واتساپ</a>
-<a href="https://rubika.ir/Alfa0912" target="_blank">روبیکا</a>
-</div>
-<p>تمامی حقوق محفوظ است © ۲۰۲۶</p>
+<p>تمامی حقوق محفوظ است | موبایل پاکروان</p>
 </footer>
 
-<script>
-function filterCategory(category, button) {
-document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
-button.classList.add('active');
-
-document.querySelectorAll('.product-card').forEach(card => {
-if (category === 'all' || card.dataset.category === category) {
-card.style.display = 'flex';
-} else {
-card.style.display = 'none';
-}
-});
-}
-
-function searchProducts() {
-let input = document.getElementById('searchInput').value.toLowerCase();
-document.querySelectorAll('.product-card').forEach(card => {
-let name = card.dataset.name.toLowerCase();
-if (name.includes(input)) {
-card.style.display = 'flex';
-} else {
-card.style.display = 'none';
-}
-});
-}
-</script>
 </body>
 </html>
