@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>موبایل اپل - پاکروان | فروشگاه لوازم جانبی موبایل</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800&display=swap');
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: 'Vazirmatn', sans-serif;
+}
+
+body {
+background-color: #0f172a;
+color: #f8fafc;
+line-height: 1.6;
+overflow-x: hidden;
+}
+
+header {
+background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.9)), url('https://images.unsplash.com/photo-1556656793-08538906a9f8?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+padding: 3rem 1rem;
+text-align: center;
+position: relative;
+}
+
+header::before {
+content: '';
+position: absolute;
+top: 0; left: 0; right: 0; bottom: 0;
+background: radial-gradient(circle, rgba(56, 189, 248, 0.15) 0%, rgba(15, 23, 42, 0.8) 100%);
+z-index: 1;
+}
+
+.header-content {
+position: relative;
+z-index: 2;
+}
+
+h1 {
+font-size: 3rem;
+font-weight: 800;
+color: #ffffff;
+margin-bottom: 0.5rem;
+letter-spacing: -1px;
+text-shadow: 0 4px 20px rgba(56, 189, 248, 0.4);
+}
+
+.subtitle {
+font-size: 1.25rem;
+font-weight: 400;
+color: #38bdf8;
+letter-spacing: 2px;
+margin-bottom: 1.5rem;
+}
+
+.badge {
+display: inline-block;
+background: rgba(56, 189, 248, 0.1);
+color: #38bdf8;
+border: 1px solid rgba(56, 189, 248, 0.3);
+padding: 0.5rem 1.5rem;
+border-radius: 50px;
+font-size: 0.9rem;
+font-weight: 500;
+}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 3rem 1.5rem;
+}
+
+.section-title {
+font-size: 1.75rem;
+font-weight: 700;
+margin-bottom: 2rem;
+display: flex;
+align-items: center;
+gap: 10px;
+border-right: 4px solid #38bdf8;
+padding-right: 12px;
+color: #f1f5f9;
+}
+
+.products-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 2rem;
+}
+
+.product-card {
+background: rgba(30, 41, 59, 0.7);
+border: 1px solid rgba(255, 255, 255, 0.08);
+border-radius: 16px;
+overflow: hidden;
+transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+backdrop-filter: blur(10px);
+display: flex;
+flex-direction: column;
+}
+
+.product-card:hover {
+transform: translateY(-6px);
+box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+border-color: rgba(56, 189, 248, 0.4);
+}
+
+.product-img {
+width: 100%;
+height: 220px;
+object-fit: cover;
+background: #1e293b;
+}
+
+.product-body {
+padding: 1.5rem;
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+}
+
+.product-title {
+font-size: 1.2rem;
+font-weight: 700;
+margin-bottom: 0.5rem;
+color: #ffffff;
+}
+
+.product-desc {
+font-size: 0.9rem;
+color: #94a3b8;
+margin-bottom: 1.2rem;
+flex-grow: 1;
+}
+
+.product-footer {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-top: auto;
+padding-top: 1rem;
+border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.price {
+font-size: 1.1rem;
+font-weight: 700;
+color: #38bdf8;
+}
+
+.price span {
+font-size: 0.8rem;
+color: #94a3b8;
+font-weight: 400;
+}
+
+.btn-buy {
+background: linear-gradient(135deg, #0284c7, #0369a1);
+color: white;
+border: none;
+padding: 0.6rem 1.2rem;
+border-radius: 8px;
+font-size: 0.9rem;
+font-weight: 600;
+cursor: pointer;
+transition: background 0.2s ease;
+}
+
+.btn-buy:hover {
+background: linear-gradient(135deg, #0369a1, #075985);
+}
+
+footer {
+background: #090d16;
+border-top: 1px solid rgba(255, 255, 255, 0.05);
+text-align: center;
+padding: 2.5rem 1rem;
+color: #64748b;
+font-size: 0.9rem;
+margin-top: 4rem;
+}
+
+footer p {
+margin-bottom: 0.5rem;
+}
+
+.contact-info {
+color: #94a3b8;
+font-weight: 500;
+}
+</style>
+</head>
+<body>
+
+<header>
+<div class="header-content">
+<h1>موبایل اپل</h1>
+<div class="subtitle">پاکروان</div>
+<div class="badge">مرکز تخصصی لوازم جانبی و تجهیزات موبایل</div>
+</div>
+</header>
+
+<div class="container">
+<h2 class="section-title">محصولات پرفروش لوازم جانبی</h2>
+
+<div class="products-grid">
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1601593346740-92561b47e33e?auto=format&fit=crop&w=600&q=80" alt="قاب سیلیکونی اصل" class="product-img">
+<div class="product-body">
+<h3 class="product-title">قاب سیلیکونی اورجینال</h3>
+<p class="product-desc">دارای لایه داخلی مخمل، ضد تعریق، رنگ‌بندی متنوع و مقاوم در برابر ضربه برای انواع مدل‌های آیفون و سامسونگ.</p>
+<div class="product-footer">
+<div class="price">۲۸۰,۰۰۰ <span>تومان</span></div>
+<button class="btn-buy" onclick="alert('برای ثبت سفارش محصول با مدیریت (پاکروان) تماس بگیرید.')">خرید محصول</button>
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="گلس سرامیکی مات" class="product-img">
+<div class="product-body">
+<h3 class="product-title">محافظ صفحه (گلس) سرامیکی مات</h3>
+<p class="product-desc">پوشش کامل صفحه نمایش، ضد اثر انگشت، مقاومت بالا در برابر خط و خش و ضربه بدون افت کیفیت تاچ.</p>
+<div class="product-footer">
+<div class="price">۱۵۰,۰۰۰ <span>تومان</span></div>
+<button class="btn-buy" onclick="alert('برای ثبت سفارش محصول با مدیریت (پاکروان) تماس بگیرید.')">خرید محصول</button>
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80" alt="شارژر فست اصلی" class="product-img">
+<div class="product-body">
+<h3 class="product-title">کلید شارژر فست شارژ اصلی</h3>
+<p class="product-desc">پشتیبانی از فناوری شارژ سریع، جریان خروجی پایدار، ایمن در برابر نوسانات برق و داغ شدن.</p>
+<div class="product-footer">
+<div class="price">۴۵۰,۰۰۰ <span>تومان</span></div>
+<button class="btn-buy" onclick="alert('برای ثبت سفارش محصول با مدیریت (پاکروان) تماس بگیرید.')">خرید محصول</button>
+</div>
+</div>
+</div>
+
+<div class="product-card">
+<img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80" alt="هندزفری بلوتوثی" class="product-img">
+<div class="product-body">
+<h3 class="product-title">هندزفری بلوتوثی مدل AirDots</h3>
+<p class="product-desc">کیفیت صدای استریو بیس‌دار، بلوتوث نسخه ۵.۳، نگهداری شارژ عالی مناسب مکالمه و موزیک.</p>
+<div class="product-footer">
+<div class="price">۶۸۰,۰۰۰ <span>تومان</span></div>
+<button class="btn-buy" onclick="alert('برای ثبت سفارش محصول با مدیریت (پاکروان) تماس بگیرید.')">خرید محصول</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<footer>
+<p class="contact-info">مدیریت: پاکروان | فروشگاه موبایل اپل</p>
+<p>تمامی حقوق محفوظ است © ۲۰۲۶</p>
+</footer>
+
+</body>
+</html>
