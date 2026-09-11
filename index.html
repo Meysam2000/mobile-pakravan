@@ -280,7 +280,6 @@ background: var(--gradient-primary);
 color: #ffffff;
 border-color: transparent;
 box-shadow: var(--glow-pink);
-transform: translateY(-50px) scale(1.05); /* اصلاح انیمیشن */
 transform: translateY(-5px) scale(1.05);
 }
 
@@ -451,7 +450,7 @@ font-weight: bold;
 display: none;
 }
 
-/* Modal / پنجره‌های پاپ‌آپ (سبد خرید، ورود، ثبت آدرس) */
+/* Modal / پنجره‌های پاپ‌آپ */
 .modal-overlay {
 position: fixed;
 top: 0;
@@ -852,6 +851,8 @@ const container = document.getElementById('cartItemsContainer');
 const countBadge = document.getElementById('cartCount');
 const totalPriceEl = document.getElementById('cartTotalPrice');
 
+if (!container) return;
+
 container.innerHTML = '';
 let totalCount = 0;
 let totalPrice = 0;
@@ -877,7 +878,6 @@ localStorage.setItem('pakravan_cart', JSON.stringify(cart));
 function addToCart(name, price) {
 cart.push({name, price});
 updateCartUI();
-// افکت باز شدن سریع سبد خرید برای تجربه کاربری بهتر
 openCartModal();
 }
 
@@ -886,8 +886,18 @@ cart.splice(index, 1);
 updateCartUI();
 }
 
-function openCartModal() { document.getElementById('cartModal').style.display = 'flex'; updateCartUI(); }
-function closeCartModal() { document.getElementById('cartModal').style.display = 'none'; }
+function openCartModal() {
+const modal = document.getElementById('cartModal');
+if (modal) {
+modal.style.display = 'flex';
+updateCartUI();
+}
+}
+
+function closeCartModal() {
+const modal = document.getElementById('cartModal');
+if (modal) modal.style.display = 'none';
+}
 
 // مدیریت حساب کاربری
 function openAuthModal() {
@@ -903,7 +913,10 @@ document.getElementById('authProfileBody').style.display = 'none';
 }
 document.getElementById('authModal').style.display = 'flex';
 }
-function closeAuthModal() { document.getElementById('authModal').style.display = 'none'; }
+
+function closeAuthModal() {
+document.getElementById('authModal').style.display = 'none';
+}
 
 function saveUserAccount() {
 let phone = document.getElementById('userPhoneInput').value;
@@ -959,7 +972,6 @@ let orderText = 🛒 سفارش جدید از سایت موبایل پاکروا
 
 {sum.toLocaleString()} تومان`;
 
-// هدایت کاربر به تلگرام مدیریت با جزئیات کامل سفارش
 let encodedText = encodeURIComponent(orderText);
 window.open(https://t.me/Kapitan0913?text=${encodedText}, '_blank');
 }
