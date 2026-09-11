@@ -9,251 +9,257 @@
 @import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
 
 :root {
---bg-main: #05050a;
---bg-card: rgba(18, 18, 35, 0.65);
---bg-card-hover: rgba(28, 28, 55, 0.85);
---accent-purple: #c084fc;
---accent-pink: #ec4899;
---gradient-primary: linear-gradient(135deg, #c084fc 0%, #ec4899 50%, #f43f5e 100%);
---text-main: #f8fafc;
+--bg-deep: #030308;
+--card-bg: rgba(18, 18, 38, 0.7);
+--card-hover: rgba(28, 28, 60, 0.9);
+--neon-purple: #a855f7;
+--neon-pink: #ec4899;
+--neon-cyan: #06b6d4;
+--text-color: #f8fafc;
 --text-muted: #94a3b8;
---border-color: rgba(192, 132, 252, 0.2);
---glow-main: 0 0 50px rgba(192, 132, 252, 0.15);
---glow-pink: 0 0 50px rgba(236, 72, 153, 0.2);
 }
 
 • { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Vazirmatn', sans-serif; }
 
 body {
-background-color: var(--bg-main);
-color: var(--text-main);
+background-color: var(--bg-deep);
+color: var(--text-color);
 line-height: 1.8;
 overflow-x: hidden;
-padding-bottom: 100px;
+padding-bottom: 120px;
 background-image:
-radial-gradient(circle at 10% 10%, rgba(192, 132, 252, 0.08) 0%, transparent 40%),
-radial-gradient(circle at 90% 90%, rgba(236, 72, 153, 0.08) 0%, transparent 40%);
+radial-gradient(circle at 15% 15%, rgba(168, 85, 247, 0.12) 0%, transparent 45%),
+radial-gradient(circle at 85% 85%, rgba(236, 72, 153, 0.12) 0%, transparent 45%),
+radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
 background-attachment: fixed;
 }
 
-@keyframes float {
-0%, 100% { transform: translateY(0); }
-50% { transform: translateY(-8px); }
+@keyframes gradientShift {
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
 }
 
-@keyframes pulseGlow {
-0%, 100% { opacity: 0.6; }
-50% { opacity: 1; }
+@keyframes borderGlow {
+0%, 100% { border-color: rgba(168, 85, 247, 0.4); box-shadow: 0 0 20px rgba(168, 85, 247, 0.2); }
+50% { border-color: rgba(236, 72, 153, 0.8); box-shadow: 0 0 35px rgba(236, 72, 153, 0.4); }
 }
 
 header {
-background: linear-gradient(180deg, rgba(5, 5, 10, 0.9), rgba(15, 15, 30, 0.95));
-border-bottom: 1px solid var(--border-color);
-padding: 3.5rem 1rem 2.5rem;
+background: linear-gradient(135deg, rgba(10, 10, 25, 0.9), rgba(20, 10, 35, 0.95));
+border-bottom: 2px solid rgba(168, 85, 247, 0.3);
+padding: 4rem 1rem 3rem;
 text-align: center;
 position: relative;
-backdrop-filter: blur(20px);
+backdrop-filter: blur(25px);
 }
 
-.header-container { max-width: 800px; margin: 0 auto; }
+.header-container { max-width: 850px; margin: 0 auto; }
 
 .store-badge {
 display: inline-flex;
 align-items: center;
 gap: 8px;
-background: rgba(192, 132, 252, 0.1);
-color: #f3e8ff;
-border: 1px solid rgba(192, 132, 252, 0.3);
-padding: 0.5rem 1.6rem;
+background: linear-gradient(90deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2));
+color: #fff;
+border: 1px solid rgba(236, 72, 153, 0.4);
+padding: 0.6rem 1.8rem;
 border-radius: 50px;
-font-size: 0.9rem;
-font-weight: 700;
-margin-bottom: 1.2rem;
-box-shadow: 0 4px 20px rgba(192, 132, 252, 0.15);
-animation: pulseGlow 3s infinite;
+font-size: 0.95rem;
+font-weight: 800;
+margin-bottom: 1.5rem;
+animation: borderGlow 4s infinite;
 }
 
 h1 {
 font-family: 'Lalezar', cursive;
-font-size: 3.8rem;
-background: linear-gradient(135deg, #ffffff 20%, #f472b6 60%, #c084fc 100%);
+font-size: 4.2rem;
+background: linear-gradient(-45deg, #f43f5e, #ec4899, #a855f7, #06b6d4);
+background-size: 300% 300%;
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+animation: gradientShift 6s ease infinite;
 letter-spacing: 1px;
 margin-bottom: 0.2rem;
-text-shadow: 0 10px 30px rgba(236, 72, 153, 0.2);
+filter: drop-shadow(0 10px 25px rgba(236, 72, 153, 0.3));
 }
 
-.subtitle { font-size: 1.15rem; color: var(--text-muted); margin-bottom: 2rem; font-weight: 600; }
+.subtitle { font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2.5rem; font-weight: 700; }
 
-.social-buttons { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 2.2rem; }
+.social-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 2.5rem; }
 
 .social-btn {
 display: inline-flex;
 align-items: center;
 gap: 10px;
-padding: 0.75rem 1.6rem;
-border-radius: 16px;
-font-size: 0.95rem;
-font-weight: 700;
+padding: 0.85rem 1.8rem;
+border-radius: 18px;
+font-size: 1rem;
+font-weight: 800;
 text-decoration: none;
 color: white;
-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-border: 1px solid rgba(255, 255, 255, 0.12);
-backdrop-filter: blur(10px);
+transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+border: 1px solid rgba(255, 255, 255, 0.2);
+box-shadow: 0 8px 25px rgba(0,0,0,0.4);
 }
 
-.social-btn:hover { transform: translateY(-5px) scale(1.02); box-shadow: 0 12px 30px rgba(0,0,0,0.6); }
-.btn-telegram { background: linear-gradient(135deg, rgba(0, 136, 204, 0.85), rgba(34, 158, 217, 0.95)); }
-.btn-whatsapp { background: linear-gradient(135deg, rgba(37, 211, 102, 0.85), rgba(18, 140, 126, 0.95)); }
-.btn-rubika { background: linear-gradient(135deg, rgba(124, 58, 237, 0.85), rgba(168, 85, 247, 0.95)); }
+.social-btn:hover { transform: translateY(-6px) scale(1.05); filter: brightness(1.2); }
+.btn-telegram { background: linear-gradient(135deg, #0088cc, #229ed9); box-shadow: 0 10px 25px rgba(0, 136, 204, 0.4); }
+.btn-whatsapp { background: linear-gradient(135deg, #25d366, #128c7e); box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4); }
+.btn-rubika { background: linear-gradient(135deg, #7c3aed, #c084fc); box-shadow: 0 10px 25px rgba(124, 58, 237, 0.4); }
 
-.search-box { position: relative; max-width: 580px; margin: 0 auto; }
+.search-box { position: relative; max-width: 620px; margin: 0 auto; }
 
 .search-input {
 width: 100%;
-background: rgba(10, 10, 22, 0.9);
-border: 1px solid var(--border-color);
-padding: 1.1rem 1.6rem;
-padding-right: 3.8rem;
+background: rgba(12, 12, 28, 0.95);
+border: 2px solid rgba(168, 85, 247, 0.35);
+padding: 1.2rem 1.8rem;
+padding-right: 4rem;
 border-radius: 50px;
 color: #fff;
-font-size: 1.05rem;
+font-size: 1.1rem;
 outline: none;
 transition: all 0.4s ease;
-box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-backdrop-filter: blur(15px);
+box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
 .search-input:focus {
-border-color: #f472b6;
-box-shadow: 0 0 30px rgba(244, 114, 182, 0.35);
-background: rgba(18, 18, 35, 0.95);
+border-color: #ec4899;
+box-shadow: 0 0 40px rgba(236, 72, 153, 0.5), inset 0 0 15px rgba(168, 85, 247, 0.3);
 }
 
-.search-icon { position: absolute; right: 1.5rem; top: 50%; transform: translateY(-50%); color: #f472b6; font-size: 1.3rem; }
+.search-icon { position: absolute; right: 1.8rem; top: 50%; transform: translateY(-50%); color: #ec4899; font-size: 1.4rem; }
 
-.banners-section { max-width: 1150px; margin: 2.5rem auto 1.5rem; padding: 0 1rem; }
+.banners-section { max-width: 1200px; margin: 3rem auto 2rem; padding: 0 1rem; }
 
 .main-promo-banner {
-background: linear-gradient(135deg, rgba(233, 30, 99, 0.9), rgba(147, 51, 234, 0.9));
-border-radius: 24px;
-padding: 3rem 2rem;
+background: linear-gradient(135deg, #4f46e5, #7c3aed, #db2777);
+background-size: 200% 200%;
+animation: gradientShift 8s ease infinite;
+border-radius: 28px;
+padding: 3.5rem 2.5rem;
 color: white;
 text-align: center;
-margin-bottom: 1rem;
-box-shadow: 0 15px 40px rgba(233, 30, 99, 0.25);
-border: 1px solid rgba(255, 255, 255, 0.25);
+box-shadow: 0 20px 50px rgba(124, 58, 237, 0.4);
+border: 1px solid rgba(255, 255, 255, 0.3);
 position: relative;
 overflow: hidden;
 }
 
-.main-promo-banner h2 { font-family: 'Lalezar', cursive; font-size: 2.8rem; margin-bottom: 0.4rem; letter-spacing: 0.5px; }
-.main-promo-banner p { font-size: 1.1rem; opacity: 0.95; font-weight: 500; }
+.main-promo-banner h2 { font-family: 'Lalezar', cursive; font-size: 3.2rem; margin-bottom: 0.5rem; letter-spacing: 0.5px; text-shadow: 0 4px 15px rgba(0,0,0,0.3); }
+.main-promo-banner p { font-size: 1.2rem; opacity: 0.95; font-weight: 600; text-shadow: 0 2px 10px rgba(0,0,0,0.2); }
 
-.container { max-width: 1150px; margin: 0 auto; padding: 1.5rem 1rem; }
+.container { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem; }
 
-.categories { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 3rem; }
+.categories { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; margin-bottom: 3.5rem; }
 
 .cat-btn {
-background: var(--bg-card);
+background: var(--card-bg);
 color: var(--text-muted);
-border: 1px solid var(--border-color);
-padding: 0.75rem 1.6rem;
-border-radius: 14px;
+border: 1px solid rgba(168, 85, 247, 0.25);
+padding: 0.85rem 1.8rem;
+border-radius: 16px;
 cursor: pointer;
-font-size: 0.95rem;
-font-weight: 700;
-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+font-size: 1rem;
+font-weight: 800;
+transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 backdrop-filter: blur(10px);
 }
 
 .cat-btn:hover, .cat-btn.active {
-background: var(--gradient-primary);
+background: linear-gradient(135deg, #a855f7, #ec4899);
 color: #ffffff;
-border-color: transparent;
-box-shadow: var(--glow-pink);
-transform: translateY(-3px);
+border-color: #f472b6;
+box-shadow: 0 0 30px rgba(236, 72, 153, 0.5);
+transform: translateY(-4px) scale(1.03);
 }
 
-.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 2rem; }
+.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2.2rem; }
 
 .product-card {
-background: var(--bg-card);
-border: 1px solid var(--border-color);
-border-radius: 24px;
+background: var(--card-bg);
+border: 1px solid rgba(168, 85, 247, 0.25);
+border-radius: 28px;
 overflow: hidden;
-transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 display: flex;
 flex-direction: column;
-backdrop-filter: blur(20px);
-box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+backdrop-filter: blur(25px);
+box-shadow: 0 15px 35px rgba(0,0,0,0.5);
 }
 
 .product-card:hover {
-transform: translateY(-10px) scale(1.01);
-box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), var(--glow-main);
-border-color: rgba(244, 114, 182, 0.5);
-background: var(--bg-card-hover);
+transform: translateY(-12px) scale(1.02);
+box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 35px rgba(168, 85, 247, 0.4);
+border-color: #ec4899;
+background: var(--card-hover);
 }
 
-.product-img-wrapper { position: relative; width: 100%; height: 230px; overflow: hidden; background: #020205; }
-.product-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1); }
-.product-card:hover .product-img { transform: scale(1.1); }
+.product-img-wrapper { position: relative; width: 100%; height: 250px; overflow: hidden; background: #010105; }
+.product-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
+.product-card:hover .product-img { transform: scale(1.12); }
 
 .product-badge {
 position: absolute;
-top: 14px; right: 14px;
-background: rgba(5, 5, 10, 0.85);
+top: 16px; right: 16px;
+background: rgba(5, 5, 15, 0.85);
 color: #f3e8ff;
-border: 1px solid rgba(192, 132, 252, 0.4);
-padding: 0.3rem 0.9rem;
+border: 1px solid rgba(236, 72, 153, 0.5);
+padding: 0.35rem 1rem;
 border-radius: 20px;
-font-size: 0.8rem;
-font-weight: 800;
-backdrop-filter: blur(5px);
+font-size: 0.85rem;
+font-weight: 900;
+backdrop-filter: blur(10px);
+box-shadow: 0 4px 15px rgba(236, 72, 153, 0.3);
 }
 
-.product-body { padding: 1.6rem; display: flex; flex-direction: column; flex-grow: 1; }
-.product-title { font-size: 1.25rem; font-weight: 800; margin-bottom: 0.6rem; color: #ffffff; }
-.product-desc { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 1.8rem; flex-grow: 1; line-height: 1.7; }
+.product-body { padding: 1.8rem; display: flex; flex-direction: column; flex-grow: 1; }
+.product-title { font-size: 1.35rem; font-weight: 900; margin-bottom: 0.6rem; color: #ffffff; }
+.product-desc { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 2rem; flex-grow: 1; line-height: 1.8; }
 
-.product-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 1.2rem; border-top: 1px solid rgba(255, 255, 255, 0.08); }
-.price { font-size: 1.2rem; font-weight: 900; color: #38bdf8; }
-.price span { font-size: 0.8rem; color: var(--text-muted); font-weight: 600; margin-right: 4px; }
+.product-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 1.4rem; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.price { font-size: 1.3rem; font-weight: 900; color: #38bdf8; text-shadow: 0 0 15px rgba(56, 189, 248, 0.3); }
+.price span { font-size: 0.85rem; color: var(--text-muted); font-weight: 700; margin-right: 4px; }
 
 .btn-buy {
-background: rgba(192, 132, 252, 0.15);
+background: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2));
 color: #f3e8ff;
-border: 1px solid rgba(192, 132, 252, 0.4);
-padding: 0.6rem 1.2rem;
-border-radius: 12px;
-font-size: 0.9rem;
-font-weight: 800;
+border: 1px solid rgba(168, 85, 247, 0.5);
+padding: 0.7rem 1.4rem;
+border-radius: 14px;
+font-size: 0.95rem;
+font-weight: 900;
 cursor: pointer;
-transition: all 0.3s ease;
+transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
-.btn-buy:hover { background: var(--gradient-primary); color: #ffffff; box-shadow: var(--glow-pink); border-color: transparent; transform: scale(1.05); }
+.btn-buy:hover {
+background: linear-gradient(135deg, #a855f7, #ec4899);
+color: #ffffff;
+box-shadow: 0 0 30px rgba(236, 72, 153, 0.6);
+border-color: transparent;
+transform: scale(1.08);
+}
 </style>
 </head>
-
 <body>
 
 <header>
 <div class="header-container">
-<div class="store-badge">⚡ مرکز تخصصی لوازم جانبی موبایل</div>
+<div class="store-badge">✨ مرکز فوق‌العاده لوازم جانبی و تعمیرات موبایل</div>
 <h1>موبایل اپل</h1>
-<div class="subtitle">مدیریت: پاکروانspan_0span_0</div>
+<div class="subtitle">مدیریت: پاکروان</div>
 
 <div class="social-buttons">
-<a href="https://t.me/Kapitan0913" target="_blank" class="social-btn btn-telegram">💬 تلگرام سفارش</a>
-<a href="https://wa.me/989354263705" target="_blank" class="social-btn btn-whatsapp">🟢 واتساپ سفارش</a>
-<a href="https://rubika.ir/Alfa0912" target="_blank" class="social-btn btn-rubika">🟣 روبیکا سفارش</a>
+<a href="https://t.me/Kapitan0913" target="_blank" class="social-btn btn-telegram">💬 کانال / ارتباط تلگرام</a>
+<a href="https://wa.me/989354263705" target="_blank" class="social-btn btn-whatsapp">🟢 واتساپ مستقیم</a>
+<a href="https://rubika.ir/Alfa0912" target="_blank" class="social-btn btn-rubika">🟣 روبیکا</a>
 </div>
 
 <div class="search-box">
-<input type="text" id="searchInput" class="search-input" placeholder="جستجوی مدل قاب، گلس، شارژر و..." onkeyup="searchProducts()">
+<input type="text" id="searchInput" class="search-input" placeholder="جستجوی پیشرفته قاب، گلس، شارژر و..." onkeyup="searchProducts()">
 <span class="search-icon">🔍</span>
 </div>
 </div>
@@ -261,77 +267,77 @@ transition: all 0.3s ease;
 
 <section class="banners-section">
 <div class="main-promo-banner">
-<h2>تنوع بی‌نظیر گجت‌های هوشمند</h2>
-<p>انواع لوازم جانبی لوکس، قاب‌های ضد ضربه و گلس‌های تمام صفحه</p>
+<h2>کلکسیون لاکچری گجت‌های هوشمند</h2>
+<p>مقاوم‌ترین قاب‌ها، گلس‌های تمام صفحه و لوازم جانبی اورجینال با ضمانت کیفیت</p>
 </div>
 </section>
 
 <div class="container">
 <div class="categories">
 <button class="cat-btn active" onclick="filterCategory('all', this)">همه محصولات</button>
-<button class="cat-btn" onclick="filterCategory('case', this)">قاب و گارد</button>
-<button class="cat-btn" onclick="filterCategory('glass', this)">گلس محافظ</button>
-<button class="cat-btn" onclick="filterCategory('charger', this)">شارژر و کابل</button>
-<button class="cat-btn" onclick="filterCategory('audio', this)">هندزفری</button>
+<button class="cat-btn" onclick="filterCategory('case', this)">قاب و گارد لوکس</button>
+<button class="cat-btn" onclick="filterCategory('glass', this)">گلس ضد ضربه</button>
+<button class="cat-btn" onclick="filterCategory('charger', this)">شارژر اصلی</button>
+<button class="cat-btn" onclick="filterCategory('audio', this)">هندزفری و ایرپاد</button>
 </div>
 
 <div class="products-grid" id="productsGrid">
 <div class="product-card" data-category="case" data-name="قاب سیلیکونی اورجینال">
 <div class="product-img-wrapper">
-<span class="product-badge">پرفروش</span>
+<span class="product-badge">پرفروش‌ترین</span>
 <img src="https://images.unsplash.com/photo-1601593346740-92561b47e33e?auto=format&fit=crop&w=500&q=80" alt="قاب سیلیکونی" class="product-img">
 </div>
 <div class="product-body">
 <h3 class="product-title">قاب سیلیکونی اورجینال</h3>
-<p class="product-desc">لایه داخلی مخمل، ضد تعریق، رنگ‌بندی متنوع و مقاوم در برابر ضربه.</p>
+<p class="product-desc">لایه داخلی مخمل ضد خش، پوشش کامل لنز دوربین، رنگ‌بندی خیره‌کننده و ماندگار.</p>
 <div class="product-footer">
 <div class="price" data-price="280000">۲۸۰,۰۰۰ <span>تومان</span></div>
-<button class="btn-buy" onclick="addToCart('قاب سیلیکونی اورجینال', 280000)">افزودن</button>
+<button class="btn-buy" onclick="addToCart('قاب سیلیکونی اورجینال', 280000)">افزودن به سبد</button>
 </div>
 </div>
 </div>
 
 <div class="product-card" data-category="glass" data-name="محافظ صفحه سرامیکی مات">
 <div class="product-img-wrapper">
-<span class="product-badge">مقاوم</span>
+<span class="product-badge">فول چسب</span>
 <img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=500&q=80" alt="گلس سرامیکی" class="product-img">
 </div>
 <div class="product-body">
 <h3 class="product-title">محافظ صفحه سرامیکی مات</h3>
-<p class="product-desc">پوشش کامل صفحه نمایش، ضد اثر انگشت و خط و خش بدون افت تاچ.</p>
+<p class="product-desc">ضد اثر انگشت قدرتمند، عدم افت کیفیت تاچ، مقاومت بی‌نظیر در برابر ضربه و خط و خش.</p>
 <div class="product-footer">
 <div class="price" data-price="150000">۱۵۰,۰۰۰ <span>تومان</span></div>
-<button class="btn-buy" onclick="addToCart('محافظ صفحه سرامیکی مات', 150000)">افزودن</button>
+<button class="btn-buy" onclick="addToCart('محافظ صفحه سرامیکی مات', 150000)">افزودن به سبد</button>
 </div>
 </div>
 </div>
 
 <div class="product-card" data-category="charger" data-name="شارژر فست شارژ اصلی">
 <div class="product-img-wrapper">
-<span class="product-badge">فست شارژ</span>
+<span class="product-badge">سوپر فست</span>
 <img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=500&q=80" alt="شارژر فست" class="product-img">
 </div>
 <div class="product-body">
 <h3 class="product-title">شارژر فست شارژ اصلی</h3>
-<p class="product-desc">پشتیبانی از شارژ سریع، جریان خروجی پایدار و ایمن در برابر نوسانات.</p>
+<p class="product-desc">انتقال ولتاژ ایمن و پایدار، محافظت کامل در برابر نوسانات برق و داغ شدن گوشی.</p>
 <div class="product-footer">
 <div class="price" data-price="450000">۴۵۰,۰۰۰ <span>تومان</span></div>
-<button class="btn-buy" onclick="addToCart('شارژر فست شارژ اصلی', 450000)">افزودن</button>
+<button class="btn-buy" onclick="addToCart('شارژر فست شارژ اصلی', 450000)">افزودن به سبد</button>
 </div>
 </div>
 </div>
 
 <div class="product-card" data-category="audio" data-name="هندزفری بلوتوثی مدل AirDots">
 <div class="product-img-wrapper">
-<span class="product-badge">محبوب</span>
+<span class="product-badge">پرفروش</span>
 <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=500&q=80" alt="هندزفری بلوتوثی" class="product-img">
 </div>
 <div class="product-body">
 <h3 class="product-title">هندزفری بلوتوثی مدل AirDots</h3>
-<p class="product-desc">صدای استریو بیس‌دار، بلوتوث نسخه ۵.۳ و نگهداری شارژ عالی.</p>
+<p class="product-desc">تفکیک صدای شگفت‌انگیز، بیس عمیق، بلوتوث نسخه ۵.۳ و باتری با ماندگاری بسیار بالا.</p>
 <div class="product-footer">
 <div class="price" data-price="680000">۶۸۰,۰۰۰ <span>تومان</span></div>
-<button class="btn-buy" onclick="addToCart('هندزفری بلوتوثی مدل AirDots', 680000)">افزودن</button>
+<button class="btn-buy" onclick="addToCart('هندزفری بلوتوثی مدل AirDots', 680000)">افزودن به سبد</button>
 </div>
 </div>
 </div>
@@ -339,57 +345,57 @@ transition: all 0.3s ease;
 </div>
 
 <!-- مدال ورود -->
-<div id="loginModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); backdrop-filter:blur(12px); justify-content:center; align-items:center; z-index:2000;">
-<div style="background:linear-gradient(135deg, rgba(18,18,35,0.95), rgba(10,10,20,0.95)); border:1px solid rgba(192,132,252,0.4); padding:2.5rem; border-radius:28px; width:90%; max-width:440px; color:#fff; position:relative; box-shadow: 0 0 50px rgba(192,132,252,0.2);">
-<button onclick="document.getElementById('loginModal').style.display='none'" style="position:absolute; top:15px; left:15px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:#fff; width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:1.2rem;">×</button>
-<h3 style="margin-bottom:1.5rem; font-family:'Lalezar',cursive; font-size:2rem; color:#f472b6;">ورود به حساب کاربری</h3>
-<input type="text" placeholder="شماره موبایل" style="width:100%; padding:1rem; margin-bottom:1.2rem; background:rgba(5,5,10,0.9); border:1px solid rgba(192,132,252,0.3); border-radius:14px; color:#fff; outline:none; font-size:1rem;">
-<input type="password" placeholder="رمز عبور" style="width:100%; padding:1rem; margin-bottom:1.5rem; background:rgba(5,5,10,0.9); border:1px solid rgba(192,132,252,0.3); border-radius:14px; color:#fff; outline:none; font-size:1rem;">
-<button onclick="alert('ورود با موفقیت انجام شد!'); document.getElementById('loginModal').style.display='none';" style="width:100%; padding:1rem; background:linear-gradient(135deg, #c084fc, #ec4899); border:none; border-radius:14px; color:#fff; font-weight:800; font-size:1.05rem; cursor:pointer; box-shadow:0 8px 25px rgba(236,72,153,0.3);">تایید و ورود</button>
+<div id="loginModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); backdrop-filter:blur(15px); justify-content:center; align-items:center; z-index:2000;">
+<div style="background:linear-gradient(135deg, rgba(20,20,40,0.95), rgba(10,10,25,0.95)); border:2px solid rgba(168,85,247,0.5); padding:2.8rem; border-radius:30px; width:90%; max-width:440px; color:#fff; position:relative; box-shadow: 0 0 50px rgba(168,85,247,0.3);">
+<button onclick="document.getElementById('loginModal').style.display='none'" style="position:absolute; top:18px; left:18px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:#fff; width:38px; height:38px; border-radius:50%; cursor:pointer; font-size:1.3rem;">×</button>
+<h3 style="margin-bottom:1.5rem; font-family:'Lalezar',cursive; font-size:2.2rem; color:#ec4899;">ورود به حساب کاربری</h3>
+<input type="text" placeholder="شماره موبایل" style="width:100%; padding:1.1rem; margin-bottom:1.2rem; background:rgba(5,5,15,0.95); border:1px solid rgba(168,85,247,0.4); border-radius:16px; color:#fff; outline:none; font-size:1rem;">
+<input type="password" placeholder="رمز عبور" style="width:100%; padding:1.1rem; margin-bottom:1.8rem; background:rgba(5,5,15,0.95); border:1px solid rgba(168,85,247,0.4); border-radius:16px; color:#fff; outline:none; font-size:1rem;">
+<button onclick="alert('ورود با موفقیت انجام شد!'); document.getElementById('loginModal').style.display='none';" style="width:100%; padding:1.1rem; background:linear-gradient(135deg, #a855f7, #ec4899); border:none; border-radius:16px; color:#fff; font-weight:900; font-size:1.1rem; cursor:pointer; box-shadow:0 10px 30px rgba(236,72,153,0.4);">تایید و ورود</button>
 </div>
 </div>
 
 <!-- مدال سبد خرید -->
-<div id="cartModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); backdrop-filter:blur(12px); justify-content:center; align-items:center; z-index:2000;">
-<div style="background:linear-gradient(135deg, rgba(18,18,35,0.95), rgba(10,10,20,0.95)); border:1px solid rgba(192,132,252,0.4); padding:2.5rem; border-radius:28px; width:90%; max-width:440px; color:#fff; position:relative; box-shadow: 0 0 50px rgba(192,132,252,0.2);">
-<button onclick="document.getElementById('cartModal').style.display='none'" style="position:absolute; top:15px; left:15px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:#fff; width:36px; height:36px; border-radius:50%; cursor:pointer; font-size:1.2rem;">×</button>
-<h3 style="margin-bottom:1.5rem; font-family:'Lalezar',cursive; font-size:2rem; color:#f472b6;">سبد خرید شما</h3>
-<div id="cartItemsList" style="max-height:220px; overflow-y:auto; margin-bottom:1.2rem;">
+<div id="cartModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.85); backdrop-filter:blur(15px); justify-content:center; align-items:center; z-index:2000;">
+<div style="background:linear-gradient(135deg, rgba(20,20,40,0.95), rgba(10,10,25,0.95)); border:2px solid rgba(168,85,247,0.5); padding:2.8rem; border-radius:30px; width:90%; max-width:440px; color:#fff; position:relative; box-shadow: 0 0 50px rgba(168,85,247,0.3);">
+<button onclick="document.getElementById('cartModal').style.display='none'" style="position:absolute; top:18px; left:18px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); color:#fff; width:38px; height:38px; border-radius:50%; cursor:pointer; font-size:1.3rem;">×</button>
+<h3 style="margin-bottom:1.5rem; font-family:'Lalezar',cursive; font-size:2.2rem; color:#ec4899;">سبد خرید شما</h3>
+<div id="cartItemsList" style="max-height:230px; overflow-y:auto; margin-bottom:1.2rem;">
 <p style="text-align:center; color:#94a3b8;">سبد خرید خالی است.</p>
 </div>
-<div style="margin-top:1rem; border-top:1px solid rgba(255,255,255,0.1); padding-top:12px; display:flex; justify-content:space-between; font-size:1.05rem;">
-<span>مجموع:</span>
+<div style="margin-top:1rem; border-top:1px solid rgba(255,255,255,0.15); padding-top:15px; display:flex; justify-content:space-between; font-size:1.1rem;">
+<span>مجموع قابل پرداخت:</span>
 <span id="cartTotalPrice" style="font-weight:900; color:#38bdf8;">۰ تومان</span>
 </div>
-<button onclick="checkoutCart()" style="width:100%; margin-top:20px; padding:1rem; background:linear-gradient(135deg, #c084fc, #ec4899); border:none; border-radius:14px; color:#fff; font-weight:800; font-size:1.05rem; cursor:pointer; box-shadow:0 8px 25px rgba(236,72,153,0.3);">تکمیل خرید و ارسال به تلگرام</button>
+<button onclick="checkoutCart()" style="width:100%; margin-top:22px; padding:1.1rem; background:linear-gradient(135deg, #a855f7, #ec4899); border:none; border-radius:16px; color:#fff; font-weight:900; font-size:1.1rem; cursor:pointer; box-shadow:0 10px 30px rgba(236,72,153,0.4);">تکمیل خرید و ارسال به تلگرام</button>
 </div>
 </div>
 
 <!-- منوی شناور پایین صفحه -->
-<nav style="position:fixed; bottom:15px; left:50%; transform:translateX(-50%); width:92%; max-width:480px; background:rgba(12,12,25,0.85); backdrop-filter:blur(25px); display:flex; justify-content:space-around; padding:12px; border-radius:22px; box-shadow:0 15px 35px rgba(0,0,0,0.8); border:1px solid rgba(192,132,252,0.35); z-index:1000;">
-<button onclick="document.getElementById('loginModal').style.display='flex'" style="background:none; border:none; color:#94a3b8; cursor:pointer; font-size:0.8rem; font-weight:700; display:flex; flex-direction:column; align-items:center; gap:4px; flex:1; transition:0.3s;">
-<span style="font-size:1.35rem;">👤</span>ورود
+<nav style="position:fixed; bottom:20px; left:50%; transform:translateX(-50%); width:92%; max-width:500px; background:rgba(12,12,30,0.88); backdrop-filter:blur(30px); display:flex; justify-content:space-around; padding:14px; border-radius:26px; box-shadow:0 20px 40px rgba(0,0,0,0.9); border:2px solid rgba(168,85,247,0.4); z-index:1000;">
+<button onclick="document.getElementById('loginModal').style.display='flex'" style="background:none; border:none; color:#94a3b8; cursor:pointer; font-size:0.85rem; font-weight:800; display:flex; flex-direction:column; align-items:center; gap:5px; flex:1; transition:0.3s;">
+<span style="font-size:1.4rem;">👤</span>ورود
 </button>
-<button onclick="document.getElementById('cartModal').style.display='flex'" style="background:none; border:none; color:#94a3b8; cursor:pointer; font-size:0.8rem; font-weight:700; display:flex; flex-direction:column; align-items:center; gap:4px; flex:1; position:relative; transition:0.3s;">
-<span style="font-size:1.35rem;">🛒</span>سفارش
-<span id="cartCount" style="background:#ec4899; color:white; border-radius:50%; padding:2px 7px; font-size:0.7rem; font-weight:900; position:absolute; top:0; right:26%;">0</span>
+<button onclick="document.getElementById('cartModal').style.display='flex'" style="background:none; border:none; color:#94a3b8; cursor:pointer; font-size:0.85rem; font-weight:800; display:flex; flex-direction:column; align-items:center; gap:5px; flex:1; position:relative; transition:0.3s;">
+<span style="font-size:1.4rem;">🛒</span>سفارش
+<span id="cartCount" style="background:#ec4899; color:white; border-radius:50%; padding:2px 8px; font-size:0.75rem; font-weight:900; position:absolute; top:0; right:28%; box-shadow:0 0 10px #ec4899;">0</span>
 </button>
-<a href="#searchInput" style="background:none; border:none; color:#94a3b8; text-decoration:none; font-size:0.8rem; font-weight:700; display:flex; flex-direction:column; align-items:center; gap:4px; flex:1;">
-<span style="font-size:1.35rem;">🔍</span>جستجو
+<a href="#searchInput" style="background:none; border:none; color:#94a3b8; text-decoration:none; font-size:0.85rem; font-weight:800; display:flex; flex-direction:column; align-items:center; gap:5px; flex:1;">
+<span style="font-size:1.4rem;">🔍</span>جستجو
 </a>
-<a href="#" style="background:none; border:none; color:#f472b6; text-decoration:none; font-size:0.8rem; font-weight:700; display:flex; flex-direction:column; align-items:center; gap:4px; flex:1;">
-<span style="font-size:1.35rem;">🏠</span>خانه
+<a href="#" style="background:none; border:none; color:#ec4899; text-decoration:none; font-size:0.85rem; font-weight:800; display:flex; flex-direction:column; align-items:center; gap:5px; flex:1;">
+<span style="font-size:1.4rem;">🏠</span>خانه
 </a>
 </nav>
 
-<footer>
-<p>فروشگاه <span style="background:linear-gradient(135deg, #c084fc, #ec4899); -webkit-background-clip:text; -webkit-text-fill-color:transparent; font-weight:900;">موبایل اپل - پاکروان</span>span_1span_1</p>
+<footer style="text-align:center; padding:3rem 1rem; color:var(--text-muted); border-top:1px solid rgba(168,85,247,0.2); margin-top:4rem;">
+<p style="font-size:1.2rem; margin-bottom:0.8rem;">فروشگاه <span style="background:linear-gradient(135deg, #a855f7, #ec4899); -webkit-background-clip:text; -webkit-text-fill-color:transparent; font-weight:900;">موبایل اپل - پاکروان</span></p>
 <div style="display:flex; justify-content:center; gap:25px; margin:1.2rem 0;">
 <a href="https://t.me/Kapitan0913" target="_blank" style="color:#f3e8ff; text-decoration:none; font-weight:700;">تلگرام</a>
 <a href="https://wa.me/989354263705" target="_blank" style="color:#f3e8ff; text-decoration:none; font-weight:700;">واتساپ</a>
 <a href="https://rubika.ir/Alfa0912" target="_blank" style="color:#f3e8ff; text-decoration:none; font-weight:700;">روبیکا</a>
 </div>
-<p>تمامی حقوق محفوظ است © ۲۰۲۶span_2span_2</p>
+<p style="font-size:0.9rem;">تمامی حقوق محفوظ است © ۲۰۲۶</p>
 </footer>
 
 <script>
@@ -436,7 +442,7 @@ return;
 let html = '', total = 0;
 cart.forEach(item => {
 total += item.price;
-html += <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.08); font-size:0.95rem;"&gt;&lt;span&gt;${item.name}</span><span style="color:#38bdf8; font-weight:700;">${item.price.toLocaleString()} تومان&lt;/span&gt;&lt;/div>;
+html += <div style="display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.08); font-size:1rem;"&gt;&lt;span&gt;${item.name}</span><span style="color:#38bdf8; font-weight:800;">${item.price.toLocaleString()} تومان&lt;/span&gt;&lt;/div>;
 });
 cartList.innerHTML = html;
 totalPriceEl.innerText = total.toLocaleString() + ' تومان';
