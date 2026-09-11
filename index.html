@@ -8,398 +8,398 @@
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
 
 :root {
-    --bg-main: #f0f3f8;
-    --surface: #ffffff;
-    --primary: #2563eb;
-    --primary-gradient: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #60a5fa 100%);
-    --accent: #f59e0b;
-    --text-dark: #0f172a;
-    --text-muted: #64748b;
-    --border: #e2e8f0;
-    --shadow-sm: 0 4px 12px rgba(37, 99, 235, 0.08);
-    --shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.12);
-    --radius-lg: 24px;
-    --radius-md: 16px;
+--bg-main: #f0f3f8;
+--surface: #ffffff;
+--primary: #2563eb;
+--primary-gradient: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 50%, #60a5fa 100%);
+--accent: #f59e0b;
+--text-dark: #0f172a;
+--text-muted: #64748b;
+--border: #e2e8f0;
+--shadow-sm: 0 4px 12px rgba(37, 99, 235, 0.08);
+--shadow-lg: 0 20px 40px rgba(15, 23, 42, 0.12);
+--radius-lg: 24px;
+--radius-md: 16px;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Vazirmatn', sans-serif; }
+• { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Vazirmatn', sans-serif; }
 
 body {
-    background-color: var(--bg-main);
-    color: var(--text-dark);
-    line-height: 1.7;
-    padding-bottom: 110px;
-    overflow-x: hidden;
-    animation: fadeInBody 0.6s ease-out;
+background-color: var(--bg-main);
+color: var(--text-dark);
+line-height: 1.7;
+padding-bottom: 110px;
+overflow-x: hidden;
+animation: fadeInBody 0.6s ease-out;
 }
 
 @keyframes fadeInBody {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+from { opacity: 0; transform: translateY(10px); }
+to { opacity: 1; transform: translateY(0); }
 }
 
 .top-promo-bar {
-    background: linear-gradient(90deg, #1e3a8a, #2563eb, #1e3a8a);
-    background-size: 200% auto;
-    color: #fff;
-    text-align: center;
-    padding: 8px 16px;
-    font-size: 0.85rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    animation: shimmerBg 6s linear infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+background: linear-gradient(90deg, #1e3a8a, #2563eb, #1e3a8a);
+background-size: 200% auto;
+color: #fff;
+text-align: center;
+padding: 8px 16px;
+font-size: 0.85rem;
+font-weight: 700;
+letter-spacing: 0.5px;
+animation: shimmerBg 6s linear infinite;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 10px;
 }
 
 @keyframes shimmerBg {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+0% { background-position: 0% 50%; }
+50% { background-position: 100% 50%; }
+100% { background-position: 0% 50%; }
 }
 
 .promo-code-badge {
-    background: rgba(255, 255, 255, 0.25);
-    padding: 2px 10px;
-    border-radius: 6px;
-    border: 1px dashed #fff;
-    cursor: pointer;
-    transition: transform 0.2s;
+background: rgba(255, 255, 255, 0.25);
+padding: 2px 10px;
+border-radius: 6px;
+border: 1px dashed #fff;
+cursor: pointer;
+transition: transform 0.2s;
 }
 .promo-code-badge:hover { transform: scale(1.05); }
 
 .main-header {
-    background: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    padding: 14px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+background: rgba(255, 255, 255, 0.92);
+backdrop-filter: blur(12px);
+-webkit-backdrop-filter: blur(12px);
+padding: 14px 20px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid var(--border);
+position: sticky;
+top: 0;
+z-index: 1000;
+box-shadow: 0 4px 20px rgba(0,0,0,0.03);
 }
 
 .header-actions {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+display: flex;
+align-items: center;
+gap: 12px;
 }
 
 .icon-btn {
-    background: #f8fafc;
-    border: 1px solid var(--border);
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 1.2rem;
-    position: relative;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+background: #f8fafc;
+border: 1px solid var(--border);
+width: 42px;
+height: 42px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+font-size: 1.2rem;
+position: relative;
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-btn:hover {
-    background: var(--primary);
-    color: #fff;
-    border-color: var(--primary);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.25);
+background: var(--primary);
+color: #fff;
+border-color: var(--primary);
+transform: translateY(-2px);
+box-shadow: 0 6px 15px rgba(37, 99, 235, 0.25);
 }
 
 .badge-counter {
-    position: absolute;
-    top: -4px;
-    right: -4px;
-    background: #ef4444;
-    color: #fff;
-    font-size: 0.7rem;
-    font-weight: 900;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #fff;
-    animation: pulseBadge 2s infinite;
+position: absolute;
+top: -4px;
+right: -4px;
+background: #ef4444;
+color: #fff;
+font-size: 0.7rem;
+font-weight: 900;
+width: 20px;
+height: 20px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+border: 2px solid #fff;
+animation: pulseBadge 2s infinite;
 }
 
 @keyframes pulseBadge {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.15); }
-    100% { transform: scale(1); }
+0% { transform: scale(1); }
+50% { transform: scale(1.15); }
+100% { transform: scale(1); }
 }
 
 .brand-logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    text-decoration: none;
+display: flex;
+align-items: center;
+gap: 8px;
+text-decoration: none;
 }
 
 .brand-title {
-    font-size: 1.4rem;
-    font-weight: 900;
-    background: var(--primary-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    letter-spacing: -0.5px;
+font-size: 1.4rem;
+font-weight: 900;
+background: var(--primary-gradient);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+letter-spacing: -0.5px;
 }
 
 .hero-banner-section {
-    padding: 16px 20px;
+padding: 16px 20px;
 }
 
 .hero-banner {
-    background: var(--primary-gradient);
-    border-radius: var(--radius-lg);
-    padding: 30px 24px;
-    color: #fff;
-    position: relative;
-    overflow: hidden;
-    box-shadow: var(--shadow-lg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 190px;
+background: var(--primary-gradient);
+border-radius: var(--radius-lg);
+padding: 30px 24px;
+color: #fff;
+position: relative;
+overflow: hidden;
+box-shadow: var(--shadow-lg);
+display: flex;
+flex-direction: column;
+justify-content: center;
+min-height: 190px;
 }
 
 .hero-banner::before {
-    content: '';
-    position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 200px;
-    height: 200px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 50%;
-    animation: floatBubble 8s ease-in-out infinite alternate;
+content: '';
+position: absolute;
+top: -50px;
+left: -50px;
+width: 200px;
+height: 200px;
+background: rgba(255, 255, 255, 0.1);
+border-radius: 50%;
+animation: floatBubble 8s ease-in-out infinite alternate;
 }
 
 @keyframes floatBubble {
-    0% { transform: translateY(0) scale(1); }
-    100% { transform: translateY(20px) scale(1.1); }
+0% { transform: translateY(0) scale(1); }
+100% { transform: translateY(20px) scale(1.1); }
 }
 
 .hero-content h2 {
-    font-size: 1.7rem;
-    font-weight: 900;
-    margin-bottom: 8px;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+font-size: 1.7rem;
+font-weight: 900;
+margin-bottom: 8px;
+text-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .hero-content p {
-    font-size: 0.95rem;
-    opacity: 0.92;
-    margin-bottom: 18px;
+font-size: 0.95rem;
+opacity: 0.92;
+margin-bottom: 18px;
 }
 
 .coupon-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 8px 18px;
-    border-radius: 14px;
-    font-weight: 900;
-    font-size: 1.15rem;
-    letter-spacing: 1.5px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+display: inline-flex;
+align-items: center;
+gap: 10px;
+background: rgba(255, 255, 255, 0.2);
+backdrop-filter: blur(8px);
+border: 1px solid rgba(255, 255, 255, 0.5);
+padding: 8px 18px;
+border-radius: 14px;
+font-weight: 900;
+font-size: 1.15rem;
+letter-spacing: 1.5px;
+box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 .search-container {
-    padding: 0 20px;
-    margin-bottom: 12px;
+padding: 0 20px;
+margin-bottom: 12px;
 }
 
 .search-box-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
+position: relative;
+display: flex;
+align-items: center;
 }
 
 .search-input {
-    width: 100%;
-    padding: 14px 20px 14px 48px;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    font-size: 0.95rem;
-    color: var(--text-dark);
-    outline: none;
-    transition: all 0.3s;
-    box-shadow: var(--shadow-sm);
+width: 100%;
+padding: 14px 20px 14px 48px;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: var(--radius-md);
+font-size: 0.95rem;
+color: var(--text-dark);
+outline: none;
+transition: all 0.3s;
+box-shadow: var(--shadow-sm);
 }
 
 .search-input:focus {
-    border-color: var(--primary);
-    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
+border-color: var(--primary);
+box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.15);
 }
 
 .search-icon-pos {
-    position: absolute;
-    left: 18px;
-    font-size: 1.2rem;
-    color: var(--text-muted);
+position: absolute;
+left: 18px;
+font-size: 1.2rem;
+color: var(--text-muted);
 }
 
 .section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 24px 20px 14px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 24px 20px 14px;
 }
 
 .section-title {
-    font-size: 1.2rem;
-    font-weight: 900;
-    color: var(--text-dark);
-    position: relative;
-    padding-right: 12px;
+font-size: 1.2rem;
+font-weight: 900;
+color: var(--text-dark);
+position: relative;
+padding-right: 12px;
 }
 
 .section-title::before {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 4px;
-    height: 18px;
-    background: var(--primary);
-    border-radius: 2px;
+content: '';
+position: absolute;
+right: 0;
+top: 50%;
+transform: translateY(-50%);
+width: 4px;
+height: 18px;
+background: var(--primary);
+border-radius: 2px;
 }
 
 .categories-scroll {
-    display: flex;
-    gap: 14px;
-    overflow-x: auto;
-    padding: 6px 20px 16px;
-    scrollbar-width: none;
+display: flex;
+gap: 14px;
+overflow-x: auto;
+padding: 6px 20px 16px;
+scrollbar-width: none;
 }
 .categories-scroll::-webkit-scrollbar { display: none; }
 
 .cat-card {
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-md);
-    min-width: 115px;
-    padding: 16px 12px;
-    text-align: center;
-    cursor: pointer;
-    flex-shrink: 0;
-    box-shadow: var(--shadow-sm);
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: var(--radius-md);
+min-width: 115px;
+padding: 16px 12px;
+text-align: center;
+cursor: pointer;
+flex-shrink: 0;
+box-shadow: var(--shadow-sm);
+transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .cat-card:hover, .cat-card.active {
-    background: var(--primary);
-    color: #fff;
-    border-color: var(--primary);
-    transform: translateY(-6px);
-    box-shadow: 0 12px 25px rgba(37, 99, 235, 0.3);
+background: var(--primary);
+color: #fff;
+border-color: var(--primary);
+transform: translateY(-6px);
+box-shadow: 0 12px 25px rgba(37, 99, 235, 0.3);
 }
 
 .cat-card:hover .cat-name, .cat-card.active .cat-name {
-    color: #fff;
+color: #fff;
 }
 
 .cat-icon-wrap {
-    font-size: 2.2rem;
-    margin-bottom: 8px;
-    transition: transform 0.3s;
+font-size: 2.2rem;
+margin-bottom: 8px;
+transition: transform 0.3s;
 }
 
 .cat-card:hover .cat-icon-wrap {
-    transform: scale(1.15) rotate(5deg);
+transform: scale(1.15) rotate(5deg);
 }
 
 .cat-name {
-    font-size: 0.85rem;
-    font-weight: 800;
-    color: var(--text-dark);
+font-size: 0.85rem;
+font-weight: 800;
+color: var(--text-dark);
 }
 </style>
 </head>
 <body>
 
 <div class="top-promo-bar">
-    <span>🔥 کد تخفیف ویژه خرید اول:</span>
-    <span class="promo-code-badge" onclick="navigator.clipboard.writeText('PAYCUH5N'); alert('کد تخفیف کپی شد!')">PAYCUH5N</span>
+<span>🔥 کد تخفیف ویژه خرید اول:</span>
+<span class="promo-code-badge" onclick="navigator.clipboard.writeText('PAYCUH5N'); alert('کد تخفیف کپی شد!')">PAYCUH5N</span>
 </div>
 
 <header class="main-header">
-    <div class="header-actions">
-        <button class="icon-btn" onclick="openModal('loginModal')" title="پروفایل کاربری">👤</button>
-        <button class="icon-btn" onclick="openModal('cartModal')" title="سبد خرید">
-            🛒
-            <span id="cartBadgeCount" class="badge-counter">0</span>
-        </button>
-    </div>
-    <a href="#" class="brand-logo">
-        <span class="brand-title">پاکروان موبایل</span>
-        <span style="font-size: 1.3rem;">👑</span>
-    </a>
-    <div class="header-actions">
-        <button class="icon-btn" onclick="document.getElementById('mainSearchInput').focus()">🔍</button>
-        <button class="icon-btn" onclick="alert('منوی پیشرفته سایت')">☰</button>
-    </div>
+<div class="header-actions">
+<button class="icon-btn" onclick="openModal('loginModal')" title="پروفایل کاربری">👤</button>
+<button class="icon-btn" onclick="openModal('cartModal')" title="سبد خرید">
+🛒
+<span id="cartBadgeCount" class="badge-counter">0</span>
+</button>
+</div>
+<a href="#" class="brand-logo">
+<span class="brand-title">پاکروان موبایل</span>
+<span style="font-size: 1.3rem;">👑</span>
+</a>
+<div class="header-actions">
+<button class="icon-btn" onclick="document.getElementById('mainSearchInput').focus()">🔍</button>
+<button class="icon-btn" onclick="alert('منوی پیشرفته سایت')">☰</button>
+</div>
 </header>
 
 <section class="hero-banner-section">
-    <div class="hero-banner">
-        <div class="hero-content">
-            <h2>۱,۰۰۰,۰۰۰ تومان تخفیف</h2>
-            <p>جشنواره خرید لوازم جانبی اورجینال سامسونگ و اپل</p>
-            <div class="coupon-pill">
-                <span>PAYCUH5N</span>
-            </div>
-        </div>
-    </div>
+<div class="hero-banner">
+<div class="hero-content">
+<h2>۱,۰۰۰,۰۰۰ تومان تخفیف</h2>
+<p>جشنواره خرید لوازم جانبی اورجینال سامسونگ و اپل</p>
+<div class="coupon-pill">
+<span>PAYCUH5N</span>
+</div>
+</div>
+</div>
 </section>
 
 <div class="search-container">
-    <div class="search-box-wrapper">
-        <input type="text" id="mainSearchInput" class="search-input" placeholder="جستجوی پیشرفته قاب، گلس، شارژر و..." onkeyup="filterProductsLive()">
-        <span class="search-icon-pos">🔍</span>
-    </div>
+<div class="search-box-wrapper">
+<input type="text" id="mainSearchInput" class="search-input" placeholder="جستجوی پیشرفته قاب، گلس، شارژر و..." onkeyup="filterProductsLive()">
+<span class="search-icon-pos">🔍</span>
+</div>
 </div>
 
 <div class="section-header">
-    <div class="section-title">دسته‌بندی‌های تخصصی</div>
+<div class="section-title">دسته‌بندی‌های تخصصی</div>
 </div>
 
 <div class="categories-scroll">
-    <div class="cat-card active" onclick="switchCategory('all', this)">
-        <div class="cat-icon-wrap">✨</div>
-        <div class="cat-name">همه محصولات</div>
-    </div>
-    <div class="cat-card" onclick="switchCategory('case', this)">
-        <div class="cat-icon-wrap">📱</div>
-        <div class="cat-name">قاب و گارد</div>
-    </div>
-    <div class="cat-card" onclick="switchCategory('glass', this)">
-        <div class="cat-icon-wrap">🛡️</div>
-        <div class="cat-name">گلس محافظ</div>
-    </div>
-    <div class="cat-card" onclick="switchCategory('charger', this)">
-        <div class="cat-icon-wrap">⚡</div>
-        <div class="cat-name">شارژر اصلی</div>
-    </div>
-    <div class="cat-card" onclick="switchCategory('audio', this)">
-        <div class="cat-icon-wrap">🎧</div>
-        <div class="cat-name">هندزفری</div>
-    </div>
+<div class="cat-card active" onclick="switchCategory('all', this)">
+<div class="cat-icon-wrap">✨</div>
+<div class="cat-name">همه محصولات</div>
+</div>
+<div class="cat-card" onclick="switchCategory('case', this)">
+<div class="cat-icon-wrap">📱</div>
+<div class="cat-name">قاب و گارد</div>
+</div>
+<div class="cat-card" onclick="switchCategory('glass', this)">
+<div class="cat-icon-wrap">🛡️</div>
+<div class="cat-name">گلس محافظ</div>
+</div>
+<div class="cat-card" onclick="switchCategory('charger', this)">
+<div class="cat-icon-wrap">⚡</div>
+<div class="cat-name">شارژر اصلی</div>
+</div>
+<div class="cat-card" onclick="switchCategory('audio', this)">
+<div class="cat-icon-wrap">🎧</div>
+<div class="cat-name">هندزفری</div>
+</div>
 </div>
 <div class="section-header">
 <div class="section-title">محصولات پرفروش و برگزیده</div>
@@ -704,7 +704,7 @@ display: block;
 }
 </style>
 
-<!-- مدال ورود / ثبت‌نام با فرم‌های کامل و دکمه بازگشت -->
+<!-- مودال ورود / ثبت‌نام کامل -->
 <div id="loginModal" class="modal-overlay">
 <div class="modal-box">
 <button class="modal-close" onclick="closeModal('loginModal')">✕</button>
@@ -718,7 +718,7 @@ display: block;
 <p style="text-align: center; font-size: 0.85rem; color: var(--text-muted);">حساب کاربری ندارید؟ <span style="color: var(--primary); font-weight: bold; cursor: pointer;" onclick="showRegisterForm()">ثبت‌نام کنید</span></p>
 </div>
 
-<!-- فرم ثبت‌نام کامل (استان، کد پستی، آدرس) -->
+<!-- فرم ثبت‌نام شامل استان، کد پستی و آدرس -->
 <div id="registerFormSection" style="display: none;">
 <h3 style="margin-bottom: 16px; font-size: 1.3rem; font-weight: 900;">ثبت‌نام کاربر جدید</h3>
 <input type="text" id="regName" placeholder="نام و نام خانوادگی" style="width:100%; padding:12px; margin-bottom:10px; border:1px solid var(--border); border-radius:12px; outline:none; font-size:0.85rem;">
@@ -812,7 +812,7 @@ if(!name || !phone || !state || !postal || !address) {
 alert('لطفا تمامی اطلاعات (نام، موبایل، استان، کد پستی و آدرس) را کامل وارد کنید.');
 return;
 }
-alert('🎉 ثبت‌نام با موفقیت انجام شد و اطلاعات ارسال شد!');
+alert('🎉 ثبت‌نام با موفقیت انجام شد!');
 closeModal('loginModal');
 showLoginForm();
 }
