@@ -11,11 +11,6 @@
 <meta name="author" content="پاکروان">
 <meta name="robots" content="index, follow">
 
-<!-- Open Graph / Social Media Meta Tags -->
-<meta property="og:title" content="موبایل اپل - پاکروان | مرکز تخصصی لوازم جانبی موبایل">
-<meta property="og:description" content="خرید آنلاین انواع قاب، گلس و لوازم جانبی اصلی موبایل با بهترین قیمت و ارسال فوری.">
-<meta property="og:type" content="website">
-
 <!-- Fonts: Vazirmatn & Lalezar -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
@@ -48,7 +43,7 @@ background-color: var(--bg-main);
 color: var(--text-main);
 line-height: 1.8;
 overflow-x: hidden;
-padding-bottom: 80px;
+padding-bottom: 90px;
 position: relative;
 }
 
@@ -65,18 +60,8 @@ opacity: 0.3;
 animation: fluidMove 14s infinite alternate ease-in-out;
 }
 
-body::before {
-background: #4f46e5;
-top: -150px;
-left: -150px;
-}
-
-body::after {
-background: #f43f5e;
-bottom: -150px;
-right: -150px;
-animation-delay: -7s;
-}
+body::before { background: #4f46e5; top: -150px; left: -150px; }
+body::after { background: #f43f5e; bottom: -150px; right: -150px; animation-delay: -7s; }
 
 @keyframes fluidMove {
 0% { transform: translate(0, 0) scale(1); }
@@ -118,12 +103,6 @@ font-size: 0.9rem;
 font-weight: 600;
 margin-bottom: 1.2rem;
 box-shadow: 0 0 20px rgba(244, 63, 94, 0.2);
-animation: badgePulse 3s infinite alternate;
-}
-
-@keyframes badgePulse {
-0% { transform: scale(1); box-shadow: 0 0 15px rgba(244, 63, 94, 0.2); }
-100% { transform: scale(1.03); box-shadow: 0 0 30px rgba(244, 63, 94, 0.4); }
 }
 
 .glitch-title {
@@ -173,8 +152,6 @@ font-weight: 700;
 text-decoration: none;
 color: white;
 transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-position: relative;
-overflow: hidden;
 }
 
 .social-btn:hover {
@@ -211,7 +188,6 @@ box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 .search-input:focus {
 border-color: #f43f5e;
 box-shadow: var(--glow-main), 0 15px 35px rgba(0,0,0,0.7);
-transform: scale(1.02);
 }
 
 .search-icon {
@@ -238,25 +214,15 @@ color: white;
 text-align: center;
 margin-bottom: 1.2rem;
 box-shadow: 0 12px 35px rgba(79, 70, 229, 0.4);
-transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.main-promo-banner:hover {
-transform: translateY(-4px);
-box-shadow: 0 18px 45px rgba(79, 70, 229, 0.6);
 }
 
 .main-promo-banner h2 {
 font-family: 'Lalezar', cursive;
 font-size: 2.7rem;
 margin-bottom: 0.4rem;
-letter-spacing: 1px;
 }
 
-.main-promo-banner p {
-font-size: 1.05rem;
-opacity: 0.95;
-}
+.main-promo-banner p { font-size: 1.05rem; opacity: 0.95; }
 
 .promo-grid {
 display: grid;
@@ -274,30 +240,14 @@ min-height: 140px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
-transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-cursor: pointer;
-}
-
-.sub-promo-banner:hover {
-transform: translateY(-6px) scale(1.02);
-filter: brightness(1.15);
-box-shadow: 0 15px 35px rgba(0,0,0,0.5);
 }
 
 .sub-promo-1 { background: var(--gradient-banner-2); }
 .sub-promo-2 { background: var(--gradient-banner-3); }
+.sub-promo-banner h4 { font-size: 1.15rem; font-weight: 800; }
+.sub-promo-banner span { font-size: 0.9rem; opacity: 0.95; }
 
-.sub-promo-banner h4 {
-font-size: 1.15rem;
-font-weight: 800;
-}
-
-.sub-promo-banner span {
-font-size: 0.9rem;
-opacity: 0.95;
-}
-
-/* دسته‌بندی‌ها */
+/* دسته‌بندی‌ها و محصولات */
 .container {
 max-width: 1200px;
 margin: 0 auto;
@@ -330,10 +280,10 @@ background: var(--gradient-primary);
 color: #ffffff;
 border-color: transparent;
 box-shadow: var(--glow-pink);
+transform: translateY(-50px) scale(1.05); /* اصلاح انیمیشن */
 transform: translateY(-5px) scale(1.05);
 }
 
-/* محصولات */
 .products-grid {
 display: grid;
 grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
@@ -371,12 +321,10 @@ background: #030712;
 width: 100%;
 height: 100%;
 object-fit: cover;
-transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+transition: transform 0.7s ease;
 }
 
-.product-card:hover .product-img {
-transform: scale(1.12) rotate(1deg);
-}
+.product-card:hover .product-img { transform: scale(1.12) rotate(1deg); }
 
 .product-badge {
 position: absolute;
@@ -404,11 +352,6 @@ font-size: 1.2rem;
 font-weight: 800;
 margin-bottom: 0.6rem;
 color: #ffffff;
-transition: color 0.3s ease;
-}
-
-.product-card:hover .product-title {
-color: #f43f5e;
 }
 
 .product-desc {
@@ -431,7 +374,6 @@ border-top: 1px solid var(--border-color);
 font-size: 1.15rem;
 font-weight: 900;
 color: #38bdf8;
-text-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
 }
 
 .price span {
@@ -450,8 +392,7 @@ border-radius: 12px;
 font-size: 0.88rem;
 font-weight: 700;
 cursor: pointer;
-transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
-text-decoration: none;
+transition: all 0.35s ease;
 }
 
 .btn-buy:hover {
@@ -468,7 +409,7 @@ position: fixed;
 bottom: 0;
 left: 0;
 width: 100%;
-background: rgba(3, 7, 18, 0.85);
+background: rgba(3, 7, 18, 0.92);
 backdrop-filter: blur(25px);
 display: flex;
 justify-content: space-around;
@@ -487,22 +428,164 @@ display: flex;
 flex-direction: column;
 align-items: center;
 gap: 4px;
+cursor: pointer;
+background: none;
+border: none;
 transition: all 0.3s ease;
+position: relative;
 }
 
-.nav-item span.icon {
-font-size: 1.3rem;
-transition: transform 0.3s ease;
+.nav-item span.icon { font-size: 1.3rem; }
+.nav-item.active, .nav-item:hover { color: #f43f5e; font-weight: 700; }
+
+.cart-badge-count {
+position: absolute;
+top: -2px;
+right: 15px;
+background: #f43f5e;
+color: white;
+font-size: 0.7rem;
+padding: 1px 6px;
+border-radius: 50px;
+font-weight: bold;
+display: none;
 }
 
-.nav-item:hover span.icon, .nav-item.active span.icon {
-transform: translateY(-3px) scale(1.15);
+/* Modal / پنجره‌های پاپ‌آپ (سبد خرید، ورود، ثبت آدرس) */
+.modal-overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(3, 7, 18, 0.8);
+backdrop-filter: blur(10px);
+display: none;
+justify-content: center;
+align-items: center;
+z-index: 2000;
+padding: 1rem;
 }
 
-.nav-item.active, .nav-item:hover {
-color: #f43f5e;
+.modal-box {
+background: #0f172a;
+border: 1px solid var(--border-color);
+width: 100%;
+max-width: 500px;
+border-radius: 24px;
+padding: 2rem;
+box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+animation: scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+max-height: 90vh;
+overflow-y: auto;
+}
+
+@keyframes scaleUp {
+from { transform: scale(0.8); opacity: 0; }
+to { transform: scale(1); opacity: 1; }
+}
+
+.modal-header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 1.5rem;
+border-bottom: 1px solid var(--border-color);
+padding-bottom: 1rem;
+}
+
+.modal-header h3 { color: #fff; font-size: 1.3rem; font-weight: 800; }
+
+.close-modal {
+background: none;
+border: none;
+color: var(--text-muted);
+font-size: 1.5rem;
+cursor: pointer;
+}
+
+.close-modal:hover { color: #f43f5e; }
+
+/* فرم‌ها و اقلام سبد خرید */
+.form-group {
+margin-bottom: 1.2rem;
+}
+
+.form-group label {
+display: block;
+font-size: 0.9rem;
+color: var(--text-muted);
+margin-bottom: 0.4rem;
+}
+
+.form-control {
+width: 100%;
+background: rgba(3, 7, 18, 0.8);
+border: 1px solid var(--border-color);
+padding: 0.85rem 1rem;
+border-radius: 12px;
+color: #fff;
+font-size: 0.95rem;
+outline: none;
+}
+
+.form-control:focus { border-color: #f43f5e; box-shadow: 0 0 15px rgba(244,63,94,0.3); }
+
+.btn-submit {
+width: 100%;
+background: var(--gradient-primary);
+color: white;
+border: none;
+padding: 0.9rem;
+border-radius: 12px;
 font-weight: 700;
-text-shadow: 0 0 10px rgba(244, 63, 94, 0.4);
+font-size: 1rem;
+cursor: pointer;
+transition: 0.3s;
+margin-top: 1rem;
+}
+
+.btn-submit:hover { filter: brightness(1.15); box-shadow: var(--glow-pink); }
+
+.cart-items-list {
+max-height: 250px;
+overflow-y: auto;
+margin-bottom: 1rem;
+}
+
+.cart-item-row {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: rgba(3, 7, 18, 0.5);
+padding: 0.8rem;
+border-radius: 12px;
+margin-bottom: 8px;
+border: 1px solid rgba(255,255,255,0.05);
+}
+
+.cart-item-info h4 { font-size: 0.95rem; color: #fff; }
+.cart-item-info span { font-size: 0.82rem; color: #38bdf8; }
+
+.remove-item {
+background: rgba(244,63,94,0.2);
+color: #ffe4e6;
+border: none;
+padding: 4px 10px;
+border-radius: 8px;
+cursor: pointer;
+font-size: 0.8rem;
+}
+
+.cart-total-section {
+border-top: 1px solid var(--border-color);
+padding-top: 1rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+font-weight: 800;
+font-size: 1.1rem;
+margin-bottom: 1rem;
 }
 
 /* فوتر */
@@ -523,26 +606,9 @@ gap: 25px;
 margin: 1.8rem 0;
 }
 
-.footer-socials a {
-color: #ffe4e6;
-text-decoration: none;
-font-weight: 700;
-transition: all 0.3s ease;
-}
-
-.footer-socials a:hover {
-color: #ffffff;
-text-shadow: 0 0 20px rgba(244, 63, 94, 0.9);
-transform: translateY(-3px);
-}
-
-.store-owner {
-color: #fff;
-font-weight: 800;
-background: var(--gradient-primary);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-}
+.footer-socials a { color: #ffe4e6; text-decoration: none; font-weight: 700; transition: 0.3s; }
+.footer-socials a:hover { color: #ffffff; text-shadow: 0 0 20px rgba(244, 63, 94, 0.9); }
+.store-owner { color: #fff; font-weight: 800; background: var(--gradient-primary); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
 </style>
 </head>
 <body>
@@ -596,136 +662,176 @@ background: var(--gradient-primary);
 
 <!-- محصولات -->
 <div class="products-grid" id="productsGrid">
-<article class="product-card" data-category="case" data-name="قاب سیلیکونی اورجینال">
+<article class="product-card" data-category="case" data-name="قاب سیلیکونی اورجینال" data-price="280000">
 <div class="product-img-wrapper">
 <span class="product-badge">پرفروش</span>
-<img src="https://images.unsplash.com/photo-1601593346740-92561b47e33e?auto=format&fit=crop&w=600&q=80" alt="قاب سیلیکونی اورجینال موبایل" class="product-img">
+<img src="https://images.unsplash.com/photo-1601593346740-92561b47e33e?auto=format&fit=crop&w=600&q=80" alt="قاب سیلیکونی اورجینال" class="product-img">
 </div>
 <div class="product-body">
 <h3 class="product-title">قاب سیلیکونی اورجینال</h3>
 <p class="product-desc">دارای لایه داخلی مخمل، ضد تعریق، رنگ‌بندی متنوع و مقاوم در برابر ضربه.</p>
 <div class="product-footer">
 <div class="price">۲۸۰,۰۰۰ <span>تومان</span></div>
-<a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
+<button class="btn-buy" onclick="addToCart('قاب سیلیکونی اورجینال', 280000)">افزودن به سبد</button>
 </div>
 </div>
 </article>
 
-<article class="product-card" data-category="case" data-name="قاب مگ‌سیف چرمی آیفون">
+<article class="product-card" data-category="case" data-name="قاب مگ‌سیف چرمی آیفون" data-price="390000">
 <div class="product-img-wrapper">
 <span class="product-badge">جدید</span>
-<img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=600&q=80" alt="قاب مگ‌سیف چرمی آیفون" class="product-img">
+<img src="https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=600&q=80" alt="قاب مگ‌سیف چرمی" class="product-img">
 </div>
 <div class="product-body">
 <h3 class="product-title">قاب مگ‌سیف چرمی آیفون</h3>
 <p class="product-desc">طراحی لوکس، پشتیبانی کامل از شارژر مگ‌سیف و محافظت عالی از لنز دوربین.</p>
 <div class="product-footer">
 <div class="price">۳۹۰,۰۰۰ <span>تومان</span></div>
-<a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
+<button class="btn-buy" onclick="addToCart('قاب مگ‌سیف چرمی آیفون', 390000)">افزودن به سبد</button>
 </div>
 </div>
 </article>
 
-<article class="product-card" data-category="glass" data-name="محافظ صفحه سرامیکی مات">
+<article class="product-card" data-category="glass" data-name="محافظ صفحه سرامیکی مات" data-price="150000">
 <div class="product-img-wrapper">
 <span class="product-badge">مقاوم</span>
-<img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="گلس و محافظ صفحه سرامیکی مات" class="product-img">
+<img src="https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?auto=format&fit=crop&w=600&q=80" alt="محافظ صفحه سرامیکی" class="product-img">
 </div>
 <div class="product-body">
 <h3 class="product-title">محافظ صفحه سرامیکی مات</h3>
 <p class="product-desc">پوشش کامل صفحه نمایش، ضد اثر انگشت و خط و خش بدون افت کیفیت تاچ.</p>
 <div class="product-footer">
 <div class="price">۱۵۰,۰۰۰ <span>تومان</span></div>
-<a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
+<button class="btn-buy" onclick="addToCart('محافظ صفحه سرامیکی مات', 150000)">افزودن به سبد</button>
 </div>
 </div>
 </article>
 
-<!-- محصول جدید: گلس OG TOVS (با فراخوانی عکس ارسال شده شما) -->
-<article class="product-card" data-category="glass" data-name="گلس ضد ضربه OG TOVS ESD">
+<article class="product-card" data-category="glass" data-name="گلس ضد ضربه OG TOVS ESD" data-price="210000">
 <div class="product-img-wrapper">
 <span class="product-badge">جدید</span>
-<!-- نام عکس شما در اینجا قرار داده شده است -->
-<img src="5880_2.png" alt="گلس ضد ضربه OG TOVS ESD" class="product-img">
+<img src="5880_2.png" alt="گلس OG TOVS" class="product-img">
 </div>
 <div class="product-body">
 <h3 class="product-title">گلس ضد ضربه OG TOVS ESD</h3>
 <p class="product-desc">مجهز به فناوری ضد استاتیک، سختی ۹H، شفافیت فوق‌العاده و پوشش لبه به لبه.</p>
 <div class="product-footer">
 <div class="price">۲۱۰,۰۰۰ <span>تومان</span></div>
-<a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
+<button class="btn-buy" onclick="addToCart('گلس ضد ضربه OG TOVS ESD', 210000)">افزودن به سبد</button>
 </div>
 </div>
 </article>
 
-<!-- محصول جدید: گلس Anti-Static (با فراخوانی عکس ارسال شده شما) -->
-<article class="product-card" data-category="glass" data-name="گلس ضد استاتیک Anti-Static">
-<div class="product-img-wrapper">
-<span class="product-badge">ویژه</span>
-<!-- نام عکس شما در اینجا قرار داده شده است -->
-<img src="5880_2.png" alt="گلس ضد استاتیک Anti-Static" class="product-img">
-</div>
-<div class="product-body">
-<h3 class="product-title">گلس ضد استاتیک Anti-Static</h3>
-<p class="product-desc">ضد گرد و غبار، مقاومت بالا در برابر خط و خش و طول عمر بیشتر صفحه نمایش.</p>
-<div class="product-footer">
-<div class="price">۲۴۰,۰۰۰ <span>تومان</span></div>
-<a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
-</div>
-</div>
-</article>
-
-<article class="product-card" data-category="charger" data-name="کلید شارژر فست شارژ اصلی">
+<article class="product-card" data-category="charger" data-name="کلید شارژر فست شارژ اصلی" data-price="450000">
 <div class="product-img-wrapper">
 <span class="product-badge">فست شارژ</span>
-<img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80" alt="کلید شارژر فست شارژ اصلی" class="product-img">
+<img src="https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80" alt="شارژر اصلی" class="product-img">
 </div>
 <div class="product-body">
 <h3 class="product-title">کلید شارژر فست شارژ اصلی</h3>
 <p class="product-desc">پشتیبانی از فناوری شارژ سریع، جریان خروجی پایدار و ایمن در برابر نوسانات.</p>
 <div class="product-footer">
 <div class="price">۴۵۰,۰۰۰ <span>تومان</span></div>
-<a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
+<button class="btn-buy" onclick="addToCart('کلید شارژر فست شارژ اصلی', 450000)">افزودن به سبد</button>
 </div>
 </div>
 </article>
 
-<article class="product-card" data-category="audio" data-name="هندزفری بلوتوثی مدل AirDots">
+<article class="product-card" data-category="audio" data-name="هندزفری بلوتوثی مدل AirDots" data-price="680000">
 <div class="product-img-wrapper">
 <span class="product-badge">محبوب</span>
-<img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80" alt="هندزفری بلوتوثی ایرداتس" class="product-img">
+<img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80" alt="هندزفری AirDots" class="product-img">
 </div>
 <div class="product-body">
 <h3 class="product-title">هندزفری بلوتوثی مدل AirDots</h3>
 <p class="product-desc">کیفیت صدای استریو بیس‌دار، بلوتوث نسخه ۵.۳ و نگهداری شارژ عالی.</p>
 <div class="product-footer">
 <div class="price">۶۸۰,۰۰۰ <span>تومان</span></div>
-<a href="https://t.me/Kapitan0913" target="_blank" class="btn-buy">خرید و سفارش</a>
+<button class="btn-buy" onclick="addToCart('هندزفری بلوتوثی مدل AirDots', 680000)">افزودن به سبد</button>
 </div>
 </div>
 </article>
 </div>
 </main>
 
-<!-- منوی پایین صفحه -->
+<!-- منوی پایین صفحه با قابلیت‌های تعاملی -->
 <nav class="bottom-nav">
-<a href="https://t.me/Kapitan0913" target="_blank" class="nav-item">
+<button class="nav-item" onclick="openAuthModal()">
 <span class="icon">👤</span>
-ورود/ارتباط
-</a>
-<a href="https://t.me/Kapitan0913" target="_blank" class="nav-item">
+<span id="authNavText">ورود / ثبت‌نام</span>
+</button>
+<button class="nav-item" onclick="openCartModal()">
 <span class="icon">🛒</span>
-ثبت سفارش
-</a>
-<a href="#searchInput" class="nav-item">
+سبد خرید
+<span class="cart-badge-count" id="cartCount">0</span>
+</button>
+<button class="nav-item" onclick="scrollToSearch()">
 <span class="icon">🗂️</span>
 دسته محصولات
-</a>
-<a href="#" class="nav-item active">
+</button>
+<button class="nav-item active" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
 <span class="icon">🏠</span>
 خانه
-</a>
+</button>
 </nav>
+
+<!-- مودال سبد خرید و تسویه حساب آدرس -->
+<div class="modal-overlay" id="cartModal">
+<div class="modal-box">
+<div class="modal-header">
+<h3>🛒 سبد خرید شما</h3>
+<button class="close-modal" onclick="closeCartModal()">×</button>
+</div>
+<div class="cart-items-list" id="cartItemsContainer">
+<!-- اقلام سبد خرید اینجا لود میشوند -->
+</div>
+<div class="cart-total-section">
+<span>مجموع قابل پرداخت:</span>
+<span id="cartTotalPrice">۰ تومان</span>
+</div>
+<hr style="border:0; border-top:1px solid var(--border-color); margin-bottom:1rem;">
+<h4 style="color:#fff; margin-bottom:0.8rem; font-size:1.05rem;">📍 اطلاعات ارسال و آدرس پستی</h4>
+<div class="form-group">
+<label>استان و شهر</label>
+<input type="text" id="checkoutCity" class="form-control" placeholder="مثلا: تهران، تهران">
+</div>
+<div class="form-group">
+<label>آدرس دقیق پستی</label>
+<input type="text" id="checkoutAddress" class="form-control" placeholder="خیابان، پلاک، واحد">
+</div>
+<div class="form-group">
+<label>کد پستی (۱۰ رقمی)</label>
+<input type="text" id="checkoutPostal" class="form-control" maxlength="10" placeholder="كد پستی معتبر">
+</div>
+<button class="btn-submit" onclick="submitOrder()">ثبت نهایی سفارش و ارسال</button>
+</div>
+</div>
+
+<!-- مودال ورود / ثبت‌نام کاربر -->
+<div class="modal-overlay" id="authModal">
+<div class="modal-box" style="max-width: 400px;">
+<div class="modal-header">
+<h3>👤 حساب کاربری</h3>
+<button class="close-modal" onclick="closeAuthModal()">×</button>
+</div>
+<div id="authFormBody">
+<div class="form-group">
+<label>شماره موبایل</label>
+<input type="text" id="userPhoneInput" class="form-control" placeholder="09123456789">
+</div>
+<div class="form-group">
+<label>نام و نام خانوادگی</label>
+<input type="text" id="userNameInput" class="form-control" placeholder="نام شما">
+</div>
+<button class="btn-submit" onclick="saveUserAccount()">تایید و ورود</button>
+</div>
+<div id="authProfileBody" style="display: none; text-align: center;">
+<p style="color: #38bdf8; font-size: 1.1rem; margin-bottom: 1rem;">شما با موفقیت وارد شده‌اید ✅</p>
+<p id="displayUserInfo" style="margin-bottom: 1.5rem; color: #fff;"></p>
+<button class="btn-submit" style="background: rgba(244,63,94,0.3); border:1px solid #f43f5e;" onclick="logoutUser()">خروج از حساب</button>
+</div>
+</div>
+</div>
 
 <footer>
 <p>فروشگاه <span class="store-owner">موبایل اپل - پاکروان</span></p>
@@ -738,6 +844,127 @@ background: var(--gradient-primary);
 </footer>
 
 <script>
+// سیستم سبد خرید با LocalStorage
+let cart = JSON.parse(localStorage.getItem('pakravan_cart')) || [];
+
+function updateCartUI() {
+const container = document.getElementById('cartItemsContainer');
+const countBadge = document.getElementById('cartCount');
+const totalPriceEl = document.getElementById('cartTotalPrice');
+
+container.innerHTML = '';
+let totalCount = 0;
+let totalPrice = 0;
+
+if (cart.length === 0) {
+container.innerHTML = '<p style="text-align:center; color:var(--text-muted); padding: 1.5rem;">سبد خرید شما خالی است.</p>';
+} else {
+cart.forEach((item, index) => {
+totalCount += 1;
+totalPrice += item.price;
+container.innerHTML += &lt;div class="cart-item-row"&gt; &lt;div class="cart-item-info"&gt; &lt;h4&gt;${item.name}</h4>
+<span>${item.price.toLocaleString()} تومان&lt;/span&gt; &lt;/div&gt; &lt;button class="remove-item" onclick="removeFromCart(${index})">حذف</button>
+</div>`;
+});
+}
+
+countBadge.innerText = totalCount;
+countBadge.style.display = totalCount > 0 ? 'inline-block' : 'none';
+totalPriceEl.innerText = totalPrice.toLocaleString() + ' تومان';
+localStorage.setItem('pakravan_cart', JSON.stringify(cart));
+}
+
+function addToCart(name, price) {
+cart.push({name, price});
+updateCartUI();
+// افکت باز شدن سریع سبد خرید برای تجربه کاربری بهتر
+openCartModal();
+}
+
+function removeFromCart(index) {
+cart.splice(index, 1);
+updateCartUI();
+}
+
+function openCartModal() { document.getElementById('cartModal').style.display = 'flex'; updateCartUI(); }
+function closeCartModal() { document.getElementById('cartModal').style.display = 'none'; }
+
+// مدیریت حساب کاربری
+function openAuthModal() {
+let savedUser = localStorage.getItem('pakravan_user');
+if (savedUser) {
+let user = JSON.parse(savedUser);
+document.getElementById('authFormBody').style.display = 'none';
+document.getElementById('authProfileBody').style.display = 'block';
+document.getElementById('displayUserInfo').innerText = ``${user.name} (${user.phone});
+} else {
+document.getElementById('authFormBody').style.display = 'block';
+document.getElementById('authProfileBody').style.display = 'none';
+}
+document.getElementById('authModal').style.display = 'flex';
+}
+function closeAuthModal() { document.getElementById('authModal').style.display = 'none'; }
+
+function saveUserAccount() {
+let phone = document.getElementById('userPhoneInput').value;
+let name = document.getElementById('userNameInput').value;
+if(!phone || !name) {
+alert('لطفاً نام و شماره موبایل خود را وارد کنید.');
+return;
+}
+let userData = {phone, name};
+localStorage.setItem('pakravan_user', JSON.stringify(userData));
+document.getElementById('authNavText').innerText = name;
+closeAuthModal();
+alert('ثبت‌نام/ورود با موفقیت انجام شد!');
+}
+
+function logoutUser() {
+localStorage.removeItem('pakravan_user');
+document.getElementById('authNavText').innerText = 'ورود / ثبت‌نام';
+closeAuthModal();
+}
+
+// ثبت نهایی سفارش و ارسال به تلگرام مدیریت
+function submitOrder() {
+if (cart.length === 0) {
+alert('سبد خرید شما خالی است!');
+return;
+}
+let city = document.getElementById('checkoutCity').value;
+let address = document.getElementById('checkoutAddress').value;
+let postal = document.getElementById('checkoutPostal').value;
+
+if (!city || !address || !postal) {
+alert('لطفاً اطلاعات استان، آدرس و کد پستی را کامل وارد کنید.');
+return;
+}
+
+if (postal.length !== 10) {
+alert('کد پستی باید دقیقاً ۱۰ رقم باشد.');
+return;
+}
+
+let savedUser = JSON.parse(localStorage.getItem('pakravan_user'));
+let userInfoText = savedUser ? خرید توسط:${savedUser.name} (${savedUser.phone}) : 'کاربر مهمان';
+
+let orderText = 🛒 سفارش جدید از سایت موبایل پاکروان:\n\n${userInfoText}\n📍 استان/شهر: latex
+{city}\n🏠 آدرس: 
+
+{address}\n📮 کدپستی: latex
+{postal}\n\n📦 اقلام سفارش:\n`; let sum = 0; cart.forEach(i =&gt; { orderText += `- 
+
+{i.name} (latex
+{i.price.toLocaleString()} تومان)\n`; sum += i.price; }); orderText += `\n💰 جمع کل: 
+
+{sum.toLocaleString()} تومان`;
+
+// هدایت کاربر به تلگرام مدیریت با جزئیات کامل سفارش
+let encodedText = encodeURIComponent(orderText);
+window.open(https://t.me/Kapitan0913?text=${encodedText}, '_blank');
+}
+
+// دسته‌بندی و جستجو
 function filterCategory(category, button) {
 document.querySelectorAll('.cat-btn').forEach(btn => btn.classList.remove('active'));
 button.classList.add('active');
@@ -762,6 +989,21 @@ card.style.display = 'none';
 }
 });
 }
+
+function scrollToSearch() {
+document.getElementById('searchInput').scrollIntoView({behavior: 'smooth'});
+document.getElementById('searchInput').focus();
+}
+
+// چک کردن وضعیت کاربر در بارگذاری اولیه
+window.onload = function() {
+let savedUser = localStorage.getItem('pakravan_user');
+if(savedUser) {
+let user = JSON.parse(savedUser);
+document.getElementById('authNavText').innerText = user.name;
+}
+updateCartUI();
+};
 </script>
 </body>
 </html>
