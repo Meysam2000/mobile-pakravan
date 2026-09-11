@@ -4,33 +4,28 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Meta Tags for SEO -->
 <title>موبایل اپل - پاکروان | مرکز تخصصی لوازم جانبی و تعمیرات موبایل</title>
-<meta name="description" content="خرید آنلاین انواع قاب و گارد گوشی، گلس محافظ صفحه، شارژر فست اصلی، هندزفری و لوازم جانبی موبایل با بهترین قیمت. مدیریت: پاکروان. ارسال به سراسر کشور.">
-<meta name="keywords" content="لوازم جانبی موبایل, قاب گوشی, گلس, شارژر فست, هندزفری بلوتوثی, موبایل اپل پاکروان, خرید لوازم جانبی موبایل">
+<meta name="description" content="خرید آنلاین انواع قاب و گارد گوشی، گلس محافظ صفحه، شارژر فست اصلی، هندزفری و لوازم جانبی موبایل با بهترین قیمت. مدیریت: پاکروان.">
 <meta name="author" content="پاکروان">
 
-<!-- Fonts: Vazirmatn & Lalezar -->
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
 
 :root {
---bg-main: #05050a;
---bg-card: rgba(18, 18, 35, 0.65);
---bg-card-hover: rgba(28, 28, 55, 0.85);
---accent-1: #9333ea;
---accent-2: #db2777;
---accent-3: #2563eb;
---gradient-primary: linear-gradient(135deg, #a855f7, #ec4899);
---gradient-banner-1: linear-gradient(135deg, #e91e63, #ff4081);
---gradient-banner-2: linear-gradient(135deg, #ff9800, #ff5722);
---gradient-banner-3: linear-gradient(135deg, #00b4d8, #0077b6);
+--bg-main: #030307;
+--bg-card: rgba(18, 18, 35, 0.7);
+--bg-card-hover: rgba(28, 28, 55, 0.9);
+--accent-purple: #a855f7;
+--accent-pink: #ec4899;
+--accent-cyan: #06b6d4;
+--gradient-primary: linear-gradient(135deg, #c084fc 0%, #ec4899 50%, #f43f5e 100%);
+--gradient-banner: linear-gradient(135deg, rgba(168, 85, 247, 0.2), rgba(236, 72, 153, 0.2));
 --text-main: #f8fafc;
 --text-muted: #94a3b8;
---border-color: rgba(168, 85, 247, 0.2);
---glow-main: 0 0 40px rgba(168, 85, 247, 0.35);
---glow-pink: 0 0 40px rgba(236, 72, 153, 0.35);
+--border-color: rgba(168, 85, 247, 0.25);
+--glow-main: 0 0 50px rgba(168, 85, 247, 0.25);
+--glow-pink: 0 0 50px rgba(236, 72, 153, 0.25);
 }
 
 • {
@@ -45,214 +40,273 @@ background-color: var(--bg-main);
 color: var(--text-main);
 line-height: 1.8;
 overflow-x: hidden;
-padding-bottom: 70px;
+padding-bottom: 90px;
 background-image:
-radial-gradient(circle at 10% 20%, rgba(147, 51, 234, 0.15) 0%, transparent 40%),
-radial-gradient(circle at 90% 80%, rgba(219, 39, 119, 0.15) 0%, transparent 40%),
-radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 60%);
+radial-gradient(circle at 15% 15%, rgba(168, 85, 247, 0.12) 0%, transparent 45%),
+radial-gradient(circle at 85% 85%, rgba(236, 72, 153, 0.12) 0%, transparent 45%),
+radial-gradient(circle at 50% 50%, rgba(6, 182, 212, 0.08) 0%, transparent 60%);
 background-attachment: fixed;
 }
 
-/* Header & Hero */
+/* انیمیشن‌های نرم */
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-8px); }
+}
+
+@keyframes pulseGlow {
+0%, 100% { opacity: 0.4; }
+50% { opacity: 0.8; }
+}
+
+@keyframes fadeIn {
+from { opacity: 0; transform: translateY(15px); }
+to { opacity: 1; transform: translateY(0); }
+}
+
 header {
-background: linear-gradient(180deg, rgba(5, 5, 10, 0.85), rgba(12, 12, 25, 0.95));
+background: linear-gradient(180deg, rgba(3, 3, 7, 0.9), rgba(12, 12, 25, 0.95));
 border-bottom: 1px solid var(--border-color);
-padding: 3rem 1rem 2rem;
+padding: 3.5rem 1rem 2.5rem;
 text-align: center;
 position: relative;
+backdrop-filter: blur(20px);
+}
+
+header::before {
+content: '';
+position: absolute;
+top: 0; left: 50%;
+transform: translateX(-50%);
+width: 60%;
+height: 2px;
+background: var(--gradient-primary);
+box-shadow: var(--glow-main);
 }
 
 .header-container {
 max-width: 800px;
 margin: 0 auto;
+animation: fadeIn 0.8s ease-out;
 }
 
 .store-badge {
 display: inline-flex;
 align-items: center;
 gap: 8px;
-background: rgba(168, 85, 247, 0.15);
-color: #e9d5ff;
-border: 1px solid rgba(168, 85, 247, 0.35);
-padding: 0.4rem 1.5rem;
+background: rgba(168, 85, 247, 0.1);
+color: #f3e8ff;
+border: 1px solid rgba(168, 85, 247, 0.3);
+padding: 0.45rem 1.6rem;
 border-radius: 50px;
-font-size: 0.88rem;
+font-size: 0.9rem;
 font-weight: 600;
-margin-bottom: 1rem;
+margin-bottom: 1.2rem;
+box-shadow: 0 4px 20px rgba(168, 85, 247, 0.15);
 }
 
 h1 {
 font-family: 'Lalezar', cursive;
-font-size: 3.8rem;
+font-size: 4rem;
 font-weight: 400;
 color: #ffffff;
-margin-bottom: 0.1rem;
-background: linear-gradient(135deg, #fff 20%, #e879f9 60%, #a855f7 100%);
+margin-bottom: 0.2rem;
+background: linear-gradient(135deg, #ffffff 20%, #f472b6 60%, #c084fc 100%);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
+letter-spacing: 1px;
 }
 
 .subtitle {
-font-size: 1.1rem;
+font-size: 1.15rem;
 color: var(--text-muted);
-margin-bottom: 1.8rem;
+margin-bottom: 2rem;
+font-weight: 500;
 }
 
-/* Social Contact Buttons */
+/* دکمه‌های اجتماعی با افکت مدرن */
 .social-buttons {
 display: flex;
 justify-content: center;
-gap: 12px;
+gap: 14px;
 flex-wrap: wrap;
-margin-bottom: 2rem;
+margin-bottom: 2.2rem;
 }
 
 .social-btn {
 display: inline-flex;
 align-items: center;
 gap: 8px;
-padding: 0.65rem 1.5rem;
-border-radius: 14px;
+padding: 0.75rem 1.6rem;
+border-radius: 16px;
 font-size: 0.9rem;
 font-weight: 700;
 text-decoration: none;
 color: white;
-transition: all 0.3s ease;
+transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+border: 1px solid rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(10px);
 }
 
 .social-btn:hover {
-transform: translateY(-4px);
-filter: brightness(1.2);
+transform: translateY(-5px) scale(1.03);
+box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
 
-.btn-telegram { background: linear-gradient(135deg, #0088cc, #229ed9); box-shadow: 0 6px 20px rgba(0, 136, 204, 0.4); }
-.btn-whatsapp { background: linear-gradient(135deg, #25d366, #128c7e); box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4); }
-.btn-rubika { background: linear-gradient(135deg, #7c3aed, #a855f7); box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4); }
+.btn-telegram { background: linear-gradient(135deg, rgba(0, 136, 204, 0.8), rgba(34, 158, 217, 0.9)); border-color: rgba(0, 136, 204, 0.4); }
+.btn-whatsapp { background: linear-gradient(135deg, rgba(37, 211, 102, 0.8), rgba(18, 140, 126, 0.9)); border-color: rgba(37, 211, 102, 0.4); }
+.btn-rubika { background: linear-gradient(135deg, rgba(124, 58, 237, 0.8), rgba(168, 85, 247, 0.9)); border-color: rgba(124, 58, 237, 0.4); }
 
-/* Search Box */
+/* نوار جستجوی پیشرفته */
 .search-box {
 position: relative;
-max-width: 580px;
+max-width: 600px;
 margin: 0 auto;
 }
 
 .search-input {
 width: 100%;
-background: rgba(18, 18, 35, 0.9);
+background: rgba(15, 15, 30, 0.8);
 border: 1px solid var(--border-color);
-padding: 1rem 1.5rem;
-padding-right: 3.5rem;
-border-radius: 50px;
+padding: 1.1rem 1.6rem;
+padding-right: 3.8rem;
+border-radius: 60px;
 color: #fff;
-font-size: 1rem;
+font-size: 1.05rem;
 outline: none;
-transition: all 0.3s ease;
-box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+transition: all 0.4s ease;
+box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+backdrop-filter: blur(10px);
 }
 
 .search-input:focus {
-border-color: #c084fc;
-box-shadow: var(--glow-main);
+border-color: #f472b6;
+box-shadow: 0 0 30px rgba(244, 114, 182, 0.3), inset 0 0 15px rgba(168, 85, 247, 0.2);
+background: rgba(22, 22, 42, 0.95);
 }
 
 .search-icon {
 position: absolute;
-right: 1.4rem;
+right: 1.5rem;
 top: 50%;
 transform: translateY(-50%);
-color: #c084fc;
-font-size: 1.2rem;
+color: #f472b6;
+font-size: 1.3rem;
 }
 
-/* Banners Section */
+/* بنرهای هيرو مدرن */
 .banners-section {
 max-width: 1200px;
-margin: 2rem auto 1rem;
+margin: 2.5rem auto 1.5rem;
 padding: 0 1rem;
+animation: fadeIn 1s ease-out;
 }
 
 .main-promo-banner {
-background: var(--gradient-banner-1);
-border-radius: 20px;
-padding: 2.5rem 2rem;
+background: linear-gradient(135deg, rgba(233, 30, 99, 0.85), rgba(147, 51, 234, 0.85));
+border-radius: 24px;
+padding: 3rem 2rem;
 color: white;
 text-align: center;
-margin-bottom: 1rem;
-box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+margin-bottom: 1.2rem;
+box-shadow: 0 15px 40px rgba(233, 30, 99, 0.25);
 position: relative;
 overflow: hidden;
+border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.main-promo-banner::after {
+content: '';
+position: absolute;
+top: -50%; left: -50%;
+width: 200%; height: 200%;
+background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 60%);
+transform: rotate(30deg);
+pointer-events: none;
 }
 
 .main-promo-banner h2 {
 font-family: 'Lalezar', cursive;
-font-size: 2.5rem;
-margin-bottom: 0.5rem;
+font-size: 2.8rem;
+margin-bottom: 0.4rem;
 letter-spacing: 1px;
+text-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .main-promo-banner p {
-font-size: 1rem;
-opacity: 0.9;
-margin-bottom: 1.2rem;
+font-size: 1.1rem;
+opacity: 0.95;
+font-weight: 500;
 }
 
 .promo-grid {
 display: grid;
 grid-template-columns: 1fr 1fr;
-gap: 15px;
+gap: 18px;
 }
 
 .sub-promo-banner {
-border-radius: 16px;
-padding: 1.5rem;
+border-radius: 20px;
+padding: 1.8rem;
 color: white;
 text-align: right;
-box-shadow: 0 8px 25px rgba(0,0,0,0.3);
-min-height: 130px;
+box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+min-height: 140px;
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+position: relative;
+overflow: hidden;
+backdrop-filter: blur(10px);
+border: 1px solid rgba(255,255,255,0.1);
+transition: transform 0.4s ease;
 }
 
-.sub-promo-1 { background: var(--gradient-banner-2); }
-.sub-promo-2 { background: var(--gradient-banner-3); }
+.sub-promo-banner:hover {
+transform: translateY(-4px);
+}
+
+.sub-promo-1 { background: linear-gradient(135deg, rgba(255, 152, 0, 0.85), rgba(255, 87, 34, 0.85)); }
+.sub-promo-2 { background: linear-gradient(135deg, rgba(0, 180, 216, 0.85), rgba(0, 119, 182, 0.85)); }
 
 .sub-promo-banner h4 {
-font-size: 1.1rem;
+font-size: 1.25rem;
 font-weight: 800;
+text-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .sub-promo-banner span {
-font-size: 0.85rem;
-opacity: 0.9;
+font-size: 0.9rem;
+opacity: 0.95;
+font-weight: 500;
 }
 
-/* Main Container */
 .container {
 max-width: 1200px;
 margin: 0 auto;
 padding: 2rem 1rem;
 }
 
-/* Categories Filter Tabs */
+/* تب‌های دسته‌بندی شیک */
 .categories {
 display: flex;
 justify-content: center;
-gap: 10px;
+gap: 12px;
 flex-wrap: wrap;
-margin-bottom: 2.5rem;
+margin-bottom: 3rem;
 }
 
 .cat-btn {
 background: var(--bg-card);
 color: var(--text-muted);
 border: 1px solid var(--border-color);
-padding: 0.6rem 1.4rem;
-border-radius: 12px;
+padding: 0.75rem 1.6rem;
+border-radius: 14px;
 cursor: pointer;
-font-size: 0.9rem;
+font-size: 0.95rem;
 font-weight: 600;
-transition: all 0.3s ease;
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+backdrop-filter: blur(10px);
 }
 
 .cat-btn:hover, .cat-btn.active {
@@ -263,116 +317,120 @@ box-shadow: var(--glow-pink);
 transform: translateY(-3px);
 }
 
-/* Products Grid */
+/* گرید محصولات و کارت‌های شناور */
 .products-grid {
 display: grid;
-grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-gap: 2rem;
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+gap: 2.2rem;
 }
 
 .product-card {
 background: var(--bg-card);
 border: 1px solid var(--border-color);
-border-radius: 20px;
+border-radius: 24px;
 overflow: hidden;
-transition: all 0.4s ease;
+transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 display: flex;
 flex-direction: column;
-backdrop-filter: blur(15px);
+backdrop-filter: blur(20px);
+position: relative;
 }
 
 .product-card:hover {
-transform: translateY(-8px);
-box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), var(--glow-main);
-border-color: rgba(168, 85, 247, 0.5);
+transform: translateY(-10px);
+box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8), var(--glow-main);
+border-color: rgba(244, 114, 182, 0.5);
 background: var(--bg-card-hover);
 }
 
 .product-img-wrapper {
 position: relative;
 width: 100%;
-height: 220px;
+height: 240px;
 overflow: hidden;
-background: #05050f;
+background: #020205;
 }
 
 .product-img {
 width: 100%;
 height: 100%;
 object-fit: cover;
-transition: transform 0.6s ease;
+transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .product-card:hover .product-img {
-transform: scale(1.1);
+transform: scale(1.12);
 }
 
 .product-badge {
 position: absolute;
-top: 12px;
-right: 12px;
-background: rgba(5, 5, 10, 0.85);
+top: 14px;
+right: 14px;
+background: rgba(3, 3, 7, 0.85);
 color: #f3e8ff;
 border: 1px solid rgba(168, 85, 247, 0.4);
-padding: 0.3rem 0.9rem;
-border-radius: 15px;
-font-size: 0.78rem;
+padding: 0.35rem 1rem;
+border-radius: 20px;
+font-size: 0.8rem;
 font-weight: 700;
+backdrop-filter: blur(10px);
 }
 
 .product-body {
-padding: 1.5rem;
+padding: 1.8rem;
 display: flex;
 flex-direction: column;
 flex-grow: 1;
 }
 
 .product-title {
-font-size: 1.15rem;
+font-size: 1.25rem;
 font-weight: 800;
-margin-bottom: 0.5rem;
+margin-bottom: 0.6rem;
 color: #ffffff;
 }
 
 .product-desc {
-font-size: 0.88rem;
+font-size: 0.92rem;
 color: var(--text-muted);
-margin-bottom: 1.5rem;
+margin-bottom: 1.8rem;
 flex-grow: 1;
-line-height: 1.6;
+line-height: 1.7;
 }
 
 .product-footer {
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding-top: 1rem;
-border-top: 1px solid var(--border-color);
+padding-top: 1.2rem;
+border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .price {
-font-size: 1.1rem;
+font-size: 1.2rem;
 font-weight: 900;
 color: #38bdf8;
+text-shadow: 0 0 20px rgba(56, 189, 248, 0.3);
 }
 
 .price span {
-font-size: 0.75rem;
+font-size: 0.8rem;
 color: var(--text-muted);
-font-weight: 400;
-margin-right: 3px;
+font-weight: 500;
+margin-right: 4px;
 }
 
 .btn-buy {
-background: rgba(168, 85, 247, 0.18);
-color: #e9d5ff;
-border: 1px solid rgba(168, 85, 247, 0.45);
-padding: 0.5rem 1.1rem;
-border-radius: 10px;
-font-size: 0.85rem;
+background: rgba(168, 85, 247, 0.15);
+color: #f3e8ff;
+border: 1px solid rgba(168, 85, 247, 0.4);
+padding: 0.6rem 1.25rem;
+border-radius: 12px;
+font-size: 0.9rem;
 font-weight: 700;
 cursor: pointer;
 transition: all 0.3s ease;
+backdrop-filter: blur(10px);
 }
 
 .btn-buy:hover {
@@ -380,168 +438,215 @@ background: var(--gradient-primary);
 color: #ffffff;
 box-shadow: var(--glow-pink);
 border-color: transparent;
+transform: scale(1.05);
 }
 
-/* Modal Windows for Login & Cart */
+/* مودال‌های فوق‌العاده شیک */
 .modal-overlay {
 position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background: rgba(0,0,0,0.8);
-backdrop-filter: blur(8px);
+top: 0; left: 0;
+width: 100%; height: 100%;
+background: rgba(0, 0, 0, 0.85);
+backdrop-filter: blur(12px);
 display: none;
 justify-content: center;
 align-items: center;
 z-index: 2000;
+animation: fadeIn 0.3s ease-out;
 }
 
 .modal-box {
-background: #121223;
+background: linear-gradient(135deg, rgba(18, 18, 35, 0.95), rgba(10, 10, 20, 0.95));
 border: 1px solid rgba(168, 85, 247, 0.4);
-padding: 2rem;
-border-radius: 20px;
+padding: 2.5rem;
+border-radius: 28px;
 width: 90%;
-max-width: 450px;
+max-width: 480px;
 color: #fff;
 position: relative;
-box-shadow: var(--glow-main);
+box-shadow: var(--glow-main), 0 20px 60px rgba(0,0,0,0.8);
+backdrop-filter: blur(20px);
 }
 
 .modal-close {
 position: absolute;
-top: 15px;
-left: 15px;
-background: none;
-border: none;
+top: 18px; left: 18px;
+background: rgba(255,255,255,0.05);
+border: 1px solid rgba(255,255,255,0.1);
 color: #fff;
-font-size: 1.5rem;
+width: 36px; height: 36px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 1.4rem;
 cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+background: rgba(236, 72, 153, 0.2);
+border-color: #ec4899;
+transform: rotate(90deg);
 }
 
 .modal-box h3 {
-margin-bottom: 1rem;
+margin-bottom: 1.2rem;
 font-family: 'Lalezar', cursive;
-font-size: 1.8rem;
-color: #e879f9;
+font-size: 2rem;
+background: var(--gradient-primary);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
 }
 
 .modal-input {
 width: 100%;
-padding: 0.8rem 1rem;
-margin-bottom: 1rem;
-background: #05050a;
+padding: 0.95rem 1.2rem;
+margin-bottom: 1.2rem;
+background: rgba(5, 5, 10, 0.9);
 border: 1px solid var(--border-color);
-border-radius: 10px;
+border-radius: 14px;
 color: #fff;
 outline: none;
+font-size: 1rem;
+transition: all 0.3s ease;
+}
+
+.modal-input:focus {
+border-color: #ec4899;
+box-shadow: 0 0 20px rgba(236, 72, 153, 0.3);
 }
 
 .modal-btn {
 width: 100%;
-padding: 0.8rem;
+padding: 0.95rem;
 background: var(--gradient-primary);
 border: none;
-border-radius: 10px;
+border-radius: 14px;
 color: #fff;
-font-weight: 700;
+font-weight: 800;
+font-size: 1.05rem;
 cursor: pointer;
+transition: all 0.3s ease;
+box-shadow: 0 10px 25px rgba(236, 72, 153, 0.3);
+}
+
+.modal-btn:hover {
+transform: translateY(-2px);
+box-shadow: 0 15px 35px rgba(236, 72, 153, 0.5);
+filter: brightness(1.1);
 }
 
 .cart-items {
-max-height: 200px;
+max-height: 220px;
 overflow-y: auto;
-margin-bottom: 1rem;
+margin-bottom: 1.2rem;
+padding-left: 5px;
 }
 
 .cart-item {
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 8px 0;
-border-bottom: 1px solid rgba(255,255,255,0.1);
-font-size: 0.9rem;
+padding: 12px 0;
+border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+font-size: 0.95rem;
 }
 
-/* منوی پایین صفحه */
+/* منوی ناوبری پایین صفحه شیک و شناور */
 .bottom-nav {
 position: fixed;
-bottom: 0;
-left: 0;
-width: 100%;
-background: rgba(12, 12, 25, 0.95);
-backdrop-filter: blur(20px);
+bottom: 15px;
+left: 50%;
+transform: translateX(-50%);
+width: 92%;
+max-width: 500px;
+background: rgba(12, 12, 25, 0.85);
+backdrop-filter: blur(25px);
 display: flex;
 justify-content: space-around;
-padding: 10px 0;
-box-shadow: 0 -5px 25px rgba(0,0,0,0.5);
-border-top: 1px solid rgba(168, 85, 247, 0.2);
+padding: 12px 10px;
+border-radius: 24px;
+box-shadow: 0 15px 40px rgba(0,0,0,0.7), 0 0 30px rgba(168, 85, 247, 0.15);
+border: 1px solid rgba(168, 85, 247, 0.3);
 z-index: 1000;
+animation: float 4s ease-in-out infinite;
 }
 
 .nav-item {
 text-align: center;
 color: var(--text-muted);
 text-decoration: none;
-font-size: 0.75rem;
+font-size: 0.78rem;
+font-weight: 600;
 display: flex;
 flex-direction: column;
 align-items: center;
-gap: 3px;
-transition: color 0.3s ease;
+gap: 4px;
+transition: all 0.3s ease;
 cursor: pointer;
 background: none;
 border: none;
+flex: 1;
 }
 
 .nav-item span.icon {
-font-size: 1.25rem;
+font-size: 1.35rem;
+transition: transform 0.3s ease;
 }
 
 .nav-item.active, .nav-item:hover {
-color: #e879f9;
-font-weight: 700;
+color: #f472b6;
+}
+
+.nav-item.active span.icon, .nav-item:hover span.icon {
+transform: scale(1.2);
 }
 
 .cart-badge-count {
-background: #db2777;
+background: #ec4899;
 color: white;
 border-radius: 50%;
-padding: 1px 6px;
-font-size: 0.65rem;
+padding: 2px 7px;
+font-size: 0.7rem;
+font-weight: 800;
 position: absolute;
 top: 2px;
-right: 35%;
+right: 30%;
+box-shadow: 0 0 10px #ec4899;
 }
 
-/* Footer */
 footer {
-background: #020205;
+background: #010103;
 border-top: 1px solid var(--border-color);
 text-align: center;
-padding: 3rem 1rem;
+padding: 3.5rem 1rem;
 color: var(--text-muted);
-font-size: 0.9rem;
-margin-top: 4rem;
+font-size: 0.95rem;
+margin-top: 5rem;
 }
 
 .footer-socials {
 display: flex;
 justify-content: center;
-gap: 20px;
+gap: 25px;
 margin: 1.5rem 0;
 }
 
 .footer-socials a {
-color: #e9d5ff;
+color: #f3e8ff;
 text-decoration: none;
 font-weight: 700;
+transition: color 0.3s ease;
+}
+
+.footer-socials a:hover {
+color: #ec4899;
 }
 
 .store-owner {
 color: #fff;
-font-weight: 800;
+font-weight: 900;
 background: var(--gradient-primary);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
@@ -569,7 +674,6 @@ background: var(--gradient-primary);
 </div>
 </header>
 
-<!-- بخش بنرهای تبلیغاتی -->
 <section class="banners-section">
 <div class="main-promo-banner">
 <h2>تنوع بی‌نظیر گجت‌های هوشمند</h2>
@@ -588,7 +692,6 @@ background: var(--gradient-primary);
 </section>
 
 <div class="container">
-<!-- Categories -->
 <div class="categories">
 <button class="cat-btn active" onclick="filterCategory('all', this)">همه محصولات</button>
 <button class="cat-btn" onclick="filterCategory('case', this)">قاب و گارد</button>
@@ -597,9 +700,7 @@ background: var(--gradient-primary);
 <button class="cat-btn" onclick="filterCategory('audio', this)">هندزفری و صوت</button>
 </div>
 
-<!-- Products Grid -->
 <div class="products-grid" id="productsGrid">
-<!-- Product 1 -->
 <div class="product-card" data-category="case" data-name="قاب سیلیکونی اورجینال">
 <div class="product-img-wrapper">
 <span class="product-badge">پرفروش</span>
@@ -615,7 +716,6 @@ background: var(--gradient-primary);
 </div>
 </div>
 
-<!-- Product 2 -->
 <div class="product-card" data-category="glass" data-name="محافظ صفحه سرامیکی مات">
 <div class="product-img-wrapper">
 <span class="product-badge">مقاوم</span>
@@ -631,7 +731,6 @@ background: var(--gradient-primary);
 </div>
 </div>
 
-<!-- Product 3 -->
 <div class="product-card" data-category="charger" data-name="کلید شارژر فست شارژ اصلی">
 <div class="product-img-wrapper">
 <span class="product-badge">فست شارژ</span>
@@ -647,7 +746,6 @@ background: var(--gradient-primary);
 </div>
 </div>
 
-<!-- Product 4 -->
 <div class="product-card" data-category="audio" data-name="هندزفری بلوتوثی مدل AirDots">
 <div class="product-img-wrapper">
 <span class="product-badge">محبوب</span>
@@ -665,7 +763,6 @@ background: var(--gradient-primary);
 </div>
 </div>
 
-<!-- Modal Login -->
 <div id="loginModal" class="modal-overlay">
 <div class="modal-box">
 <button class="modal-close" onclick="closeModal('loginModal')">×</button>
@@ -676,7 +773,6 @@ background: var(--gradient-primary);
 </div>
 </div>
 
-<!-- Modal Cart -->
 <div id="cartModal" class="modal-overlay">
 <div class="modal-box">
 <button class="modal-close" onclick="closeModal('cartModal')">×</button>
@@ -692,7 +788,6 @@ background: var(--gradient-primary);
 </div>
 </div>
 
-<!-- منوی پایین صفحه -->
 <nav class="bottom-nav">
 <button class="nav-item" onclick="openModal('loginModal')">
 <span class="icon">👤</span>
@@ -797,6 +892,7 @@ return;
 let text = "سلام، قصد خرید محصولات زیر را دارم:%0A";
 let total = 0;
 cart.forEach(item => {
+total += item.price;
 text += -${item.name} ({total.toLocaleString()} تومان; window.open(https://t.me/Kapitan0913?text=${text}`, '_blank');
 }
 </script>
